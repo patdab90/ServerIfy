@@ -24,6 +24,7 @@ public class SimpleREST {
 	@POST
 	@Path(value = "/post")
 	@Consumes(value = "application/json")
+	@Produces(value = "application/json")
 	public Message post(Message message) {
 		Message m = new Message();
 		return m;
@@ -37,7 +38,7 @@ public class SimpleREST {
 		user.setUsername("patryk");
 		GroupEntity group = new GroupEntity();
 		group.setName("grupa1");
-		return null;// messageService.getBuilder().group(group).user(user).event("alx",
-					// 10).params(null).build();
+		return messageService.getBuilder().group(group).user(user)
+				.event(user, 10).params(null).build();
 	}
 }
