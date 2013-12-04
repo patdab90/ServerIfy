@@ -237,4 +237,10 @@ public class GroupService implements IGroupService {
 		groupPermission.setX(x);
 		groupPermissionDAO.merge(groupPermission);
 	}
+
+	@Override
+	public List<GroupEntity> getGroupsByUsername(String username) {
+		
+		return null;
+	}
 }

@@ -32,6 +32,8 @@ public interface IGroupService extends IBaseService<GroupEntity> {
 
 	List<GroupEntity> getGroups(UserEntity user);
 
+	List<GroupEntity> getGroupsByUsername(String username);
+
 	boolean hasPermition(UserEntity user, GroupEntity group,
 			GroupPermission permission);
 

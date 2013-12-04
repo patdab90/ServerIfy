@@ -7,7 +7,6 @@ public class PeselUtils {
 	/**
 	 * Pobieranie sumy kontrolnej numeru pesel
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @param pesel
@@ -40,7 +39,6 @@ public class PeselUtils {
 	/**
 	 * Zwracanie roku urodzenia na podstawie numeru PESEL
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @param pesel
@@ -78,7 +76,6 @@ public class PeselUtils {
 	/**
 	 * Pobranie miesiąca urodzenia z numeru pesel
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @return
@@ -108,7 +105,6 @@ public class PeselUtils {
 	/**
 	 * Pobranie dnia urodzenia na podstawie numeru pesel
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @return
@@ -131,7 +127,6 @@ public class PeselUtils {
 	 * Pobranie daty urodzenia na podstawie numeru pesel (data w formacie
 	 * gotowego stringu)
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @param pesel
@@ -152,7 +147,6 @@ public class PeselUtils {
 	/**
 	 * Pobranie płci na podstawie numeru PESEL
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @param pesel
@@ -179,7 +173,6 @@ public class PeselUtils {
 	 * Sprawdzanie czy numer PESEL jest poprawny (ma właściwą długość oraz
 	 * poprawną sumę kontrolną)
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 15-06-2013
 	 * 
 	 * @param pesel

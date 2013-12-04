@@ -2,6 +2,7 @@ package pl.poznan.put.cs.ify.webify.data.dao.impl;
 
 import java.util.List;
 
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
@@ -83,6 +84,14 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 		q.setParameter("recipe", recipe);
 		q.setParameter("device", device);
 		return getSingleResult(q);
+	}
+
+	@Override
+	public void update(ParameterEntity param) {
+		// Query q = getManager()
+		// .createNativeQuery(
+		// "INSERT INTO parameters (a,b,c) VALUES (1,2,3) ON DUPLICATE KEY UPDATE c=c+1; UPDATE table SET c=c+1 WHERE a=1;");
+
 	}
 
 }

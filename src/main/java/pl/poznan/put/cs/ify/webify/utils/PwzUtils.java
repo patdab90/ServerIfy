@@ -5,8 +5,6 @@ public class PwzUtils {
 	/**
 	 * Obliczanie sumy kontrolnej numeru PWZ
 	 * 
-	 * @author Olga Kamińska
-	 * @author Mateusz Pogorzelski
 	 * @date 24-06-2013
 	 * 
 	 * @param nr
@@ -37,7 +35,6 @@ public class PwzUtils {
 	/**
 	 * Walidacja numeru PWZ
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 24-06-2013
 	 * 
 	 * @param pwz

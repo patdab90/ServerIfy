@@ -42,38 +42,23 @@ public class MainWindow extends BaseWindow {
 
 	public MainWindow() {
 		super(App.APPLICATION_TITLE);
-
 	}
 
 	@Override
 	protected void tryToAutowire() {
-		// if (loginWindow == null) {
-		// loginWindow = (LoginWindow) helper.getBean("loginWindow");
-		// log.error("nowe okno logowania");
-		// }
-		// if (registerWindow == null) {
-		// registerWindow = (RegisterWindow) helper.getBean("registerWindow");
-		// log.error("nowe okno rejestracji");
-		// }
-		// if (loginComponent == null) {
-		// loginComponent = (LoginComponent) helper.getBean("loginComponent");
-		// log.error("nowe komponent logowania");
-		// }
-		// if (menuComponent == null) {
-		// menuComponent = (MenuComponent) helper.getBean("menuComponent");
-		// menuComponent.setApplication(getApplication());
-		// menuComponent.setSession(session);
-		// log.error("nowy komponent menu");
-		// }
 
+	}
+
+	protected void loginView() {
+		loginComponent.setMain(this);
+		loginComponent.setLogin(loginWindow);
+		loginComponent.setRegister(registerWindow);
+		addComponent(loginComponent);
 	}
 
 	public void init() {
 		if (!session.isLogged()) {
-			loginComponent.setMain(this);
-			loginComponent.setLogin(loginWindow);
-			loginComponent.setRegister(registerWindow);
-			addComponent(loginComponent);
+			loginView();
 		} else {
 			addComponent(new Label("Zalogowny jako: " + session.getUserName()));
 			// addComponent(menuComponent);

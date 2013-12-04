@@ -59,6 +59,12 @@ public class UserService implements IUserService {
 				.getAnnotation(ViewAccessible.class);
 		if (ann == null)
 			return true;
+		for (String username : ann.users()) {
+			if (user.getUsername().equals(username)) {
+				return true;
+			}
+		}
+
 		for (UserRole role : ann.roles()) {
 			if (user.hasRole(role))
 				return true;
@@ -90,7 +96,7 @@ public class UserService implements IUserService {
 	public boolean login(final String username, final String password) {
 		final UserEntity user = userDAO.findByUserName(username);
 		if (user == null) {
-			log.info("LOGIN: brak użytkownika: " + username);
+			log.info("LOGIN: brak uzytkownika: " + username);
 			return false;
 		}
 		if (StringUtils.md5(password).equals(user.getPassword())) {

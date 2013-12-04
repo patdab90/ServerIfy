@@ -44,6 +44,7 @@ public class App extends Application {
 	 */
 	@Override
 	public void init() {
+		setTheme("runo");
 		SpringContextHelper helper = new SpringContextHelper(this);
 		if (mainWindow == null) {
 			log.debug("mainWindow is null.");

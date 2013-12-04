@@ -5,7 +5,6 @@ public class MathUtils {
 	/**
 	 * Pobranie cyfry z konkretnej pozycji danej liczby
 	 * 
-	 * @author Olga Kamińska
 	 * @date 15-06-2013
 	 * 
 	 * @param number
@@ -20,7 +19,6 @@ public class MathUtils {
 	/**
 	 * Pobranie cyfry z konkretnej pozycji danej liczby
 	 * 
-	 * @author Olga Kamińska
 	 * @date 15-06-2013
 	 * 
 	 * @param number

@@ -11,7 +11,6 @@ import pl.poznan.put.cs.ify.webify.data.enums.user.Gender;
 /**
  * Testy dla narzędzi do numeru pesel
  * 
- * @author Mateusz Pogorzelski
  * @date 15-06-2013
  * 
  */
@@ -55,8 +54,8 @@ public class PeselUtilsTest extends BaseTest {
 		String pesel = "91021200416";
 		Long expected = 12l;
 
-		assertEquals("Nieprawidłowy dzień lub jej format dla numeru: " + pesel,
-				expected, PeselUtils.getBirthDay(pesel));
+		assertEquals("Nieprawidłowy dzień lub jej format dla numeru: "
+				+ pesel, expected, PeselUtils.getBirthDay(pesel));
 
 		assertNull(PeselUtils.getBirthDay(""));
 	}

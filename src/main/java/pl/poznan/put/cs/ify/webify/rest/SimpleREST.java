@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.rest.model.Message;
+import pl.poznan.put.cs.ify.webify.rest.model.MessageParam;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageService;
 
 @Component
@@ -33,12 +34,12 @@ public class SimpleREST {
 	@GET
 	@Path(value = "/get")
 	@Produces(value = "application/json")
-	public Message get() {
+	public MessageParam get() {
 		UserEntity user = new UserEntity();
 		user.setUsername("patryk");
 		GroupEntity group = new GroupEntity();
 		group.setName("grupa1");
-		return messageService.getBuilder().group(group).user(user)
-				.event(user, 10).params(null).build();
+		return new MessageParam();// messageService.getBuilder().group(group).user(user)
+		// .event(user, 10).params(null).build();
 	}
 }

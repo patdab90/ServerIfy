@@ -23,7 +23,6 @@ import pl.poznan.put.cs.ify.webify.utils.StringUtils;
 /**
  * Encja użytkownika
  * 
- * @author Mateusz Pogorzelski
  * @date 30-05-2013
  * 
  */
@@ -186,7 +185,6 @@ public class UserEntity extends BaseEntity {
 	/**
 	 * Usuwanie roli
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 30-05-2013
 	 * 
 	 * @param role
@@ -201,7 +199,6 @@ public class UserEntity extends BaseEntity {
 	/**
 	 * Sprawdzanie czy użytkownik posiada rolę
 	 * 
-	 * @author Mateusz Pogorzelski
 	 * @date 30-05-2013
 	 * 
 	 * @param role

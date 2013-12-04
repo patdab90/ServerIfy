@@ -18,4 +18,5 @@ public interface IParameterDAO extends IBaseDAO<ParameterEntity> {
 	ParameterEntity find(String name, UserEntity user, GroupEntity group,
 			String recipe, String device);
 
+	void update(ParameterEntity param);
 }

@@ -5,66 +5,44 @@ import org.springframework.stereotype.Component;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IParameterDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.receip.ParameterEntity;
-import pl.poznan.put.cs.ify.webify.service.IBaseService;
 import pl.poznan.put.cs.ify.webify.service.IParameterService;
 
 @Component
-public class ParameterService implements IParameterService,
-		IBaseService<ParameterEntity> {
+public class ParameterService implements IParameterService {
 
 	@Autowired
 	private IParameterDAO parameterDAO;
 
 	public String getValue(ParameterEntity param) {
-		return getValue(param, param.getType().getCls()).toString();
-	}
-
-	// TODO mmoże mozliwe jest wykonanie tego na bazie?
-	@SuppressWarnings("unchecked")
-	public <T> T getValue(ParameterEntity param, Class<T> cls) {
-		Object res;
-		switch (param.getType()) {
-		case STRING:
+		String res = null;
+		String type = param.getType();
+		if (type == "String") {
 			res = param.getStringValue();
-			break;
-		case INTEGER:
-			res = param.getIntegerValue();
-			break;
-		case BYTE_ARRAY:
-			res = param.getLobValue();
-			break;
-		case DOUBLE:
-			res = param.getDoubleValue();
-			break;
-		case BOOLEAN:
-			res = param.getBooleanValue();
-			break;
-		default:
-			throw new UnsupportedOperationException("Type " + param.getType()
-					+ " is unsuported!");
+		} else if (type == "Integer") {
+			res = param.getIntegerValue().toString();
+		} else if (type == "Double") {
+			res = param.getDoubleValue().toString();
+		} else if (type == "Boolean") {
+			res = param.getBooleanValue().toString();
+		} else {
+			res = param.getStringValue();
 		}
-		return (T) res;
+		return res;
 	}
 
-	public void setType(ParameterEntity param, String value) {
-		switch (param.getType()) {
-		case STRING:
+	@Override
+	public void setValue(ParameterEntity param, String value) {
+		String type = param.getType();
+		if (type == "String") {
 			param.setStringValue(value);
-			break;
-		case INTEGER:
+		} else if (type == "Integer") {
 			param.setIntegerValue(Integer.parseInt(value));
-			break;
-		case BYTE_ARRAY:
-			throw new UnsupportedOperationException();
-		case DOUBLE:
+		} else if (type == "Double") {
 			param.setDoubleValue(Double.parseDouble(value));
-			break;
-		case BOOLEAN:
+		} else if (type == "Boolean") {
 			param.setBooleanValue(Boolean.parseBoolean(value));
-			break;
-		default:
-			throw new UnsupportedOperationException("Type " + param.getType()
-					+ " is unsuported!");
+		} else {
+			param.setStringValue(value);
 		}
 	}
 }

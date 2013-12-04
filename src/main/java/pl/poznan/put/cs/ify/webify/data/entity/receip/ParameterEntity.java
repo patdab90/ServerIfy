@@ -13,7 +13,6 @@ import javax.persistence.UniqueConstraint;
 import pl.poznan.put.cs.ify.webify.data.entity.BaseEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
-import pl.poznan.put.cs.ify.webify.data.enums.ValueType;
 
 @Entity
 @Table(name = "parameters", uniqueConstraints = { @UniqueConstraint(columnNames = {
@@ -39,8 +38,8 @@ public class ParameterEntity extends BaseEntity {
 	@Column(nullable = false, length = 25)
 	private String name;
 
-	@Column(nullable = false, length = 15)
-	private ValueType type;
+	@Column(nullable = false, length = 25)
+	private String type;
 
 	@Column(nullable = true)
 	private String stringValue;
@@ -88,11 +87,11 @@ public class ParameterEntity extends BaseEntity {
 		this.name = name;
 	}
 
-	public ValueType getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(ValueType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 

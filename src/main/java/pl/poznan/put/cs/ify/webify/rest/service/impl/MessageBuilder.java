@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.receip.ParameterEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
@@ -31,6 +33,7 @@ public class MessageBuilder implements IMessageBuilder {
 	}
 
 	@Override
+	@Transactional
 	public Message build() {
 		message = new Message();
 		message.setUser(buildUser());
@@ -46,10 +49,10 @@ public class MessageBuilder implements IMessageBuilder {
 	}
 
 	@Override
+	@Transactional
 	public Message build(Message body) {
 		message = body;
-
-		return message;
+		return build();
 	}
 
 	@Override
@@ -94,10 +97,8 @@ public class MessageBuilder implements IMessageBuilder {
 		return new MessageEvent(target.getUsername(), tag);
 	}
 
-	private Map<String, MessageParam> buildParameters() {// TODO przenieść
-															// zamienianie Listy
-															// parametrów na
-															// mapę do servisu
+	@Transactional
+	private Map<String, MessageParam> buildParameters() {
 		if (parameters == null || parameters.isEmpty()) {
 			return null;
 		}
@@ -105,9 +106,10 @@ public class MessageBuilder implements IMessageBuilder {
 				parameters.size());
 		for (ParameterEntity param : parameters) {
 			MessageParam mp = new MessageParam();
-			mp.setType(param.getType().toString());// TODO zrobić tak żeby nie
-													// wywoływać toString
+			mp.setType(param.getType());
 			mp.setValue(parameterBo.getValue(param));
+			mp.setUsername(param.getUser().getUsername());
+
 			map.put(param.getName(), mp);
 		}
 		return map;

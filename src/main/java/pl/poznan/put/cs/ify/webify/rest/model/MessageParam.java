@@ -15,6 +15,7 @@ public class MessageParam implements Serializable {
 	private static final long serialVersionUID = 558911541236012180L;
 	private String value;
 	private String type;
+	private String username;
 
 	public String getValue() {
 		return value;
@@ -30,5 +31,13 @@ public class MessageParam implements Serializable {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 }

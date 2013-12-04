@@ -18,4 +18,6 @@ public @interface ViewAccessible {
 
 	UserRole[] roles() default {};
 
+	String[] users() default {};
+
 }
