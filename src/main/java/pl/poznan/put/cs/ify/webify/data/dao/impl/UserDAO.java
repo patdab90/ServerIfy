@@ -32,7 +32,7 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public UserEntity findByUserName(final String username) {
 
 		final TypedQuery<UserEntity> query = getManager().createQuery(

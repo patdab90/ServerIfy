@@ -90,6 +90,7 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 	 * @param query
 	 * @return
 	 */
+	@Transactional
 	protected T getSingleResult(final TypedQuery<T> query) {
 		if (query == null || query.getResultList() == null
 				|| query.getResultList().isEmpty()) {

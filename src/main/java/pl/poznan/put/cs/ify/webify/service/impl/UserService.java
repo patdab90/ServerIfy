@@ -100,7 +100,6 @@ public class UserService implements IUserService {
 			return false;
 		}
 		if (StringUtils.md5(password).equals(user.getPassword())) {
-
 			return true;
 		}
 		// log.debug("LOGIN: nieprawidłowe hasło: powinno być: "
