@@ -21,10 +21,8 @@ public class GroupDAO extends BaseDAO<GroupEntity> implements IGroupDAO {
 	@Override
 	@Transactional(readOnly = true)
 	public GroupEntity findByName(String groupname) {
-		TypedQuery<GroupEntity> q = (TypedQuery<GroupEntity>) getManager()
-				.createNamedQuery(
-						"SELECT g FROM GroupEntity WHERE g.name LIKE :name",
-						cls);
+		TypedQuery<GroupEntity> q = getManager().createQuery(
+				"SELECT g FROM GroupEntity g WHERE g.name = :name", cls);
 		q.setParameter("name", groupname);
 		return getSingleResult(q);
 	}
@@ -33,7 +31,7 @@ public class GroupDAO extends BaseDAO<GroupEntity> implements IGroupDAO {
 	@Transactional(readOnly = true)
 	public List<GroupEntity> findByUser(UserEntity user) {
 		TypedQuery<GroupEntity> q = getManager()
-				.createNamedQuery(
+				.createQuery(
 						"SELECT g FROM GroupEntity g, GroupPermissionEntity gp, UserEntity u WHERE gp.user.id = :userId AND gp.group.id = :g.id",
 						cls);
 		q.setParameter("userId", user.getId());

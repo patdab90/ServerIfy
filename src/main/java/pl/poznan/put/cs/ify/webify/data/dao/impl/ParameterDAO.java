@@ -26,8 +26,8 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	public List<ParameterEntity> find(GroupEntity group, String recipe,
 			String device) {
 		TypedQuery<ParameterEntity> q = getManager()
-				.createNamedQuery(
-						"SELECT p FROM ParameterEntity "
+				.createQuery(
+						"SELECT p FROM ParameterEntity p "
 								+ "WHERE p.group.id = :groupId AND p.recipe = :recipe AND p.device = :device",
 						cls);
 		q.setParameter("groupId", group.getId());
@@ -40,8 +40,8 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	@Transactional(readOnly = true)
 	public ParameterEntity find(String name, GroupEntity group, String recipe,
 			String device) {
-		TypedQuery<ParameterEntity> q = getManager().createNamedQuery(
-				"SELECT p FROM ParameterEntity "
+		TypedQuery<ParameterEntity> q = getManager().createQuery(
+				"SELECT p FROM ParameterEntity p "
 						+ "WHERE p.name = :name AND p.group.id = :groupId "
 						+ "AND p.recipe = :recipe AND p.device = :device", cls);
 		q.setParameter("groupId", group.getId());
@@ -56,8 +56,8 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	public List<ParameterEntity> find(UserEntity user, GroupEntity group,
 			String recipe, String device) {
 		TypedQuery<ParameterEntity> q = getManager()
-				.createNamedQuery(
-						"SELECT p FROM ParameterEntity "
+				.createQuery(
+						"SELECT p FROM ParameterEntity p "
 								+ "WHERE p.user.id = :userId AND p.group.id = :groupId "
 								+ "AND p.recipe = :recipe AND p.device = :device",
 						cls);
@@ -73,8 +73,8 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	public ParameterEntity find(String name, UserEntity user,
 			GroupEntity group, String recipe, String device) {
 		TypedQuery<ParameterEntity> q = getManager()
-				.createNamedQuery(
-						"SELECT p FROM ParameterEntity WHERE "
+				.createQuery(
+						"SELECT p FROM ParameterEntity p "
 								+ "WHERE p.name = :name AND p.user.id = :userId AND p.group.id = :groupId "
 								+ "AND p.recipe = :recipe AND p.device = :device",
 						cls);

@@ -45,7 +45,7 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	@Override
 	@Transactional(readOnly = true)
 	public List<UserEntity> findMembersByGroup(GroupEntity group) {
-		TypedQuery<UserEntity> q = getManager().createNamedQuery(
+		TypedQuery<UserEntity> q = getManager().createQuery(
 				"SELECT u FROM UserEntity u, GroupPermissionEntity gp, GroupEntity g "
 						+ "WHERE gp.user.id = :u.id "
 						+ "AND gp.group.id = :groupId AND gp.x = true", cls);
@@ -56,7 +56,7 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	@Override
 	@Transactional(readOnly = true)
 	public List<UserEntity> findByGroup(GroupEntity group) {
-		TypedQuery<UserEntity> q = getManager().createNamedQuery(
+		TypedQuery<UserEntity> q = getManager().createQuery(
 				"SELECT u FROM UserEntity u, GroupPermissionEntity gp, GroupEntity g "
 						+ "WHERE gp.user.id = :u.id "
 						+ "AND gp.group.id = :groupId ", cls);

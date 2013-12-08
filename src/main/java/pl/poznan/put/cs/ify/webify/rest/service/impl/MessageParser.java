@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO;
@@ -33,6 +35,8 @@ public class MessageParser implements IMessageParser {
 	private IParameterService parameterService;
 	private String device;
 
+	protected Logger log = LoggerFactory.getLogger(getClass());
+
 	public MessageParser(IUserDAO userDAO, IGroupDAO groupDAO,
 			IParameterService parameterService) {
 		this.userDAO = userDAO;
@@ -41,6 +45,7 @@ public class MessageParser implements IMessageParser {
 	}
 
 	@Override
+	@Transactional
 	public void parse(Message message) {
 		this.message = message;
 		parse();
@@ -49,10 +54,17 @@ public class MessageParser implements IMessageParser {
 	@Override
 	@Transactional
 	public void parse() {
+		log.info("parse() ");
 		MessageUser mu = message.getUser();
+		log.info("parse() messageuser=" + mu);
 		device = mu.getDevice();
+		log.info("parse() device=" + device);
 		recipe = mu.getRecipe();
+		log.info("parse() recipe=" + recipe);
+		log.info("parse() username=" + mu.getUsername());
+		log.info("parse() userDAO=" + userDAO);
 		user = userDAO.findByUserName(mu.getUsername());
+		log.info("parse() groupname=" + mu.getGroup());
 		group = groupDAO.findByName(mu.getGroup());
 
 		MessageEvent me = message.getEvent();

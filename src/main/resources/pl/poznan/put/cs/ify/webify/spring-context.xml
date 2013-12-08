@@ -18,7 +18,10 @@
 					  pl.poznan.put.cs.ify.webify.gui
 					  pl.poznan.put.cs.ify.webify.gui.windows
 					  pl.poznan.put.cs.ify.webify.gui.session
-					  pl.poznan.put.cs.ify.webify.data.dao.impl" />
+					  pl.poznan.put.cs.ify.webify.data.dao.impl
+					  pl.poznan.put.cs.ify.webify.rest
+					  pl.poznan.put.cs.ify.webify.rest.service
+					  pl.poznan.put.cs.ify.webify.rest.service.impl" />
 
 	<bean
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />

@@ -35,7 +35,8 @@ public class MessageBuilder implements IMessageBuilder {
 	@Override
 	@Transactional
 	public Message build() {
-		message = new Message();
+		if (message == null)
+			message = new Message();
 		message.setUser(buildUser());
 		message.setEvent(buildEvent());
 		message.setValues(buildParameters());
@@ -87,18 +88,30 @@ public class MessageBuilder implements IMessageBuilder {
 	}
 
 	private MessageUser buildUser() {
+		MessageUser mu = message.getUser();
+		if (mu != null && mu.getGroup() != null && mu.getUsername() != null
+				&& mu.getDevice() != null && mu.getRecipe() != null) {
+			return mu;
+		}
 		valid(user, group);
 		return new MessageUser(user.getUsername(), group.getName(), device,
 				recipe);
 	}
 
 	private MessageEvent buildEvent() {
+		MessageEvent me = message.getEvent();
+		if (me != null) {
+			return me;
+		}
 		valid(target, tag);
 		return new MessageEvent(target.getUsername(), tag);
 	}
 
 	@Transactional
 	private Map<String, MessageParam> buildParameters() {
+		if (message.getValues() != null && !message.getValues().isEmpty()) {
+			return message.getValues();
+		}
 		if (parameters == null || parameters.isEmpty()) {
 			return null;
 		}

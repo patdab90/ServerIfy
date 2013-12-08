@@ -24,7 +24,7 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> find(UserEntity user) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
-				.createNamedQuery(
+				.createQuery(
 						"SELECT g FROM GroupPermissionEntity g WHERE g.user.id = :user",
 						cls);
 		q.setParameter("user", user.getId());
@@ -35,7 +35,7 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> find(GroupEntity group) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
-				.createNamedQuery(
+				.createQuery(
 						"SELECT g FROM GroupPermissionEntity g WHERE g.group.id = :group",
 						cls);
 		q.setParameter("group", group.getId());
@@ -46,7 +46,7 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> findByUsername(String username) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
-				.createNamedQuery(
+				.createQuery(
 						"SELECT g FROM GroupPermissionEntity g WHERE g.user.username = :username",
 						cls);
 		q.setParameter("username", username);
@@ -57,7 +57,7 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> findByGroupName(String groupName) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
-				.createNamedQuery(
+				.createQuery(
 						"SELECT g FROM GroupPermissionEntity g WHERE g.group.name = :name",
 						cls);
 		q.setParameter("name", groupName);
@@ -74,7 +74,7 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	@Transactional(readOnly = true)
 	public GroupPermissionEntity find(long userId, long groupId) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
-				.createNamedQuery(
+				.createQuery(
 						"SELECT gp FROM GroupPermissionEntity gp WHERE gp.user.id = :user AND gp.user.id = :group",
 						cls);
 		q.setParameter("user", userId);
