@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
@@ -19,7 +18,6 @@ public class GroupDAO extends BaseDAO<GroupEntity> implements IGroupDAO {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public GroupEntity findByName(String groupname) {
 		TypedQuery<GroupEntity> q = getManager().createQuery(
 				"SELECT g FROM GroupEntity g WHERE g.name = :name", cls);
@@ -28,7 +26,6 @@ public class GroupDAO extends BaseDAO<GroupEntity> implements IGroupDAO {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<GroupEntity> findByUser(UserEntity user) {
 		TypedQuery<GroupEntity> q = getManager()
 				.createQuery(

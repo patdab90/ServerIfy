@@ -33,8 +33,8 @@
 		p:basename="messages" />
 
 
-	<bean
-		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	<!-- <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" 
+		/> -->
 
 	<bean name="mysqlDataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -74,8 +74,7 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
-	<tx:annotation-driven mode="aspectj"
-		transaction-manager="transactionManager" />
+	<tx:annotation-driven transaction-manager="transactionManager" />
 	<aop:aspectj-autoproxy />
 
 

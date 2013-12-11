@@ -2,7 +2,6 @@ package pl.poznan.put.cs.ify.webify.data.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
@@ -22,7 +21,7 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public List<ParameterEntity> find(GroupEntity group, String recipe,
 			String device) {
 		TypedQuery<ParameterEntity> q = getManager()
@@ -37,7 +36,6 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public ParameterEntity find(String name, GroupEntity group, String recipe,
 			String device) {
 		TypedQuery<ParameterEntity> q = getManager().createQuery(
@@ -52,7 +50,6 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<ParameterEntity> find(UserEntity user, GroupEntity group,
 			String recipe, String device) {
 		TypedQuery<ParameterEntity> q = getManager()
@@ -69,7 +66,6 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public ParameterEntity find(String name, UserEntity user,
 			GroupEntity group, String recipe, String device) {
 		TypedQuery<ParameterEntity> q = getManager()

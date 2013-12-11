@@ -34,7 +34,6 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 	 * @param cls
 	 * @return
 	 */
-	@Transactional(readOnly = true)
 	public List<T> findAll(final Class<T> cls) {
 		final TypedQuery<T> query = this.getManager().createQuery(
 				"SELECT u FROM " + cls.getSimpleName() + " u ", cls);
@@ -53,7 +52,6 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 	 * @return
 	 */
 	@Override
-	@Transactional(readOnly = true)
 	public T findById(final Long id, final Class<T> cls) {
 		if (id == null) {
 			return null;
@@ -68,7 +66,7 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 	 * 
 	 */
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public void flush(final T entity) {
 		if (this.manager == null) {
 			throw new IllegalStateException(entity.getClass().getSimpleName()
@@ -90,7 +88,6 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 	 * @param query
 	 * @return
 	 */
-	@Transactional
 	protected T getSingleResult(final TypedQuery<T> query) {
 		if (query == null || query.getResultList() == null
 				|| query.getResultList().isEmpty()) {
@@ -100,7 +97,7 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public T merge(final T entity) {
 		if (this.getManager() == null) {
 			throw new IllegalStateException(entity.getClass().getSimpleName()

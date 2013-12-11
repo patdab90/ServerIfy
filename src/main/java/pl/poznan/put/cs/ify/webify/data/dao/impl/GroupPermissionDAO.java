@@ -21,7 +21,7 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public List<GroupPermissionEntity> find(UserEntity user) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
 				.createQuery(
@@ -32,7 +32,6 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> find(GroupEntity group) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
 				.createQuery(
@@ -43,7 +42,6 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> findByUsername(String username) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
 				.createQuery(
@@ -54,7 +52,6 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<GroupPermissionEntity> findByGroupName(String groupName) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
 				.createQuery(
@@ -65,13 +62,11 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public GroupPermissionEntity find(UserEntity user, GroupEntity group) {
 		return find(user.getId(), group.getId());
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public GroupPermissionEntity find(long userId, long groupId) {
 		TypedQuery<GroupPermissionEntity> q = getManager()
 				.createQuery(

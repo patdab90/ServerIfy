@@ -26,7 +26,6 @@ public class UserService implements IUserService {
 	 * java.lang.Object)
 	 */
 	@Override
-	@Transactional
 	public boolean canAccessView(final Long id, final Object view) {
 		return this.canAccessView(userDAO.findById(id, UserEntity.class), view);
 	}
@@ -39,7 +38,6 @@ public class UserService implements IUserService {
 	 * java.lang.Object)
 	 */
 	@Override
-	@Transactional
 	public boolean canAccessView(final String username, final Object view) {
 		return this.canAccessView(userDAO.findByUserName(username), view);
 	}
@@ -52,7 +50,6 @@ public class UserService implements IUserService {
 	 * .ify.webify.data.entity. user.UserEntity, java.lang.Object)
 	 */
 	@Override
-	@Transactional
 	public boolean canAccessView(final UserEntity user, final Object view) {
 
 		ViewAccessible ann = view.getClass()
@@ -81,8 +78,7 @@ public class UserService implements IUserService {
 	@Override
 	@Transactional
 	public UserEntity getByUsername(final String username) {
-		final UserEntity result = userDAO.findByUserName(username);
-		return result;
+		return userDAO.findByUserName(username);
 	}
 
 	/*
@@ -92,7 +88,6 @@ public class UserService implements IUserService {
 	 * java.lang.String)
 	 */
 	@Override
-	@Transactional
 	public boolean login(final String username, final String password) {
 		final UserEntity user = userDAO.findByUserName(username);
 		if (user == null) {

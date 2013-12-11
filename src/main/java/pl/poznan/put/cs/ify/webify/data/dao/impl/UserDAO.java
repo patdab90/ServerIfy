@@ -19,7 +19,6 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public UserEntity findByNames(final String fName, final String lName) {
 
 		final TypedQuery<UserEntity> query = getManager()
@@ -32,7 +31,6 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	}
 
 	@Override
-	@Transactional
 	public UserEntity findByUserName(final String username) {
 
 		final TypedQuery<UserEntity> query = getManager().createQuery(
@@ -43,7 +41,6 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<UserEntity> findMembersByGroup(GroupEntity group) {
 		TypedQuery<UserEntity> q = getManager().createQuery(
 				"SELECT u FROM UserEntity u, GroupPermissionEntity gp, GroupEntity g "
@@ -54,7 +51,6 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
 	public List<UserEntity> findByGroup(GroupEntity group) {
 		TypedQuery<UserEntity> q = getManager().createQuery(
 				"SELECT u FROM UserEntity u, GroupPermissionEntity gp, GroupEntity g "

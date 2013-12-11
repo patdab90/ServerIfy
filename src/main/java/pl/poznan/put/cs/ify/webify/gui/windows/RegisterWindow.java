@@ -11,6 +11,8 @@ import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.data.enums.user.UserRole;
 import pl.poznan.put.cs.ify.webify.service.IUserService;
 
+import com.vaadin.data.Validator;
+import com.vaadin.data.validator.RegexpValidator;
 import com.vaadin.event.FieldEvents.TextChangeEvent;
 import com.vaadin.event.FieldEvents.TextChangeListener;
 import com.vaadin.ui.Button;
@@ -28,15 +30,15 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private final Button submit;
+	private Button submit;
 
 	// private final TextField peselField;
-	private final TextField firstName;
-	private final TextField lastName;
-	private final TextField password;
-	private final TextField address;
-	private final TextField zipcode;
-	private final TextField city;
+	private TextField firstName;
+	private TextField lastName;
+	private TextField password;
+	private TextField address;
+	private TextField zipcode;
+	private TextField city;
 
 	// @Autowired
 	// private IUserRegistrationProcess registrationProcess;
@@ -49,35 +51,34 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 
 	public RegisterWindow() {
 		super(App.APPLICATION_TITLE);
-
 		final Form fl = new Form();
 		final TextField uName = new TextField("Nazwa użytkownika");
 		uName.setImmediate(true);
 		uName.setValidationVisible(true);
 		uName.setRequired(true);
-		// uName.addValidator(new Validator() {
-		// /**
-		// * GUID
-		// */
-		// private static final long serialVersionUID = 1L;
-		//
-		// @Override
-		// public void validate(Object value) throws InvalidValueException {
-		// if (!isValid(value))
-		// throw new InvalidValueException(
-		// "Nazwa użytkownika musi być unikalna");
-		//
-		// }
-		//
-		// @Override
-		// public boolean isValid(Object value) {
-		// String name = (String) value;
-		// UserEntity obj = userBo.getByUsername(name);
-		// if (obj == null)
-		// return true;
-		// return false;
-		// }
-		// });
+		uName.addValidator(new Validator() {
+			/**
+			 * GUID
+			 */
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			public void validate(Object value) throws InvalidValueException {
+				if (!isValid(value))
+					throw new InvalidValueException(
+							"Nazwa użytkownika musi być unikalna");
+
+			}
+
+			@Override
+			public boolean isValid(Object value) {
+				String name = (String) value;
+				UserEntity obj = userBo.getByUsername(name);
+				if (obj == null)
+					return true;
+				return false;
+			}
+		});
 
 		password = new TextField("Hasło");
 		password.setRequired(true);
@@ -86,28 +87,28 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 		firstName = new TextField("Imię");
 		firstName.setRequired(true);
 		firstName.setRequiredError("Imię nie może być puste");
-		// firstName
-		// .addValidator(new RegexpValidator(
-		// "^[A-ZĄĘŚĆŃŹŻŁÓ][a-ząęśćńźżłó]+$",
-		// "Imię nie spełnia wymagań Ustawy o zmianie imion i nazwisk (Dz.U. z 2005 Nr 233, poz. 1992)"));
+		firstName
+				.addValidator(new RegexpValidator(
+						"^[A-ZĄĘŚĆŃŹŻŁÓ][a-ząęśćńźżłó]+$",
+						"Imię nie spełnia wymagań Ustawy o zmianie imion i nazwisk (Dz.U. z 2005 Nr 233, poz. 1992)"));
 		firstName.setImmediate(true);
 		firstName.setValidationVisible(true);
 		lastName = new TextField("Nazwisko");
 		lastName.setImmediate(true);
 		lastName.setRequired(true);
 		lastName.setRequiredError("Nazwisko nie może być puste");
-		// lastName.addValidator(new RegexpValidator(
-		// "^[A-ZĄĘŚĆŃŹŻŁÓ][a-ząęśćńźżłó]+$",
-		// "Nazwisko nie spełnia wymagań Ustawy o zmianie imion i nazwisk (Dz.U. z 2005 Nr 233, poz. 1992)"));
+		lastName.addValidator(new RegexpValidator(
+				"^[A-ZĄĘŚĆŃŹŻŁÓ][a-ząęśćńźżłó]+$",
+				"Nazwisko nie spełnia wymagań Ustawy o zmianie imion i nazwisk (Dz.U. z 2005 Nr 233, poz. 1992)"));
 		address = new TextField("Adres");
 		address.setRequired(true);
 		address.setRequiredError("Adres nie może być pusty");
 		zipcode = new TextField("Kod pocztowy");
 		zipcode.setRequired(true);
 		zipcode.setRequiredError("Kod pocztowy nie może być pusty");
-		// zipcode.addValidator(new RegexpValidator(
-		// "[0-9]{2}-[0-9]{3}",
-		// "Nieprawidłowy format kodu pocztowego. Kod musi być sformatowany zgodnie z Rozporządzeniem Ministerstwa Łączności nr 89 z dnia 17.11.1872"));
+		zipcode.addValidator(new RegexpValidator(
+				"[0-9]{2}-[0-9]{3}",
+				"Nieprawidłowy format kodu pocztowego. Kod musi być sformatowany zgodnie z Rozporządzeniem Ministerstwa Łączności nr 89 z dnia 17.11.1872"));
 		city = new TextField("Miasto");
 		city.setRequired(true);
 		city.setRequiredError("Miasto nie może być puste");
@@ -161,6 +162,10 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 
 	@Override
 	public void textChange(TextChangeEvent event) {
+
+	}
+
+	public void init() {
 
 	}
 
