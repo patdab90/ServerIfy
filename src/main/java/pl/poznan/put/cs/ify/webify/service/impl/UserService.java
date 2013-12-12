@@ -88,6 +88,7 @@ public class UserService implements IUserService {
 	 * java.lang.String)
 	 */
 	@Override
+	@Transactional
 	public boolean login(final String username, final String password) {
 		final UserEntity user = userDAO.findByUserName(username);
 		if (user == null) {
