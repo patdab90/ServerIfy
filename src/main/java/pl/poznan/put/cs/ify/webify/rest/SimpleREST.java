@@ -5,7 +5,9 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Request;
 
+import org.jboss.resteasy.spi.HttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -28,18 +30,20 @@ public class SimpleREST {
 	@Produces(value = "application/json")
 	public Message post(Message message) {
 		Message m = new Message();
-		return m;
+		return message;
 	}
 
 	@GET
 	@Path(value = "/get")
 	@Produces(value = "application/json")
-	public MessageParam get() {
+	public Request get(Request r) {
+
 		UserEntity user = new UserEntity();
 		user.setUsername("patryk");
 		GroupEntity group = new GroupEntity();
 		group.setName("grupa1");
-		return new MessageParam();// messageService.getBuilder().group(group).user(user)
+		return r;// new MessageParam();//
+					// messageService.getBuilder().group(group).user(user)
 		// .event(user, 10).params(null).build();
 	}
 }

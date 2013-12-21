@@ -56,15 +56,9 @@ public class MessageParser implements IMessageParser {
 	public void parse() {
 		log.info("parse() ");
 		MessageUser mu = message.getUser();
-		log.info("parse() messageuser=" + mu);
 		device = mu.getDevice();
-		log.info("parse() device=" + device);
 		recipe = mu.getRecipe();
-		log.info("parse() recipe=" + recipe);
-		log.info("parse() username=" + mu.getUsername());
-		log.info("parse() userDAO=" + userDAO);
 		user = userDAO.findByUserName(mu.getUsername());
-		log.info("parse() groupname=" + mu.getGroup());
 		group = groupDAO.findByName(mu.getGroup());
 
 		MessageEvent me = message.getEvent();

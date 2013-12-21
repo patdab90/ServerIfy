@@ -26,4 +26,35 @@ public class StringUtils {
 		}
 		return md5;
 	}
+
+	public static String ALGO = "SHA1";
+
+	private static String hash(String input) throws NoSuchAlgorithmException {
+		MessageDigest mDigest = MessageDigest.getInstance(ALGO);
+		byte[] result = mDigest.digest(input.getBytes());
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < result.length; i++) {
+			sb.append(Integer.toString((result[i] & 0xff) + 0x100, 16)
+					.substring(1));
+		}
+		return sb.toString();
+	}
+
+	private static String getHash(String user, String pass) {
+		try {
+			return hash(user + pass);
+		} catch (NoSuchAlgorithmException e) {
+			throw new RuntimeException(ALGO + " not supported");
+		}
+	}
+
+	/**
+	 * 
+	 * @param user
+	 * @param pass
+	 * @return
+	 */
+	public static String sh1(String user, String pass) {
+		return getHash(user, pass);
+	}
 }

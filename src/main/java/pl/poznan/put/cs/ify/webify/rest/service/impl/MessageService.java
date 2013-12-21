@@ -96,8 +96,9 @@ public class MessageService implements IMessageService {
 			// TODO
 		} else if (tag == -3) {
 			// TODO
-		}
-		if (tag > 0) {
+		} else if (tag == MessageEvent.POOL_EVENT) {
+
+		} else if (tag > 0) {
 			// TODO
 		}
 		return null;
@@ -107,7 +108,7 @@ public class MessageService implements IMessageService {
 			GroupEntity group, String recipe, String device) {
 		List<ParameterEntity> params = null;
 		if (target == null) {
-			params = parameterDAO.find(group, recipe, device);
+			params = parameterDAO.find(group, recipe);
 		} else {
 			params = parameterDAO.find(target, group, recipe, device);
 		}

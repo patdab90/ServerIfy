@@ -50,7 +50,6 @@ public class MainWindow extends BaseWindow {
 	}
 
 	protected void loginView() {
-		registerWindow.init();
 		loginComponent.setMain(this);
 		loginComponent.setLogin(loginWindow);
 		loginComponent.setRegister(registerWindow);

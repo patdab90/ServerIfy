@@ -123,7 +123,9 @@ public class UserEntity extends BaseEntity {
 	 *            the password to set
 	 */
 	public void setPassword(String password) {
-		this.password = StringUtils.md5(password);
+		if (username != null || !"".equals(username)) {
+			this.password = StringUtils.sh1(username, password);
+		}
 	}
 
 	/**

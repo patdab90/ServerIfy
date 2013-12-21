@@ -126,18 +126,18 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 			public void buttonClick(ClickEvent event) {
 				fl.commit();
 
-				UserEntity patient = new UserEntity();
+				UserEntity user = new UserEntity();
+				String username = fl.getField("uName").getValue().toString();
+				String pass = fl.getField("password").getValue().toString();
+				log.debug("password=" + pass);
+				user.setLastName(fl.getField("lastName").getValue().toString());
+				user.setFirstName(fl.getField("firstName").getValue()
+						.toString());
+				user.setUsername(username);
+				user.setPassword(pass);
+				user.addRole(UserRole.USER);
 
-				patient.setLastName(fl.getField("lastName").getValue()
-						.toString());
-				patient.setFirstName(fl.getField("firstName").getValue()
-						.toString());
-				patient.setUsername(fl.getField("uName").getValue().toString());
-				patient.setPassword(fl.getField("password").getValue()
-						.toString());
-				patient.addRole(UserRole.USER);
-
-				userDAO.persist(patient);
+				userDAO.persist(user);
 				getApplication().getMainWindow().showNotification(
 						"Użytkownik zarejestrowany: "
 								+ fl.getField("uName").getValue().toString());
@@ -162,10 +162,6 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 
 	@Override
 	public void textChange(TextChangeEvent event) {
-
-	}
-
-	public void init() {
 
 	}
 

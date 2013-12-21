@@ -90,4 +90,10 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 
 	}
 
+	@Override
+	public List<ParameterEntity> find(GroupEntity group, String recipe) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

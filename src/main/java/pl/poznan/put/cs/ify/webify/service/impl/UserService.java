@@ -1,5 +1,8 @@
 package pl.poznan.put.cs.ify.webify.service.impl;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -95,13 +98,9 @@ public class UserService implements IUserService {
 			log.info("LOGIN: brak uzytkownika: " + username);
 			return false;
 		}
-		if (StringUtils.md5(password).equals(user.getPassword())) {
+		if (StringUtils.sh1(username, password).equals(user.getPassword())) {
 			return true;
 		}
-		// log.debug("LOGIN: nieprawidłowe hasło: powinno być: "
-		// + user.getPassword() + " : było: " + password + ":"
-		// + StringUtils.md5(password));
 		return false;
 	}
-
 }
