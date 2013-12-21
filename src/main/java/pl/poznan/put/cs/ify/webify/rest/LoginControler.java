@@ -4,7 +4,9 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +23,19 @@ public class LoginControler {
 	private IUserService userService;
 
 	@POST
-	@Consumes(value = "application/json")
-	@Produces(value = "application/json")
+	@Path("/l")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	public boolean login(LoginMessage message) {
 		return userService.login(message.getUser(), message.getPassword());
+	}
+
+	@POST
+	@Path("/{user}/{password}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public boolean login2(@PathParam("user") String user,
+			@PathParam("password") String password) {
+		return userService.login(user, password);
 	}
 
 	@GET

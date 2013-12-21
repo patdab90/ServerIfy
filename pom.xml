@@ -286,16 +286,16 @@
 		</dependency>
 
 		<!-- resteasy -->
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>jaxrs-api</artifactId>
-			<version>2.3.2.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-jaxrs</artifactId>
-			<version>2.3.2.Final</version>
-		</dependency>
+	<!-- <dependency> -->
+	<!-- <groupId>org.jboss.resteasy</groupId> -->
+	<!-- <artifactId>jaxrs-api</artifactId> -->
+	<!-- <version>2.3.2.Final</version> -->
+	<!-- </dependency> -->
+	<!-- <dependency> -->
+	<!-- <groupId>org.jboss.resteasy</groupId> -->
+	<!-- <artifactId>resteasy-jaxrs</artifactId> -->
+	<!-- <version>2.3.2.Final</version> -->
+	<!-- </dependency> -->
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
 			<artifactId>resteasy-jackson-provider</artifactId>
@@ -306,11 +306,11 @@
 			<artifactId>resteasy-spring</artifactId>
 			<version>2.3.2.Final</version>
 		</dependency>
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-jaxb-provider</artifactId>
-			<version>2.3.2.Final</version>
-		</dependency>
+	<!-- <dependency> -->
+	<!-- <groupId>org.jboss.resteasy</groupId> -->
+	<!-- <artifactId>resteasy-jaxb-provider</artifactId> -->
+	<!-- <version>2.3.2.Final</version> -->
+	<!-- </dependency> -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
