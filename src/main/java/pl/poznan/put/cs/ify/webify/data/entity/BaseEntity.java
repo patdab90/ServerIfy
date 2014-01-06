@@ -1,7 +1,9 @@
 package pl.poznan.put.cs.ify.webify.data.entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,6 +27,24 @@ public class BaseEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
+	@Column(name = "sys_created_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
+	private Timestamp createdDate;
+
+	/**
+	 * @return the createdDate
+	 */
+	public Timestamp getCreatedDate() {
+		return this.createdDate;
+	}
+
+	/**
+	 * @param createdDate
+	 *            the createdDate to set
+	 */
+	public void setCreatedDate(final Timestamp createdDate) {
+		this.createdDate = createdDate;
+	}
 
 	/**
 	 * @return the id

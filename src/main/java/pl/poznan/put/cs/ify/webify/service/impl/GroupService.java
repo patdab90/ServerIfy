@@ -1,10 +1,13 @@
 package pl.poznan.put.cs.ify.webify.service.impl;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO;
@@ -16,9 +19,9 @@ import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.data.enums.GroupPermission;
 import pl.poznan.put.cs.ify.webify.service.IGroupService;
 
-@Component
+@Service
 public class GroupService implements IGroupService {
-
+	protected Logger log = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private IGroupPermissionDAO groupPermissionDAO;
 
@@ -78,13 +81,14 @@ public class GroupService implements IGroupService {
 		return hasPermition(user, group, GroupPermission.D);
 	}
 
-	@Override
 	@Transactional(readOnly = true)
+	@Override
 	public boolean canList(final GroupEntity group, final UserEntity user) {
 		return hasPermition(user, group, GroupPermission.R);
 	}
 
 	@Transactional
+	@Override
 	public GroupEntity createGroupe(final UserEntity creator, final String name) {
 		if (creator == null) {
 			throw new NullPointerException();
@@ -101,6 +105,29 @@ public class GroupService implements IGroupService {
 		group.setOwner(creator);
 		groupDAO.persist(group);
 
+		log.debug("createGroupe, group id=" + group.getId());
+
+		GroupPermissionEntity gp = createPermission(creator, group);
+		if (gp.getGroup() == null) {
+			log.debug("createGroupe, group is null");
+			gp.setGroup(group);
+			gp = groupPermissionDAO.merge(gp);
+			if (gp.getGroup() == null)
+				log.error("createGroupe, group is still null");
+			if (gp.getUser() == null) {
+				log.debug("createGroupe, user is null");
+				gp.setUser(creator);
+				groupPermissionDAO.merge(gp);
+				if (gp.getUser() == null)
+					log.error("createGroupe, user is still null");
+			}
+		}
+		log.error("createGroupe, group=" + gp);
+		return group;
+	}
+
+	public GroupPermissionEntity createPermission(final UserEntity creator,
+			final GroupEntity group) {
 		final GroupPermissionEntity groupPermissionEntity = new GroupPermissionEntity();
 		groupPermissionEntity.setUser(creator);
 		groupPermissionEntity.setGroup(group);
@@ -109,15 +136,21 @@ public class GroupService implements IGroupService {
 		groupPermissionEntity.setR(true);
 		groupPermissionEntity.setX(true);
 		groupPermissionDAO.persist(groupPermissionEntity);
-
-		group.addUser(groupPermissionEntity);
-		return groupDAO.merge(group);
+		return groupPermissionEntity;
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public List<GroupEntity> getGroups(final UserEntity user) {
-		return groupDAO.findByUser(user);
+		List<GroupPermissionEntity> gpl = groupPermissionDAO.find(user);
+		if (gpl == null)
+			return null;
+		List<GroupEntity> res = new ArrayList<GroupEntity>(gpl.size());
+		for (GroupPermissionEntity gp : gpl) {
+			res.add(gp.getGroup());
+		}
+		return res;
+		// return groupDAO.findByUser(user);
 	}
 
 	@Override
@@ -239,8 +272,15 @@ public class GroupService implements IGroupService {
 	}
 
 	@Override
+	@Deprecated
 	public List<GroupEntity> getGroupsByUsername(String username) {
-		
+
 		return null;
+	}
+
+	@Transactional
+	@Override
+	public GroupEntity findByName(String name) {
+		return groupDAO.findByName(name);
 	}
 }

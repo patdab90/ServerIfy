@@ -25,16 +25,16 @@ public class GroupEntity extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -5356825281601180146L;
 
-	@Column(nullable = false, length = 30, unique = true)
+	@Column(nullable = false, unique = true)
 	private String name;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "group")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "group")
 	private List<GroupPermissionEntity> users = new LinkedList<GroupPermissionEntity>();
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumns(value = {
-			@JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false),
-			@JoinColumn(name = "username", referencedColumnName = "username", insertable = false, updatable = false) })
+			@JoinColumn(name = "user_id", referencedColumnName = "id"),
+			@JoinColumn(name = "username", referencedColumnName = "username") })
 	private UserEntity owner;
 
 	public UserEntity getOwner() {
@@ -46,6 +46,7 @@ public class GroupEntity extends BaseEntity {
 	}
 
 	public List<GroupPermissionEntity> getUsers() {
+
 		return users;
 	}
 

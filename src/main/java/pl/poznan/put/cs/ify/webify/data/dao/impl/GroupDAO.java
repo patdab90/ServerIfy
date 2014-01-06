@@ -26,11 +26,13 @@ public class GroupDAO extends BaseDAO<GroupEntity> implements IGroupDAO {
 	}
 
 	@Override
+	@Deprecated
 	public List<GroupEntity> findByUser(UserEntity user) {
 		TypedQuery<GroupEntity> q = getManager()
 				.createQuery(
-						"SELECT g FROM GroupEntity g, GroupPermissionEntity gp, UserEntity u WHERE gp.user.id = :userId AND gp.group.id = :g.id",
-						cls);
+						"SELECT g FROM GroupEntity AS g JOIN GroupPermissionEntity AS gp JOIN UserEntity AS u "
+								+ "WHERE gp.user.id = :userId "
+								+ "AND gp.group.id = :g.id", cls);
 		q.setParameter("userId", user.getId());
 		return q.getResultList();
 	}

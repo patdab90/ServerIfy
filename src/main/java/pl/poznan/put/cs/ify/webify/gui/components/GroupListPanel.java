@@ -2,13 +2,12 @@ package pl.poznan.put.cs.ify.webify.gui.components;
 
 import java.util.List;
 
-import javax.persistence.Transient;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
@@ -19,10 +18,11 @@ import pl.poznan.put.cs.ify.webify.service.IGroupService;
 import com.vaadin.data.Item;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.Property.ValueChangeListener;
+import com.vaadin.ui.Button;
 import com.vaadin.ui.ListSelect;
 import com.vaadin.ui.Panel;
 
-@Component
+@Component(value = "groupListPanel")
 @Scope(value = "session")
 public class GroupListPanel extends Panel {
 
@@ -47,21 +47,22 @@ public class GroupListPanel extends Panel {
 		super();
 	}
 
+	// @Transactional
 	public void load(UserSession user) {
 		this.user = user;
 		select = new ListSelect();
 		UserEntity userEntity = userDAO.findByUserName(user.getUserName());
 		List<GroupEntity> groups = groupService.getGroups(userEntity);
-		for (GroupEntity group : groups) {
-			Item item = select.addItem(group.getName());
-			log.debug("init(): item=" + item);
-		}
+		if (groups != null)
+			for (GroupEntity group : groups) {
+				Item item = select.addItem(group.getName());
+				log.debug("init(): item=" + item);
+			}
 		select.setRows(groups.size());
 		select.setNullSelectionAllowed(false);
 		select.setReadOnly(true);
 		select.setImmediate(true);
 		select.addListener(new ValueChangeListener() {
-
 			/**
 			 * 
 			 */
@@ -73,5 +74,15 @@ public class GroupListPanel extends Panel {
 				log.debug(event.getProperty().getValue().toString());
 			}
 		});
+		Button addNewGroupButton = new Button("Dodaj nową grupę", this,
+				"addNewGroupButtonClick");
+		// addComponent();
+
+		addComponent(select);
 	}
+
+	public void addNewGroupButtonClick(Button.ClickEvent event) {
+		
+	}
+
 }

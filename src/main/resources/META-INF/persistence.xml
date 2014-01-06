@@ -12,6 +12,7 @@
 
 		<!-- receipe -->
 		<class>pl.poznan.put.cs.ify.webify.data.entity.receip.ParameterEntity</class>
+		<class>pl.poznan.put.cs.ify.webify.data.entity.receip.EventQueueEntity</class>
 
 		<!-- user -->
 		<class>pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity</class>

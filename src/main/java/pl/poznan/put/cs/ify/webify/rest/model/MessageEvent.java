@@ -16,7 +16,7 @@ public class MessageEvent implements Serializable {
 	private String target;
 	private int tag;
 
-	public static int POOL_EVENT = -4;
+	public static int PULL_EVENT = -4;
 	public static int GET_DATA_EVENT = -1;
 	public static int PUT_DATA_EVENT = 0;
 

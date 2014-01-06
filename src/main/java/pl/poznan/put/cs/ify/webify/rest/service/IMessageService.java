@@ -12,4 +12,8 @@ public interface IMessageService {
 	IMessageParser getParser(Message message);
 
 	IMessageBuilder getBuilder(Message message);
+
+	void pushMessage(Message message);
+
+	Message pullMessage(Message message);
 }

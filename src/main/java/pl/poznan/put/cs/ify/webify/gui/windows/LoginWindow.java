@@ -1,5 +1,7 @@
 package pl.poznan.put.cs.ify.webify.gui.windows;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -20,6 +22,11 @@ public class LoginWindow extends BaseWindow implements LoginListener {
 
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * 
+	 */
+	protected Logger log = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private IUserService userBo;
 
@@ -28,13 +35,17 @@ public class LoginWindow extends BaseWindow implements LoginListener {
 
 	@Override
 	public void onLogin(LoginEvent event) {
+
 		String username = event.getLoginParameter("username");
 		String password = event.getLoginParameter("password");
+		log.debug("onLogin() username=" + username + " password=" + password);
 		if (userBo == null) {
 			userBo = new UserService();
 		}
 
 		if (userBo.login(username, password)) {
+			log.debug("onLogin() LOGED username=" + username + " password="
+					+ password);
 			getApplication().getMainWindow().showNotification(
 					"Zalogowano jako: " + username);
 			session.setLogged(true);
@@ -42,6 +53,8 @@ public class LoginWindow extends BaseWindow implements LoginListener {
 			session.setUserPassword(password);
 			((MainWindow) getApplication().getMainWindow()).refresh();
 		} else {
+			log.debug("onLogin() UNLOGED username=" + username + " password="
+					+ password);
 			getApplication().getMainWindow().showNotification(
 					"Nieprawidłowe dane logowania");
 		}

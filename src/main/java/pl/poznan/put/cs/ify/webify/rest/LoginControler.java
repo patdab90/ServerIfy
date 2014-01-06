@@ -37,21 +37,7 @@ public class LoginControler {
 			@PathParam("password") String password) {
 		return userService.login(user, password);
 	}
+	
 
-	@GET
-	@Path(value = "/test_get")
-	@Produces(value = "application/json")
-	public Response get() {
-		return Response.ok(true).build();
-	}
-
-	@GET
-	@Path(value = "/test_get2")
-	@Produces(value = "application/json")
-	public LoginMessage get2() {
-		LoginMessage l = new LoginMessage();
-		l.setUser("test");
-		l.setPassword("test");
-		return l;
-	}
+	
 }

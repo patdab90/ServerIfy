@@ -1,0 +1,1192 @@
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:3:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:29:	A Classname should have a minimum of five characters
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:34:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:48:	Found 'DU'-anomaly for variable 'helper' (lines '48'-'58').
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:48:	Local variable 'helper' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/App.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:14:	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:16:	Use explicit scoping instead of the default package private level
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:17:	Avoid excessively long variable names like applicationContext
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:17:	Use explicit scoping instead of the default package private level
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:22:	Singleton is not thread safe
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:23:	Local variable 'requestAttributes' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:25:	Local variable 'request' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:25:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:26:	Local variable 'session' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:26:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:28:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:32:	Local variable 'beanFactory' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/Inject.java:34:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/SpringContextHelper.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/SpringContextHelper.java:15:	Parameter 'application' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/SpringContextHelper.java:16:	Local variable 'servletContext' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/IBaseDAO.java:16:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/IBaseDAO.java:20:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:18:	Abstract classes should be named AbstractXXX
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:20:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:23:	Parameter 'cls2' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:28:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:41:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:45:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:55:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:57:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:72:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:93:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:94:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:96:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:103:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:107:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:116:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:119:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:119:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:119:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:127:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:142:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/BaseDAO.java:142:	Parameter 'id' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/EventQueueDAO.java:22:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/EventQueueDAO.java:23:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/EventQueueDAO.java:23:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/EventQueueDAO.java:23:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/EventQueueDAO.java:28:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:21:	Parameter 'groupname' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:22:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:22:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:22:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:24:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:30:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:31:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:31:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:31:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAO.java:37:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:25:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:26:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:26:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:26:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:30:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:31:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:35:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:36:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:36:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:36:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:40:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:41:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:45:	Parameter 'username' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:46:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:46:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:46:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:55:	Parameter 'groupName' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:56:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:56:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:56:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:60:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:65:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:65:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:70:	Parameter 'groupId' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:70:	Parameter 'userId' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:71:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:71:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:71:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupPermissionDAO.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:25:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:25:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:26:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:27:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:27:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:27:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:29:	The String literal "SELECT p FROM ParameterEntity p " appears 4 times in this file; the first occurrence is on line 29
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:32:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:32:	The String literal "groupId" appears 4 times in this file; the first occurrence is on line 32
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:33:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:33:	The String literal "recipe" appears 4 times in this file; the first occurrence is on line 33
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:34:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:34:	The String literal "device" appears 4 times in this file; the first occurrence is on line 34
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:35:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:39:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:39:	Parameter 'name' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:39:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:40:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:41:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:41:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:41:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:45:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:46:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:47:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:53:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:53:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:54:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:54:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:55:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:55:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:55:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:63:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:69:	Parameter 'name' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:69:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:70:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:70:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:70:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:71:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:71:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:71:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:81:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:86:	Parameter 'param' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:89:	Comment is too large: Line too long
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:94:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/ParameterDAO.java:94:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:24:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:28:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:29:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:37:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:45:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:46:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:46:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:46:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:55:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:56:	Avoid variables with short names like q
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:56:	Local variable 'q' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:56:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:60:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/dao/impl/UserDAO.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:25:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:29:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:60:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:60:	Parameter 'id' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:66:	Avoid using final local variables, turn them into fields
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:67:	Found 'DD'-anomaly for variable 'result' (lines '67'-'68').
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:73:	Parameter 'obj' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:74:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:75:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:76:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:77:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:78:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:79:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:80:	Local variable 'other' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:82:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:83:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:84:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/BaseEntity.java:85:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupEntity.java:44:	Parameter 'owner' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupEntity.java:53:	Parameter 'users' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupEntity.java:57:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupEntity.java:61:	Parameter 'users' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupEntity.java:69:	Parameter 'name' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:12:	Avoid unused imports such as 'org.aspectj.org.eclipse.jdt.internal.compiler.ast.FalseLiteral'
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:20:	The String literal "name" appears 5 times in this file; the first occurrence is on line 20
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:20:	The String literal "username" appears 5 times in this file; the first occurrence is on line 20
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:31:	Avoid using redundant field initializer for 'd'
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:31:	Avoid variables with short names like d
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:34:	Avoid using redundant field initializer for 'a'
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:34:	Avoid variables with short names like a
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:37:	Avoid variables with short names like r
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:40:	Avoid variables with short names like x
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:58:	Avoid variables with short names like d
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:58:	Parameter 'd' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:66:	Avoid variables with short names like a
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:66:	Parameter 'a' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:74:	Avoid variables with short names like r
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:74:	Parameter 'r' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:82:	Avoid variables with short names like x
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:82:	Parameter 'x' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:90:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/group/GroupPermissionEntity.java:98:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/EventQueueEntity.java:41:	Parameter 'dataObject' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/EventQueueEntity.java:46:	Returning 'data' may expose an internal array.
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/EventQueueEntity.java:49:	Parameter 'data' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/EventQueueEntity.java:49:	The user-supplied array 'data' is stored directly.
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/EventQueueEntity.java:57:	Parameter 'sourceUser' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/EventQueueEntity.java:65:	Parameter 'targetUser' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:70:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:78:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:86:	Parameter 'name' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:94:	Parameter 'type' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:102:	Parameter 'stringValue' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:110:	Parameter 'integerValue' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:115:	Returning 'lobValue' may expose an internal array.
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:118:	Parameter 'lobValue' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:118:	The user-supplied array 'lobValue' is stored directly.
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:126:	Parameter 'doubleValue' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:134:	Parameter 'booleanValue' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:142:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/receip/ParameterEntity.java:150:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:66:	Avoid using redundant field initializer for 'enabled'
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:87:	Parameter 'groups' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:91:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:95:	Parameter 'groups' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:110:	Parameter 'username' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:125:	Parameter 'password' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:142:	Parameter 'name' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:157:	Parameter 'surname' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:168:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:180:	Parameter 'role' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:184:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:194:	Parameter 'role' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:198:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:209:	Parameter 'role' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:217:	Returning 'rolesLob' may expose an internal array.
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:225:	Parameter 'rolesLob' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:225:	The user-supplied array 'rolesLob' is stored directly.
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:227:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/data/entity/user/UserEntity.java:242:	Parameter 'enabled' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/data/enums/user/Gender.java:31:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/data/enums/user/Gender.java:33:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:10:	Avoid unused imports such as 'org.springframework.transaction.annotation.Transactional'
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:32:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:35:	Perhaps 'select' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:38:	Avoid unused private fields such as 'user'.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:38:	Perhaps 'user' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:44:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:46:	Avoid unnecessary constructors - the compiler will generate these for you
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:51:	Found 'UR'-anomaly for variable 'group' (lines '51'-'58').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:51:	Found 'UR'-anomaly for variable 'group' (lines '51'-'58').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:51:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:54:	Local variable 'userEntity' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:55:	Local variable 'groups' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:56:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:57:	Local variable 'group' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:58:	Local variable 'item' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:59:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:69:	Found 'DU'-anomaly for variable 'serialVersionUID' (lines '69'-'82').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:69:	Found 'DU'-anomaly for variable 'serialVersionUID' (lines '69'-'82').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:72:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:77:	Avoid unused local variables such as 'addNewGroupButton'.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:77:	Found 'DU'-anomaly for variable 'addNewGroupButton' (lines '77'-'82').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:77:	Found 'DU'-anomaly for variable 'addNewGroupButton' (lines '77'-'82').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:77:	Local variable 'addNewGroupButton' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:84:	Document empty method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/GroupListPanel.java:84:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:32:	It is a good practice to call super() in a constructor
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:35:	Found 'DU'-anomaly for variable 'layout' (lines '35'-'61').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:43:	Found 'DU'-anomaly for variable 'layoutCss' (lines '43'-'61').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:43:	Local variable 'layoutCss' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:47:	Found 'DU'-anomaly for variable 'serialVersionUID' (lines '47'-'61').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:50:	Avoid variables with short names like c
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:50:	Parameter 'c' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:63:	Parameter 'main' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:67:	Parameter 'login' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:71:	Parameter 'register' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:75:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:86:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:96:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:103:	Avoid variables with short names like e
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/LoginComponent.java:103:	Parameter 'e' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/TitlePanel.java:22:	Avoid using redundant field initializer for 'helper'
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/TitlePanel.java:26:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/TitlePanel.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/TitlePanel.java:32:	Perhaps 'logo' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/components/TitlePanel.java:38:	Parameter 'app' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/session/UserSession.java:28:	Avoid using redundant field initializer for 'logged'
+src/main/java/pl/poznan/put/cs/ify/webify/gui/session/UserSession.java:37:	Parameter 'userName' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/session/UserSession.java:48:	Parameter 'userPassword' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/session/UserSession.java:59:	Parameter 'logged' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:19:	Abstract classes should be named AbstractXXX
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:29:	Avoid using redundant field initializer for 'helper'
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:33:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:41:	Avoid unused constructor parameters such as 'title'.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:41:	It is a good practice to call super() in a constructor
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:41:	Parameter 'title' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:45:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:50:	Avoid catching NullPointerException; consider removing the cause of the NPE.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:50:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:56:	Parameter 'application' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:60:	Avoid catching NullPointerException; consider removing the cause of the NPE.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:60:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/BaseWindow.java:65:	Parameter 'session' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:28:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:37:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:39:	Local variable 'username' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:40:	Local variable 'password' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:41:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:47:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:54:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:54:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:54:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:56:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:58:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:58:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:66:	Local variable 'form' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/LoginWindow.java:68:	Local variable 'loginPanel' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:43:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:46:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:56:	Document empty method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:68:	Avoid if (x != y) ..; else ..;
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:80:	Found 'UR'-anomaly for variable 'w' (lines '80'-'83').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:82:	Avoid variables with short names like w
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/MainWindow.java:82:	Local variable 'w' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:13:	Avoid unused private fields such as 'session'.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:13:	Perhaps 'session' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:13:	Private field 'session' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:15:	Avoid variables with short names like s
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:15:	Parameter 's' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:23:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/NewGroupWindow.java:26:	Document empty method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:33:	Perhaps 'submit' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:33:	Private field 'submit' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:36:	Perhaps 'firstName' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:36:	Private field 'firstName' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:37:	Perhaps 'lastName' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:37:	Private field 'lastName' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:38:	Perhaps 'password' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:38:	Private field 'password' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:39:	Perhaps 'address' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:39:	Private field 'address' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:40:	Perhaps 'zipcode' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:40:	Private field 'zipcode' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:41:	Perhaps 'city' could be replaced by a local variable.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:41:	Private field 'city' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:47:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:50:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:54:	Avoid variables with short names like fl
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:54:	Found 'DU'-anomaly for variable 'fl' (lines '54'-'156').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:54:	Found 'DU'-anomaly for variable 'fl' (lines '54'-'156').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:54:	Found 'DU'-anomaly for variable 'fl' (lines '54'-'156').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:63:	Found 'DU'-anomaly for variable 'serialVersionUID' (lines '63'-'156').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:63:	Found 'DU'-anomaly for variable 'serialVersionUID' (lines '63'-'156').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:63:	Found 'DU'-anomaly for variable 'serialVersionUID' (lines '63'-'156').
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:66:	Parameter 'value' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:67:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:74:	Parameter 'value' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:75:	Local variable 'name' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:76:	Local variable 'obj' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:77:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:78:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:126:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:129:	Local variable 'user' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:130:	Local variable 'username' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:130:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:130:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:131:	Local variable 'pass' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:131:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:131:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:132:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:133:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:133:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:133:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:133:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:134:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:134:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:134:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:134:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:141:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:141:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:141:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:141:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:143:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:143:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:145:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:159:	Document empty method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:164:	Document empty method
+src/main/java/pl/poznan/put/cs/ify/webify/gui/windows/RegisterWindow.java:164:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/GroupRecipeControler.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/GroupRecipeControler.java:26:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/GroupRecipeControler.java:28:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/GroupRecipeControler.java:35:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/GroupRecipeControler.java:42:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/LoginControler.java:4:	Avoid unused imports such as 'javax.ws.rs.GET'
+src/main/java/pl/poznan/put/cs/ify/webify/rest/LoginControler.java:10:	Avoid unused imports such as 'javax.ws.rs.core.Response'
+src/main/java/pl/poznan/put/cs/ify/webify/rest/LoginControler.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/LoginControler.java:29:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/LoginControler.java:36:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/LoginControler.java:37:	Parameter 'password' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:12:	Avoid unused imports such as 'org.jboss.resteasy.spi.HttpRequest'
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:20:	Avoid unused imports such as 'pl.poznan.put.cs.ify.webify.rest.model.MessageParam'
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:28:	Avoid unused private fields such as 'messageService'.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:32:	The String literal "application/json" appears 6 times in this file; the first occurrence is on line 32
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:34:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:35:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:35:	Avoid unused local variables such as 'm'.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:35:	Avoid variables with short names like m
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:35:	Found 'DU'-anomaly for variable 'm' (lines '35'-'37').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:35:	Local variable 'm' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:42:	Avoid variables with short names like r
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:42:	Parameter 'r' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:44:	Local variable 'user' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:46:	Local variable 'group' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:57:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:64:	Avoid variables with short names like l
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:64:	Local variable 'l' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:74:	Parameter 'text' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:75:	Avoid variables with short names like l
+src/main/java/pl/poznan/put/cs/ify/webify/rest/SimpleREST.java:75:	Local variable 'l' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/LoginMessage.java:4:	Use explicit scoping instead of the default package private level
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/LoginMessage.java:5:	Use explicit scoping instead of the default package private level
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/LoginMessage.java:11:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/LoginMessage.java:19:	Parameter 'password' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/Message.java:14:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/Message.java:20:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/Message.java:28:	Parameter 'event' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/Message.java:36:	Parameter 'values' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:19:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'PULL_EVENT' is not final.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:19:	The field name indicates a constant but its modifiers do not
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:19:	Variables should start with a lowercase character, 'PULL_EVENT' starts with uppercase character.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:20:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'GET_DATA_EVENT' is not final.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:20:	The field name indicates a constant but its modifiers do not
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:20:	Variables should start with a lowercase character, 'GET_DATA_EVENT' starts with uppercase character.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:21:	Avoid using redundant field initializer for 'PUT_DATA_EVENT'
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:21:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'PUT_DATA_EVENT' is not final.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:21:	The field name indicates a constant but its modifiers do not
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:21:	Variables should start with a lowercase character, 'PUT_DATA_EVENT' starts with uppercase character.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:23:	Document empty constructor
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:27:	Parameter 'tag' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:27:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:36:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageEvent.java:44:	Parameter 'tag' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageParam.java:24:	Parameter 'value' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageParam.java:32:	Parameter 'type' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageParam.java:40:	Parameter 'username' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:23:	Document empty constructor
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:27:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:27:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:27:	Parameter 'username' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:28:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:39:	Avoid variables with short names like un
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:39:	Parameter 'un' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:43:	Use block level rather than method level synchronization
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:47:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:47:	Use block level rather than method level synchronization
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:51:	Use block level rather than method level synchronization
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:55:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:55:	Use block level rather than method level synchronization
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:59:	Use block level rather than method level synchronization
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:63:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/model/MessageUser.java:63:	Use block level rather than method level synchronization
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/IMessageService.java:6:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/IMessageService.java:8:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:19:	This class has too many methods, consider refactoring it.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:21:	Field message has the same name as a method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:22:	Field user has the same name as a method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:23:	Field group has the same name as a method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:25:	Field device has the same name as a method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:28:	Field recipe has the same name as a method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:29:	Private field 'parameterBo' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:31:	Parameter 'parameterBo' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:38:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:47:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:54:	Parameter 'body' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:60:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:66:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:72:	Parameter 'params' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:78:	Parameter 'tag' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:78:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:85:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:91:	Avoid variables with short names like mu
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:91:	Local variable 'mu' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:92:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:92:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:93:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:93:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:94:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:102:	Avoid variables with short names like me
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:102:	Local variable 'me' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:104:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:111:	Found 'UR'-anomaly for variable 'param' (lines '111'-'122').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:112:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:113:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:116:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:118:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:118:	Local variable 'map' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:120:	Local variable 'param' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:121:	Avoid instantiating new objects inside loops
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:121:	Avoid variables with short names like mp
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:121:	Local variable 'mp' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:124:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:124:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:131:	Avoid unused method parameters such as 'tag'.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:131:	Avoid unused method parameters such as 'target'.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:131:	Parameter 'tag' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:131:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:137:	Avoid unused method parameters such as 'g'.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:137:	Avoid variables with short names like g
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:137:	Avoid variables with short names like u
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:137:	Parameter 'g' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:137:	Parameter 'u' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageBuilder.java:149:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:25:	Field message has the same name as a method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:33:	Private field 'userDAO' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:34:	Private field 'groupDAO' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:35:	Private field 'parameterService' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:38:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:40:	Parameter 'groupDAO' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:40:	Parameter 'userDAO' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:41:	Parameter 'parameterService' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:49:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:58:	Avoid variables with short names like mu
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:58:	Local variable 'mu' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:59:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:60:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:64:	Avoid variables with short names like me
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:64:	Local variable 'me' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:65:	Avoid if (x != y) ..; else ..;
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:66:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:67:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:72:	Found 'UR'-anomaly for variable 'key' (lines '72'-'76').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:73:	Local variable 'param' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:74:	Local variable 'map' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:75:	Local variable 'key' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:76:	Avoid variables with short names like mp
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:76:	Local variable 'mp' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:77:	Local variable 'type' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:78:	Avoid variables with short names like p
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:78:	Local variable 'p' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:84:	Parameter 'name' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:84:	Parameter 'type' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:85:	Parameter 'value' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:86:	Avoid variables with short names like p
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:86:	Local variable 'p' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageParser.java:98:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:29:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:44:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:52:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:64:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:65:	Avoid variables with short names like p
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:65:	Local variable 'p' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:65:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:66:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:72:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:74:	Local variable 'parser' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:75:	Found 'DU'-anomaly for variable 'target' (lines '75'-'95').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:75:	Local variable 'target' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:76:	Found 'DU'-anomaly for variable 'group' (lines '76'-'95').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:76:	Local variable 'group' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:77:	Found 'DU'-anomaly for variable 'recipe' (lines '77'-'95').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:77:	Local variable 'recipe' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:78:	Found 'DU'-anomaly for variable 'device' (lines '78'-'95').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:78:	Local variable 'device' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:79:	Local variable 'tag' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:81:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:84:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:85:	Avoid empty if statements
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:85:	Avoid empty if statements
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:87:	Avoid empty if statements
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:87:	Avoid empty if statements
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:90:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:91:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:97:	Found 'UR'-anomaly for variable 'p' (lines '97'-'102').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:97:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:97:	Parameter 'parser' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:98:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:98:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:100:	Local variable 'params' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:101:	Avoid variables with short names like p
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:101:	Local variable 'p' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:102:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:103:	Avoid variables with short names like pe
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:103:	Local variable 'pe' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:108:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:115:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:115:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:116:	Parameter 'device' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:116:	Parameter 'group' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:116:	Parameter 'recipe' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:117:	Found 'DD'-anomaly for variable 'params' (lines '117'-'119').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:117:	Found 'DD'-anomaly for variable 'params' (lines '117'-'121').
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:123:	Local variable 'builder' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:124:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:124:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:128:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:129:	Local variable 'parser' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:130:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:131:	Local variable 'sourceUser' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:131:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:132:	Local variable 'targetUser' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:132:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:133:	Local variable 'dataObject' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:135:	Local variable 'element' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:144:	Parameter 'message' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:145:	Local variable 'parser' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:146:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:147:	Local variable 'targetUser' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:147:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:148:	Local variable 'element' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:149:	Local variable 'data' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:149:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageService.java:150:	Consider simply returning the value vs storing it in local variable 'data'
+src/main/java/pl/poznan/put/cs/ify/webify/service/IBaseService.java:14:	An Interface should be used only to model a behaviour; consider converting this to a class.
+src/main/java/pl/poznan/put/cs/ify/webify/service/IBaseService.java:16:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/service/IBaseService.java:16:	Variables that are final and static should be all capitals, 'log' is not all capitals.
+src/main/java/pl/poznan/put/cs/ify/webify/service/IGroupService.java:10:	This class has too many methods, consider refactoring it.
+src/main/java/pl/poznan/put/cs/ify/webify/service/IGroupService.java:16:	Avoid variables with short names like d
+src/main/java/pl/poznan/put/cs/ify/webify/service/IGroupService.java:17:	Avoid variables with short names like a
+src/main/java/pl/poznan/put/cs/ify/webify/service/IGroupService.java:17:	Avoid variables with short names like r
+src/main/java/pl/poznan/put/cs/ify/webify/service/IGroupService.java:17:	Avoid variables with short names like x
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:14:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:24:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:24:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:26:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:36:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:38:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:47:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:49:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:60:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/service/IUserService.java:68:	Avoid modifiers which are implied by the context
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/EventQueueService.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/EventQueueService.java:20:	Parameter 'target' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/EventQueueService.java:21:	Local variable 'element' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/EventQueueService.java:22:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/EventQueueService.java:29:	Parameter 'element' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:1:	Possible God class (WMC=47, ATFD=39, TCC=0.0)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:23:	This class has too many methods, consider refactoring it.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:24:	The Logger variable declaration does not contain the static and final modifiers
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:26:	Avoid excessively long variable names like groupPermissionDAO
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:39:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:69:	This usage of the Collection.toArray() method will throw a ClassCastException.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:94:	Avoid throwing null pointer exceptions.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:97:	Avoid throwing null pointer exceptions.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:104:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:105:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:108:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:108:	debug logging that involves string concatenation should be guarded with isDebugEnabled() checks
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:110:	Avoid variables with short names like gp
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:111:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:113:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:115:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:115:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:117:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:119:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:121:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:121:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:131:	Avoid excessively long variable names like groupPermissionEntity
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:144:	Found 'UR'-anomaly for variable 'gp' (lines '144'-'150').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:145:	Local variable 'gpl' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:146:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:147:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:148:	Local variable 'res' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:148:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:149:	Avoid variables with short names like gp
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:149:	Local variable 'gp' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:172:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:174:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:176:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:191:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:199:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:211:	Document empty method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:227:	This usage of the Collection.toArray() method will throw a ClassCastException.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:231:	Found 'UR'-anomaly for variable 'p' (lines '231'-'237').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:234:	Found 'DU'-anomaly for variable 'groupPermission' (lines '234'-'239').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:236:	Avoid variables with short names like p
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:264:	Avoid variables with short names like a
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:264:	Avoid variables with short names like d
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:264:	Avoid variables with short names like r
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:264:	Avoid variables with short names like x
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:267:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:268:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:269:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:270:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/GroupService.java:275:	Parameter 'username' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:14:	Avoid unused private fields such as 'parameterDAO'.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:16:	Parameter 'param' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:17:	Found 'DD'-anomaly for variable 'res' (lines '17'-'20').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:17:	Found 'DD'-anomaly for variable 'res' (lines '17'-'22').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:17:	Found 'DD'-anomaly for variable 'res' (lines '17'-'24').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:17:	Found 'DD'-anomaly for variable 'res' (lines '17'-'26').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:17:	Found 'DD'-anomaly for variable 'res' (lines '17'-'28').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:18:	Local variable 'type' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:19:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:19:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:21:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:21:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:22:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:23:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:23:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:24:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:25:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:25:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:26:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:34:	Parameter 'param' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:34:	Parameter 'value' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:35:	Local variable 'type' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:36:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:36:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:38:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:38:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:40:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:40:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:42:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/ParameterService.java:42:	Use equals() to compare strings instead of '==' or '!='
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:3:	Avoid unused imports such as 'java.security.MessageDigest'
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:4:	Avoid unused imports such as 'java.security.NoSuchAlgorithmException'
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:32:	Avoid variables with short names like id
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:56:	Found 'UR'-anomaly for variable 'role' (lines '56'-'69').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:56:	Found 'UR'-anomaly for variable 'username' (lines '56'-'63').
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:58:	Local variable 'ann' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:58:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:60:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:61:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:62:	Local variable 'username' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:63:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:64:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:68:	Local variable 'role' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:69:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:70:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:99:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:101:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:101:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/service/impl/UserService.java:102:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/BeanUtils.java:7:	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/BeanUtils.java:16:	Parameter 'list' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/BeanUtils.java:17:	Parameter 'cls' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/BeanUtils.java:18:	Local variable 'container' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/JSONutils.java:3:	Each class should declare at least one constructor
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:3:	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:5:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:14:	Parameter 'number' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:14:	Parameter 'pos' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:15:	Local variable 'result' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:15:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:15:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:16:	Consider simply returning the value vs storing it in local variable 'result'
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:19:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:28:	Parameter 'number' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:28:	Parameter 'pos' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:29:	Local variable 'result' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:29:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/MathUtils.java:29:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:5:	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:5:	The class 'PeselUtils' has a Cyclomatic Complexity of 6 (Highest = 12).
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:7:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:16:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:19:	Found 'DU'-anomaly for variable 'num' (lines '19'-'37').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:19:	Local variable 'num' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:21:	Found 'DD'-anomaly for variable 'tab' (lines '21'-'27').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:21:	Found 'DU'-anomaly for variable 'tab' (lines '21'-'37').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:23:	Found 'DU'-anomaly for variable 'weights' (lines '23'-'37').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:23:	Local variable 'weights' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:27:	Found 'DD'-anomaly for variable 'tab' (lines '27'-'27').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:27:	Found 'DU'-anomaly for variable 'tab' (lines '27'-'37').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:31:	Found 'DD'-anomaly for variable 'sum' (lines '31'-'35').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:35:	Useless parentheses.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:35:	Useless parentheses.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:39:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:48:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:48:	The method 'getBirthYear' has a Cyclomatic Complexity of 12.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:49:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:50:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:52:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:53:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:55:	Local variable 'num' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:83:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:83:	The method 'getBirthMonth' has a Cyclomatic Complexity of 10.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:84:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:86:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:87:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:89:	Local variable 'num' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:112:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:113:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:115:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:116:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:118:	Local variable 'num' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:126:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:135:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:137:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:138:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:140:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:140:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:142:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:142:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:155:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:158:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:159:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:162:	Local variable 'genderPos' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:165:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:165:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:166:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:172:	Comment is too large: Too many lines
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:182:	Parameter 'pesel' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:184:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:185:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:187:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:187:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:188:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:190:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:190:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PeselUtils.java:192:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:3:	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:13:	Avoid variables with short names like nr
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:13:	Parameter 'nr' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:15:	Found 'DU'-anomaly for variable 'num' (lines '15'-'33').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:15:	Local variable 'num' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:17:	Found 'DD'-anomaly for variable 'tab' (lines '17'-'23').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:17:	Found 'DU'-anomaly for variable 'tab' (lines '17'-'33').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:19:	Found 'DU'-anomaly for variable 'weights' (lines '19'-'33').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:19:	Local variable 'weights' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:23:	Found 'DD'-anomaly for variable 'tab' (lines '23'-'23').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:23:	Found 'DU'-anomaly for variable 'tab' (lines '23'-'33').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:27:	Found 'DD'-anomaly for variable 'sum' (lines '27'-'31').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:43:	Parameter 'pwz' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:44:	Avoid using Literals in Conditional Statements
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:44:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:45:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:46:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:46:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/PwzUtils.java:48:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:7:	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:16:	Parameter 'input' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:17:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:17:	Found 'DD'-anomaly for variable 'md5' (lines '17'-'23').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:17:	Found 'DU'-anomaly for variable 'md5' (lines '17'-'28').
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:18:	Avoid using if statements without curly braces
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:19:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:21:	Local variable 'digest' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:25:	Avoid printStackTrace(); use a logger call instead.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:30:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:30:	The field name indicates a constant but its modifiers do not
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:30:	Variables should start with a lowercase character, 'ALGO' starts with uppercase character.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:32:	Parameter 'input' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:33:	Local variable 'mDigest' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:34:	Local variable 'result' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:34:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:35:	Avoid variables with short names like sb
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:35:	Local variable 'sb' could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:37:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:37:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:37:	Useless parentheses.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:37:	Useless parentheses.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:43:	Parameter 'pass' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:43:	Parameter 'user' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:47:	Avoid throwing raw exception types.
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:47:	New exception is thrown in catch block, original stack trace may be lost
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:57:	Parameter 'pass' is not assigned and could be declared final
+src/main/java/pl/poznan/put/cs/ify/webify/utils/StringUtils.java:57:	Parameter 'user' is not assigned and could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/BaseTest.java:15:	The Logger variable declaration does not contain the static and final modifiers
+src/test/java/pl/poznan/put/cs/ify/webify/BaseTest.java:18:	Document empty method
+src/test/java/pl/poznan/put/cs/ify/webify/BaseTest.java:18:	JUnit tests should include assert() or fail()
+src/test/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAOTest.java:18:	Avoid unused private fields such as 'dao'.
+src/test/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAOTest.java:21:	Document empty method
+src/test/java/pl/poznan/put/cs/ify/webify/data/dao/impl/GroupDAOTest.java:21:	JUnit tests should include assert() or fail()
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:35:	The Logger variable declaration does not contain the static and final modifiers
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:36:	Perhaps 'message' could be replaced by a local variable.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:44:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:46:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:46:	Perhaps 'sourceUser' could be replaced by a local variable.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:49:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:51:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:56:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:58:	Local variable 'id1' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:59:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:60:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:65:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:66:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:68:	Local variable 'id1' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:69:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:70:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:71:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:72:	Avoid variables with short names like e
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:72:	Local variable 'e' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:73:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:74:	Avoid variables with short names like e2
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:74:	Local variable 'e2' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:75:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:84:	Local variable 'now' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:85:	Do not add empty strings
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:85:	Local variable 'time' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:86:	Local variable 'username' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:87:	Local variable 'targetUserName' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:88:	Local variable 'group' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:89:	Local variable 'device' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:90:	Local variable 'recipe' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:93:	The String literal "test1" appears 6 times in this file; the first occurrence is on line 93
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:107:	Local variable 'user' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:108:	Local variable 'event' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:117:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:118:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:120:	Avoid variables with short names like u2
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:120:	Local variable 'u2' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:121:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:124:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:125:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:127:	Avoid variables with short names like u3
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:127:	Local variable 'u3' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/EventQueueServiceTest.java:128:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:32:	The Logger variable declaration does not contain the static and final modifiers
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:42:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:45:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:46:	Avoid variables with short names like g
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:46:	Local variable 'g' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:48:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:49:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:49:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:50:	Avoid variables with short names like l
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:50:	Unnecessary use of fully qualified name 'java.util.List' due to existing import 'java.util.List'
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:52:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:53:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:56:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:57:	Avoid variables with short names like gp
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:57:	Local variable 'gp' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:58:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:59:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:59:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:60:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:60:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:66:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:67:	Avoid variables with short names like g
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:67:	Local variable 'g' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:69:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:70:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:70:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:71:	Avoid variables with short names like l
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:71:	Unnecessary use of fully qualified name 'java.util.List' due to existing import 'java.util.List'
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:72:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:73:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:76:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:77:	Avoid variables with short names like gp
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:77:	Local variable 'gp' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:78:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:79:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:80:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:82:	Avoid variables with short names like g2
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:82:	Local variable 'g2' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:84:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:85:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:85:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:86:	Avoid variables with short names like l2
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:86:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:86:	Unnecessary use of fully qualified name 'java.util.List' due to existing import 'java.util.List'
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:87:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:88:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:91:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:91:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:92:	Local variable 'gp2' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:92:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:93:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:94:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:94:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:95:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:95:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:97:	Local variable 'groups' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:98:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:99:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:99:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:104:	Local variable 'username' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:114:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:115:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:117:	Avoid variables with short names like u2
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:117:	Local variable 'u2' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/GroupServiceTest.java:118:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:1:	A high number of imports can indicate a high degree of coupling within an object.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:1:	Too many static imports may lead to messy code
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:42:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:42:	The Logger variable declaration does not contain the static and final modifiers
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:45:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:47:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:49:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:50:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:51:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:52:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:54:	Avoid excessively long variable names like groupPermissionDAO
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:54:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:57:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:62:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:65:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:67:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:68:	Local variable 'result' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:70:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:71:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:77:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:85:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:87:	Local variable 'param' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:89:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:89:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:92:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:92:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:96:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:98:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:99:	Local variable 'result' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:100:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:101:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:101:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:102:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:102:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:102:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:102:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:103:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:103:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:103:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:104:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:104:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:104:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:104:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:105:	Avoid variables with short names like p1
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:105:	Local variable 'p1' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:105:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:105:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:106:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:106:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:107:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:107:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:117:	Local variable 'event' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:118:	Local variable 'now' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:119:	Do not add empty strings
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:119:	Local variable 'time' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:121:	Local variable 'username' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:122:	Local variable 'group' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:123:	Local variable 'device' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:124:	Local variable 'recipe' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:125:	Local variable 'user' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:137:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:138:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:140:	Avoid variables with short names like u2
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:140:	Local variable 'u2' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:141:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:148:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:149:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:152:	Avoid variables with short names like gp
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:152:	Local variable 'gp' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:160:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/rest/service/impl/MessageServiceTest.java:161:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:9:	This class name ends with Test but contains no test cases
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:15:	Found 'DU'-anomaly for variable 'num' (lines '15'-'27').
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:15:	Local variable 'num' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:17:	Local variable 'numArr' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:22:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:33:	Found 'DU'-anomaly for variable 'num' (lines '33'-'45').
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:33:	Local variable 'num' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:35:	Local variable 'numArr' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/MathUtilsTest.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:17:	This class name ends with Test but contains no test cases
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:22:	Local variable 'pesel' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:22:	The String literal "91021200416" appears 6 times in this file; the first occurrence is on line 22
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:23:	Local variable 'expectedResult' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:32:	Local variable 'pesel' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:33:	Found 'DU'-anomaly for variable 'expected' (lines '33'-'39').
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:33:	Local variable 'expected' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:36:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:36:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:36:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:37:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:42:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:43:	Local variable 'pesel' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:44:	Local variable 'expected' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:49:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:53:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:54:	Local variable 'pesel' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:55:	Local variable 'expected' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:60:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:64:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:65:	Local variable 'pesel' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:66:	Local variable 'expected' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:71:	JUnit assertions should include a message
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:75:	JUnit tests should not contain more than 1 assert(s).
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:76:	Local variable 'pesel' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:77:	Local variable 'expected' could be declared final
+src/test/java/pl/poznan/put/cs/ify/webify/utils/PeselUtilsTest.java:82:	JUnit assertions should include a message

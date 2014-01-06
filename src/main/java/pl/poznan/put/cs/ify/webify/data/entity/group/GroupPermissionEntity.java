@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.aspectj.org.eclipse.jdt.internal.compiler.ast.FalseLiteral;
+
 import pl.poznan.put.cs.ify.webify.data.entity.BaseEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 
@@ -39,14 +41,14 @@ public class GroupPermissionEntity extends BaseEntity {
 
 	@ManyToOne(fetch = FetchType.EAGER, targetEntity = GroupEntity.class)
 	@JoinColumns(value = {
-			@JoinColumn(name = "group_id", referencedColumnName = "id", insertable = false, updatable = false),
-			@JoinColumn(name = "name", referencedColumnName = "name", insertable = false, updatable = false) })
+			@JoinColumn(name = "group_id", referencedColumnName = "id"),
+			@JoinColumn(name = "name", referencedColumnName = "name") })
 	private GroupEntity group;
 
 	@ManyToOne(fetch = FetchType.EAGER, targetEntity = UserEntity.class)
 	@JoinColumns(value = {
-			@JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false),
-			@JoinColumn(name = "username", referencedColumnName = "username", insertable = false, updatable = false) })
+			@JoinColumn(name = "user_id", referencedColumnName = "id"),
+			@JoinColumn(name = "username", referencedColumnName = "username") })
 	private UserEntity user;
 
 	public boolean isD() {

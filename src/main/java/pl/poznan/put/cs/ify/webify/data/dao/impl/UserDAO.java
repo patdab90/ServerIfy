@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
@@ -30,6 +31,7 @@ public class UserDAO extends BaseDAO<UserEntity> implements IUserDAO {
 	}
 
 	@Override
+	@Transactional
 	public UserEntity findByUserName(final String username) {
 
 		final TypedQuery<UserEntity> query = getManager().createQuery(

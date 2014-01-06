@@ -32,6 +32,7 @@ public interface IGroupService extends IBaseService<GroupEntity> {
 
 	List<GroupEntity> getGroups(UserEntity user);
 
+	@Deprecated
 	List<GroupEntity> getGroupsByUsername(String username);
 
 	boolean hasPermition(UserEntity user, GroupEntity group,
@@ -46,5 +47,9 @@ public interface IGroupService extends IBaseService<GroupEntity> {
 	boolean canDelete(GroupEntity group, UserEntity user);
 
 	boolean canList(GroupEntity group, UserEntity user);
+
+	GroupEntity createGroupe(UserEntity creator, String name);
+
+	GroupEntity findByName(String name);
 
 }

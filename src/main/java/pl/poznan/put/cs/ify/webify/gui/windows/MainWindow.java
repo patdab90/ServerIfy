@@ -5,8 +5,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import pl.poznan.put.cs.ify.webify.App;
+import pl.poznan.put.cs.ify.webify.gui.components.GroupListPanel;
 //import pl.poznan.put.cs.ify.webify.bo.impl.UserBo;
 import pl.poznan.put.cs.ify.webify.gui.components.LoginComponent;
+import pl.poznan.put.cs.ify.webify.gui.components.TitlePanel;
 //import pl.poznan.put.cs.ify.webify.gui.components.MenuComponent;
 import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
 
@@ -37,6 +39,12 @@ public class MainWindow extends BaseWindow {
 	@Autowired
 	private RegisterWindow registerWindow;
 
+	@Autowired
+	private GroupListPanel groupListPanel;
+
+	@Autowired
+	private TitlePanel titlePanel;
+
 	// @Autowired
 	// private MenuComponent menuComponent;
 
@@ -58,10 +66,13 @@ public class MainWindow extends BaseWindow {
 
 	public void init() {
 		if (!session.isLogged()) {
+			titlePanel.init(application);
+			addComponent(titlePanel);
 			loginView();
 		} else {
 			addComponent(new Label("Zalogowny jako: " + session.getUserName()));
-			// addComponent(menuComponent);
+			groupListPanel.load(session);
+			addComponent(groupListPanel);
 			// menuComponent.constructMenu();
 		}
 	}
