@@ -36,8 +36,10 @@ public class TitlePanel extends Panel {
 	}
 
 	public void init(Application app) {
-		logo = new Embedded("", new ClassResource("ify-logo.png", app));
-		this.addComponent(logo);
+		if (logo == null) {
+			logo = new Embedded("", new ClassResource("ify-logo.png", app));
+			this.addComponent(logo);
+		}
 	}
 
 }

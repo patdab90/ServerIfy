@@ -31,6 +31,7 @@ import pl.poznan.put.cs.ify.webify.service.IGroupService;
 public class GroupServiceTest {
 	protected Logger log = LoggerFactory.getLogger(this.getClass());
 	private UserEntity user;
+	private UserEntity user2;
 
 	@Autowired
 	private IGroupService groupService;
@@ -62,7 +63,7 @@ public class GroupServiceTest {
 
 	@Test
 	@Transactional
-	@Ignore
+	// @Ignore
 	public void getAllGroups() {
 		GroupEntity g = groupService.createGroupe(user, "TestCreateGroup2"
 				+ new Date().getTime());
@@ -97,6 +98,51 @@ public class GroupServiceTest {
 		List<GroupEntity> groups = groupService.getGroups(user);
 		assertNotNull(groups);
 		assertEquals(2, groups.size());
+	}
+
+	@Test
+	// @Transactional
+	public void shouldAddMember() {
+
+		GroupEntity g = groupService.createGroupe(user, "TestCreateGroup1"
+				+ new Date().getTime());
+		assertNotNull(g);
+		assertNotNull(g.getId());
+		java.util.List<GroupPermissionEntity> l = g.getUsers();
+
+		assertNotNull(l);
+		if (l.isEmpty()) {
+			l = permissionDAO.find(g);
+		}
+		assertEquals(1, l.size());
+		GroupPermissionEntity gp = l.get(0);
+		assertNotNull(gp);
+		assertNotNull(gp.getUser());
+		assertEquals(gp.getUser(), user);
+
+		// before
+		String username = "userTest2" + this.getClass().getSimpleName()
+				+ new Date().getTime();
+		user2 = new UserEntity();
+		user2.setFirstName("test2");
+		user2.setLastName("test2");
+		user2.setPassword("test2");
+		user2.setUsername(username);
+		user2.addRole(UserRole.USER);
+
+		userDAO.persist(user2);
+		assertNotNull(user2);
+		assertNotNull(user2.getId());
+		log.info("init(): user2 id=" + user2.getId());
+		UserEntity u2 = userDAO.findByUserName(username);
+		assertEquals(user2, u2);
+
+		groupService.addGroupMember(user, g, user2);
+
+		GroupPermissionEntity perm = permissionDAO.find(user2, g);
+		assertNotNull(perm);
+		assertEquals(user2, perm.getUser());
+		assertEquals(g, perm.getGroup());
 	}
 
 	@Before

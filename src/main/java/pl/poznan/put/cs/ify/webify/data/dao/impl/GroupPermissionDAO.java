@@ -62,16 +62,17 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 	}
 
 	@Override
+	@Transactional
 	public GroupPermissionEntity find(UserEntity user, GroupEntity group) {
 		return find(user.getId(), group.getId());
 	}
 
 	@Override
 	public GroupPermissionEntity find(long userId, long groupId) {
-		TypedQuery<GroupPermissionEntity> q = getManager()
-				.createQuery(
-						"SELECT gp FROM GroupPermissionEntity gp WHERE gp.user.id = :user AND gp.user.id = :group",
-						cls);
+		TypedQuery<GroupPermissionEntity> q = getManager().createQuery(
+				"SELECT gp FROM GroupPermissionEntity gp "
+						+ "WHERE gp.user.id = :user "
+						+ "AND gp.group.id = :group", cls);
 		q.setParameter("user", userId);
 		q.setParameter("group", groupId);
 		q.setMaxResults(1);

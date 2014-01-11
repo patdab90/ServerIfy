@@ -43,6 +43,9 @@ public class MainWindow extends BaseWindow {
 	private GroupListPanel groupListPanel;
 
 	@Autowired
+	private NewGroupWindow groupWindow;
+
+	@Autowired
 	private TitlePanel titlePanel;
 
 	// @Autowired
@@ -50,6 +53,7 @@ public class MainWindow extends BaseWindow {
 
 	public MainWindow() {
 		super(App.APPLICATION_TITLE);
+
 	}
 
 	@Override
@@ -65,13 +69,14 @@ public class MainWindow extends BaseWindow {
 	}
 
 	public void init() {
+		titlePanel.init(application);
+		addComponent(titlePanel);
 		if (!session.isLogged()) {
-			titlePanel.init(application);
-			addComponent(titlePanel);
 			loginView();
 		} else {
-			addComponent(new Label("Zalogowny jako: " + session.getUserName()));
-			groupListPanel.load(session);
+			groupListPanel.setMainWindow(this);
+			groupListPanel.setGroupWindow(groupWindow);
+			groupListPanel.init(session);
 			addComponent(groupListPanel);
 			// menuComponent.constructMenu();
 		}

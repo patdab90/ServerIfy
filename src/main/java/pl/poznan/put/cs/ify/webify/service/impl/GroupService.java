@@ -36,16 +36,20 @@ public class GroupService implements IGroupService {
 	public void addGroupMember(final UserEntity admin, final GroupEntity group,
 			final UserEntity user) {
 		if (!canAdd(group, admin)) {
+			log.debug("addGroupMember have no permission to add!!");
 			return;// wyjatek??
 		}
+		log.debug("addGroupMember ");
 		GroupPermissionEntity groupPermission = groupPermissionDAO.find(user,
 				group);
 		if (groupPermission == null) {
+			log.debug("addGroupMember new permission for group");
 			groupPermission = new GroupPermissionEntity();
 			groupPermission.setUser(user);
 			groupPermission.setGroup(group);
 			groupPermissionDAO.persist(groupPermission);
 		} else {
+			log.debug("addGroupMember modify permission for group");
 			if (groupPermission.isX() && groupPermission.isR()) {
 				return;// może tylko X??
 			}
@@ -70,18 +74,18 @@ public class GroupService implements IGroupService {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public boolean canAdd(final GroupEntity group, final UserEntity user) {
 		return hasPermition(user, group, GroupPermission.A);
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public boolean canDelete(final GroupEntity group, final UserEntity user) {
 		return hasPermition(user, group, GroupPermission.D);
 	}
 
-	@Transactional(readOnly = true)
+	@Transactional
 	@Override
 	public boolean canList(final GroupEntity group, final UserEntity user) {
 		return hasPermition(user, group, GroupPermission.R);
@@ -154,17 +158,17 @@ public class GroupService implements IGroupService {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public List<UserEntity> getMembers(final GroupEntity group) {
 		return userDAO.findMembersByGroup(group);
 	}
 
-	@Transactional(readOnly = true)
+	@Transactional
 	public List<UserEntity> getUsers(final GroupEntity group) {
 		return userDAO.findByGroup(group);
 	}
 
-	@Transactional(readOnly = true)
+	@Transactional
 	protected boolean hasPermision(final GroupPermission permission,
 			final GroupPermissionEntity groupPermmison) {
 		switch (permission) {
@@ -182,11 +186,12 @@ public class GroupService implements IGroupService {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public boolean hasPermition(final UserEntity user, final GroupEntity group,
 			final GroupPermission permission) {
 		final GroupPermissionEntity groupPermmison = groupPermissionDAO.find(
 				user, group);
+		log.debug("hasPermition groupPermmison=" + groupPermmison);
 		if (groupPermmison == null) {
 			return false;
 		}
@@ -194,13 +199,13 @@ public class GroupService implements IGroupService {
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public boolean isGroupOvner(final GroupEntity group, final UserEntity user) {
 		return group.getOwner().equals(user);
 	}
 
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional
 	public boolean isMember(final GroupEntity group, final UserEntity user) {
 		return hasPermition(user, group, GroupPermission.X);
 	}
