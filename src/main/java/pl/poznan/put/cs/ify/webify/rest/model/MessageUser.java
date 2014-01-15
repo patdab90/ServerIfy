@@ -16,6 +16,7 @@ public class MessageUser implements Serializable {
 	 */
 	private static final long serialVersionUID = -6368381722642162198L;
 	private String username;
+	private String password;
 	private String group;
 	private String device;
 	private String recipe;
@@ -29,7 +30,7 @@ public class MessageUser implements Serializable {
 		this.username = username;
 		this.group = group;
 		this.device = device;
-		this.recipe = recipe;
+		this.recipe = recipe;	
 	}
 
 	public String getUsername() {
@@ -62,5 +63,13 @@ public class MessageUser implements Serializable {
 
 	public synchronized void setRecipe(String recipe) {
 		this.recipe = recipe;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

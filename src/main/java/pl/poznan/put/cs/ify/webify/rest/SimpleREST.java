@@ -1,6 +1,8 @@
 package pl.poznan.put.cs.ify.webify.rest;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -10,6 +12,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Request;
 
+import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +24,7 @@ import pl.poznan.put.cs.ify.webify.data.enums.user.UserRole;
 import pl.poznan.put.cs.ify.webify.rest.model.LoginMessage;
 import pl.poznan.put.cs.ify.webify.rest.model.Message;
 import pl.poznan.put.cs.ify.webify.rest.model.MessageEvent;
+import pl.poznan.put.cs.ify.webify.rest.model.MessageParam;
 import pl.poznan.put.cs.ify.webify.rest.model.MessageUser;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageService;
 
@@ -101,10 +105,23 @@ public class SimpleREST {
 		message.setUser(user);
 
 		userDAO.persist(sourceUser);
-		UserEntity u2 = userDAO.findByUserName(username);
 
 		userDAO.persist(targetUser);
-		UserEntity u3 = userDAO.findByUserName(targetUserName);
+
+		MessageParam p = new MessageParam();
+		p.setType("String");
+		p.setUsername(targetUserName);
+		p.setValue("taki_text");
+
+		MessageParam p2 = new MessageParam();
+		p2.setType("Integer");
+		p2.setUsername(targetUserName);
+		p2.setValue("123");
+
+		Map<String, MessageParam> map = new HashMap<String, MessageParam>();
+		map.put("tekst1", p);
+		map.put("liczba1", p2);
+		message.setValues(map);
 		return message;
 	}
 

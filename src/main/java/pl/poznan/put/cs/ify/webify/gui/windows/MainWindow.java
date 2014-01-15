@@ -11,7 +11,11 @@ import pl.poznan.put.cs.ify.webify.gui.components.LoginComponent;
 import pl.poznan.put.cs.ify.webify.gui.components.TitlePanel;
 //import pl.poznan.put.cs.ify.webify.gui.components.MenuComponent;
 import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
+import pl.poznan.put.cs.ify.webify.service.IUserService;
 
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Window;
 
@@ -29,6 +33,8 @@ public class MainWindow extends BaseWindow {
 
 	// @Autowired
 	// private UserBo userBo;
+	@Autowired
+	private IUserService userService;
 
 	@Autowired
 	private LoginWindow loginWindow;
@@ -47,6 +53,8 @@ public class MainWindow extends BaseWindow {
 
 	@Autowired
 	private TitlePanel titlePanel;
+
+	private Button logoutButton;
 
 	// @Autowired
 	// private MenuComponent menuComponent;
@@ -77,7 +85,24 @@ public class MainWindow extends BaseWindow {
 			groupListPanel.setMainWindow(this);
 			groupListPanel.setGroupWindow(groupWindow);
 			groupListPanel.init(session);
+
+			logoutButton = new Button("Wyloguj", new ClickListener() {
+
+				private static final long serialVersionUID = 1L;
+
+				@Override
+				public void buttonClick(ClickEvent event) {
+					session.setLogged(false);
+					session.setUserName(null);
+					session.setUserPassword(null);
+					refresh();
+				}
+			});
+			addComponent(new Label("Jesteś zalogowany jako "
+					+ session.getUserName()));
+			addComponent(logoutButton);
 			addComponent(groupListPanel);
+
 			// menuComponent.constructMenu();
 		}
 	}
