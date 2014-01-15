@@ -15,7 +15,6 @@ import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
 import pl.poznan.put.cs.ify.webify.gui.windows.NewGroupWindow;
 import pl.poznan.put.cs.ify.webify.service.IGroupService;
 
-import com.vaadin.data.Item;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.Property.ValueChangeListener;
 import com.vaadin.ui.Button;
@@ -25,7 +24,6 @@ import com.vaadin.ui.ListSelect;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.Window.CloseEvent;
-import com.vaadin.ui.Window.CloseListener;
 
 @Component(value = "groupListPanel")
 @Scope(value = "session")
@@ -40,13 +38,16 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 	private ListSelect select;
 
 	@Autowired
-	private UserSession user;
+	private UserSession session;
 
 	@Autowired
 	private IUserDAO userDAO;
 
 	@Autowired
 	private IGroupService groupService;
+
+	@Autowired
+	private EditGoupPanel editGroupPanel;
 
 	private Window mainWindow;
 
@@ -60,7 +61,8 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 
 	// @Transactional
 	public void init(final UserSession user) {
-		this.user = user;
+		this.removeAllComponents();
+		this.session = user;
 
 		addNewGroupButton = new Button("Dodaj nową grupę", new ClickListener() {
 			private static final long serialVersionUID = 1L;
@@ -102,7 +104,7 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 
 	protected void createSelect() {
 		select = new ListSelect();
-		UserEntity userEntity = userDAO.findByUserName(user.getUserName());
+		UserEntity userEntity = userDAO.findByUserName(session.getUserName());
 		List<GroupEntity> groups = groupService.getGroups(userEntity);
 		select.setRows(groups.size());
 		if (groups != null)
@@ -121,8 +123,14 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 
 			@Override
 			public void valueChange(ValueChangeEvent event) {
-				log.debug(event.toString());
-				log.debug(event.getProperty().getValue().toString());
+				if (event.getProperty().getValue() == null
+						|| event.getProperty().getValue().toString().equals("")) {
+					editGroupPanel.setVisible(false);
+				}
+
+				editGroupPanel.init(session, event.getProperty().getValue()
+						.toString());
+				editGroupPanel.setVisible(true);
 			}
 		});
 		this.addComponent(select);

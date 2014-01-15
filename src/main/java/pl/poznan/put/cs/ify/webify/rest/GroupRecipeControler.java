@@ -29,7 +29,7 @@ public class GroupRecipeControler {
 	}
 
 	@POST
-	@Path("/send")
+	@Path("/load")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Message loadEvent(Message message) {

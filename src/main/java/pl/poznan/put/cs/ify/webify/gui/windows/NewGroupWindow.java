@@ -1,7 +1,5 @@
 package pl.poznan.put.cs.ify.webify.gui.windows;
 
-import java.util.Locale;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

@@ -125,6 +125,7 @@ public class MessageService implements IMessageService {
 	}
 
 	@Override
+	@Transactional
 	public void pushMessage(Message message) {
 		IMessageParser parser = getParser(message);
 		parser.parse();
@@ -141,6 +142,7 @@ public class MessageService implements IMessageService {
 	}
 
 	@Override
+	@Transactional
 	public Message pullMessage(Message message) {
 		IMessageParser parser = getParser(message);
 		parser.parse();

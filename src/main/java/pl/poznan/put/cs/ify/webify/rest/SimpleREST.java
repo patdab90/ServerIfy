@@ -1,5 +1,7 @@
 package pl.poznan.put.cs.ify.webify.rest;
 
+import java.util.Date;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -7,17 +9,19 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Request;
-import javax.ws.rs.core.Response;
 
-import org.jboss.resteasy.spi.HttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO;
+import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
+import pl.poznan.put.cs.ify.webify.data.enums.user.UserRole;
 import pl.poznan.put.cs.ify.webify.rest.model.LoginMessage;
 import pl.poznan.put.cs.ify.webify.rest.model.Message;
-import pl.poznan.put.cs.ify.webify.rest.model.MessageParam;
+import pl.poznan.put.cs.ify.webify.rest.model.MessageEvent;
+import pl.poznan.put.cs.ify.webify.rest.model.MessageUser;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageService;
 
 @Component
@@ -26,6 +30,18 @@ public class SimpleREST {
 
 	@Autowired
 	private IMessageService messageService;
+
+	@Autowired
+	private IEventQueueDAO queueDAO;
+
+	private UserEntity sourceUser;
+
+	@Autowired
+	private IUserDAO userDAO;
+
+	private UserEntity targetUser;
+
+	private Message message;
 
 	@POST
 	@Path(value = "/post")
@@ -53,8 +69,43 @@ public class SimpleREST {
 	@GET
 	@Path(value = "/test_get")
 	@Produces(value = "application/json")
-	public Response get() {
-		return Response.ok(true).build();
+	public Message get() {
+
+		Date now = new Date();
+		String time = "" + now.getTime();
+		String username = "username" + time;
+		String targetUserName = "Targetusername" + time;
+		String group = "group" + time;
+		String device = "device" + time;
+		String recipe = "recipe" + time;
+
+		targetUser = new UserEntity();
+		targetUser.setFirstName("test1");
+		targetUser.setLastName("test1");
+		targetUser.setPassword("test1");
+		targetUser.addRole(UserRole.USER);
+
+		targetUser.setUsername(targetUserName);
+
+		sourceUser = new UserEntity();
+		sourceUser.setFirstName("test1");
+		sourceUser.setLastName("test1");
+		sourceUser.setPassword("test1");
+		sourceUser.setUsername(username);
+		sourceUser.addRole(UserRole.USER);
+
+		MessageUser user = new MessageUser(username, group, device, recipe);
+		MessageEvent event = new MessageEvent(targetUserName, 1);
+		message = new Message();
+		message.setEvent(event);
+		message.setUser(user);
+
+		userDAO.persist(sourceUser);
+		UserEntity u2 = userDAO.findByUserName(username);
+
+		userDAO.persist(targetUser);
+		UserEntity u3 = userDAO.findByUserName(targetUserName);
+		return message;
 	}
 
 	@GET
