@@ -148,6 +148,9 @@ public class MessageService implements IMessageService {
 		parser.parse();
 		UserEntity targetUser = parser.getUser();
 		EventQueueEntity element = queueService.pull(targetUser);
+		if (element == null) {
+			return new Message();
+		}
 		Object data = element.getDataObject();
 		return (Message) data;
 	}
