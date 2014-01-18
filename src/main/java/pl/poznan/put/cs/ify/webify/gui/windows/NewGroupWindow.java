@@ -56,6 +56,7 @@ public class NewGroupWindow extends BaseWindow {
 	}
 
 	public void init(UserSession session) {
+		this.setWidth("500px");
 		final Form fl = new Form();
 		createGroupNameField();
 		createNewMemberNameFiled();

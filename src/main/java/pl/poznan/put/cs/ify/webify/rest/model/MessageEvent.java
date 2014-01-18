@@ -44,4 +44,38 @@ public class MessageEvent implements Serializable {
 	public void setTag(int tag) {
 		this.tag = tag;
 	}
+
+	@Override
+	public String toString() {
+		return "MessageEvent [target=" + target + ", tag=" + tag + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + tag;
+		result = prime * result + ((target == null) ? 0 : target.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MessageEvent other = (MessageEvent) obj;
+		if (tag != other.tag)
+			return false;
+		if (target == null) {
+			if (other.target != null)
+				return false;
+		} else if (!target.equals(other.target))
+			return false;
+		return true;
+	}
+
 }

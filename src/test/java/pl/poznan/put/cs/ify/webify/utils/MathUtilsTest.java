@@ -12,7 +12,7 @@ public class MathUtilsTest extends BaseTest {
 	public void getDigitFromPosLongTest() {
 
 		// Liczba do przetestowania
-		Long num = 123498765l;
+		final Long num = 123498765l;
 		// Liczba do przetestowania w postaci tablicy
 		Long numArr[] = { 1l, 2l, 3l, 4l, 9l, 8l, 7l, 6l, 5l };
 

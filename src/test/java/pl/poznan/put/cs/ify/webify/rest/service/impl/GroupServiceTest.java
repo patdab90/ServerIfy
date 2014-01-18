@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -162,5 +163,10 @@ public class GroupServiceTest {
 		log.info("init(): user id=" + user.getId());
 		UserEntity u2 = userDAO.findByUserName(username);
 		assertEquals(user, u2);
+	}
+
+	@After
+	public void clean() {
+		// userDAO.remove(user);
 	}
 }

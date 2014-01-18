@@ -2,6 +2,9 @@ package pl.poznan.put.cs.ify.webify.rest.service.impl;
 
 import java.util.List;
 
+import javax.naming.AuthenticationException;
+import javax.ws.rs.NotSupportedException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +24,9 @@ import pl.poznan.put.cs.ify.webify.rest.service.IMessageBuilder;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageParser;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageService;
 import pl.poznan.put.cs.ify.webify.service.IEventQueueService;
+import pl.poznan.put.cs.ify.webify.service.IGroupService;
 import pl.poznan.put.cs.ify.webify.service.IParameterService;
+import pl.poznan.put.cs.ify.webify.service.IUserService;
 
 @Component
 public class MessageService implements IMessageService {
@@ -33,6 +38,12 @@ public class MessageService implements IMessageService {
 
 	@Autowired
 	private IUserDAO userDAO;
+
+	@Autowired
+	private IUserService userService;
+
+	@Autowired
+	private IGroupService groupService;
 
 	@Autowired
 	private IGroupDAO groupDAO;
@@ -69,9 +80,12 @@ public class MessageService implements IMessageService {
 
 	@Override
 	@Transactional
-	public Message execute(Message message) {
+	public Message execute(Message message) throws AuthenticationException {
 		log.info("execute()");
+
 		IMessageParser parser = getParser(message);
+		UserEntity user = parser.getUser();
+		validSender(user);
 		UserEntity target = parser.getTarget();
 		GroupEntity group = parser.getGroup();
 		String recipe = parser.getRecipe();
@@ -89,9 +103,10 @@ public class MessageService implements IMessageService {
 		} else if (tag == MessageEvent.PULL_EVENT) {
 			return pullMessage(message);
 		} else if (tag > 0) {
-			pushMessage(message);
+			pushObject(message, user, target, group);
+			return null;
 		}
-		return null;
+		throw new NotSupportedException();
 	}
 
 	public Message putData(IMessageParser parser, GroupEntity group,
@@ -126,30 +141,56 @@ public class MessageService implements IMessageService {
 
 	@Override
 	@Transactional
-	public void pushMessage(Message message) {
+	public void pushMessage(Message message) throws AuthenticationException {
+		Object dataObject = message;
+
 		IMessageParser parser = getParser(message);
 		parser.parse();
 		UserEntity sourceUser = parser.getUser();
 		UserEntity targetUser = parser.getTarget();
-		Object dataObject = message;
+		GroupEntity group = parser.getGroup();
 
-		EventQueueEntity element = new EventQueueEntity();
-		element.setSourceUser(sourceUser);
-		element.setTargetUser(targetUser);
-		element.setDataObject(dataObject);
+		validSender(sourceUser);
 
-		queueService.push(element);
+		pushObject(dataObject, sourceUser, targetUser, group);
+	}
+
+	protected void validSender(UserEntity sourceUser)
+			throws AuthenticationException {
+		if (sourceUser == null) {
+			throw new AuthenticationException("Invalid Username or password!");
+		}
+	}
+
+	protected void pushObject(Object dataObject, UserEntity sourceUser,
+			UserEntity targetUser, GroupEntity group) {
+		if (userService.isBroadcast(targetUser)) {
+			List<UserEntity> members = groupService.getMembers(group);
+			for (UserEntity userEntity : members) {
+				queueService.pushQueueElement(dataObject, sourceUser,
+						userEntity);
+			}
+		} else {
+			queueService.pushQueueElement(dataObject, sourceUser, targetUser);
+		}
 	}
 
 	@Override
 	@Transactional
-	public Message pullMessage(Message message) {
+	public Message pullMessage(Message message) throws AuthenticationException {
 		IMessageParser parser = getParser(message);
 		parser.parse();
+		UserEntity sourceUser = parser.getUser();
 		UserEntity targetUser = parser.getUser();
+		validSender(sourceUser);
+
+		return pullObject(targetUser);
+	}
+
+	protected Message pullObject(UserEntity targetUser) {
 		EventQueueEntity element = queueService.pull(targetUser);
 		if (element == null) {
-			return new Message();
+			return null;
 		}
 		Object data = element.getDataObject();
 		return (Message) data;

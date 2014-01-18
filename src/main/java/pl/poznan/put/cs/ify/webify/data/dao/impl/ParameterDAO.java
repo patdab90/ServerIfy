@@ -83,6 +83,7 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
+	@Deprecated
 	public void update(ParameterEntity param) {
 		// Query q = getManager()
 		// .createNativeQuery(
@@ -92,8 +93,14 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 
 	@Override
 	public List<ParameterEntity> find(GroupEntity group, String recipe) {
-		// TODO Auto-generated method stub
-		return null;
+		TypedQuery<ParameterEntity> q = getManager()
+				.createQuery(
+						"SELECT p FROM ParameterEntity p "
+								+ "WHERE p.recipe = :recipe AND p.group.id = :groupId ",
+						cls);
+		q.setParameter("groupId", group.getId());
+		q.setParameter("recipe", recipe);
+		return q.getResultList();
 	}
 
 }

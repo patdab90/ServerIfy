@@ -67,4 +67,12 @@ public interface IUserService extends IBaseService<UserEntity> {
 	 */
 	public UserEntity getByUsername(String username);
 
+	/**
+	 * Check that user is system commend representing all users in group.
+	 * 
+	 * @param user
+	 * @return
+	 */
+	boolean isBroadcast(UserEntity user);
+
 }

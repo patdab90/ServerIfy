@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNull;
 
 import java.util.Date;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -75,6 +76,8 @@ public class EventQueueServiceTest {
 		assertNull(e2);
 	}
 
+	
+
 	@Before
 	@Transactional
 	public void init() {
@@ -104,7 +107,8 @@ public class EventQueueServiceTest {
 		sourceUser.setUsername(username);
 		sourceUser.addRole(UserRole.USER);
 
-		MessageUser user = new MessageUser(username, group, device, recipe);
+		MessageUser user = new MessageUser(username, username, group, device,
+				recipe);
 		MessageEvent event = new MessageEvent(targetUserName, 1);
 		log.info("init(): time=" + time);
 		message = new Message();
@@ -131,5 +135,12 @@ public class EventQueueServiceTest {
 		element.setSourceUser(sourceUser);
 		element.setTargetUser(targetUser);
 		element.setDataObject(message);
+	}
+
+	@After
+	public void crean() {
+		userDAO.remove(sourceUser);
+		userDAO.remove(targetUser);
+
 	}
 }

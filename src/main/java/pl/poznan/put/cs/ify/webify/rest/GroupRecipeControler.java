@@ -1,11 +1,13 @@
 package pl.poznan.put.cs.ify.webify.rest;
 
+import javax.naming.AuthenticationException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +26,11 @@ public class GroupRecipeControler {
 	@Path("/send")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response saveEvent(Message message) {
-		messageService.pushMessage(message);
+		try {
+			messageService.pushMessage(message);
+		} catch (AuthenticationException e) {
+			return Response.status(Status.UNAUTHORIZED).entity(e).build();
+		}
 		return Response.ok().build();
 	}
 
@@ -32,14 +38,22 @@ public class GroupRecipeControler {
 	@Path("/load")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Message loadEvent(Message message) {
-		return messageService.pullMessage(message);
+	public Response loadEvent(Message message) {
+		try {
+			return Response.ok(messageService.pullMessage(message)).build();
+		} catch (AuthenticationException e) {
+			return Response.status(Status.UNAUTHORIZED).entity(e).build();
+		}
 	}
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Message exe(Message message) {
-		return messageService.execute(message);
+	public Response exe(Message message) {
+		try {
+			return Response.ok(messageService.execute(message)).build();
+		} catch (AuthenticationException e) {
+			return Response.status(Status.UNAUTHORIZED).entity(e).build();
+		}
 	}
 }

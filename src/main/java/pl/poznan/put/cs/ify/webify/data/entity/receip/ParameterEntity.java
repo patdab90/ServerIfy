@@ -15,8 +15,11 @@ import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 
 @Entity
-@Table(name = "parameters", uniqueConstraints = { @UniqueConstraint(columnNames = {
-		"groupname", "recipe", "device", "name", "username" }) })
+@Table(name = "parameters"/*
+						 * , uniqueConstraints = { @UniqueConstraint(columnNames
+						 * = { "groupname", "recipe", "device", "name",
+						 * "username" }) }
+						 */)
 public class ParameterEntity extends BaseEntity {
 
 	/**

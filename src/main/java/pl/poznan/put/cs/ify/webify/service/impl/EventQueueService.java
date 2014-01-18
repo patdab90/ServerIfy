@@ -30,4 +30,21 @@ public class EventQueueService implements IEventQueueService {
 		queueDAO.persist(element);
 	}
 
+	@Override
+	public EventQueueEntity createQueueElement(Object dataObject,
+			UserEntity sourceUser, UserEntity targetUser) {
+		EventQueueEntity element = new EventQueueEntity();
+		element.setSourceUser(sourceUser);
+		element.setTargetUser(targetUser);
+		element.setDataObject(dataObject);
+		return element;
+	}
+
+	@Override
+	public void pushQueueElement(Object dataObject, UserEntity sourceUser,
+			UserEntity userEntity) {
+		EventQueueEntity element = createQueueElement(dataObject, sourceUser,
+				userEntity);
+		push(element);
+	}
 }

@@ -19,6 +19,7 @@ import pl.poznan.put.cs.ify.webify.rest.model.MessageParam;
 import pl.poznan.put.cs.ify.webify.rest.model.MessageUser;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageParser;
 import pl.poznan.put.cs.ify.webify.service.IParameterService;
+import pl.poznan.put.cs.ify.webify.service.impl.UserService;
 
 public class MessageParser implements IMessageParser {
 
@@ -59,6 +60,9 @@ public class MessageParser implements IMessageParser {
 		device = mu.getDevice();
 		recipe = mu.getRecipe();
 		user = userDAO.findByUserName(mu.getUsername());
+		if (user.getPassword().equals(mu.getPassword())) {
+			user = null;
+		}
 		group = groupDAO.findByName(mu.getGroup());
 
 		MessageEvent me = message.getEvent();

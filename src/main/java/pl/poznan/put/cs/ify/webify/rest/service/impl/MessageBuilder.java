@@ -94,7 +94,7 @@ public class MessageBuilder implements IMessageBuilder {
 			return mu;
 		}
 		valid(user, group);
-		return new MessageUser(user.getUsername(), group.getName(), device,
+		return new MessageUser(user.getUsername(), "", group.getName(), device,
 				recipe);
 	}
 

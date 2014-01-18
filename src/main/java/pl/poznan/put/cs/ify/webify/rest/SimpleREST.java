@@ -12,7 +12,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Request;
 
-import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -98,7 +97,8 @@ public class SimpleREST {
 		sourceUser.setUsername(username);
 		sourceUser.addRole(UserRole.USER);
 
-		MessageUser user = new MessageUser(username, group, device, recipe);
+		MessageUser user = new MessageUser(username, username, group, device,
+				recipe);
 		MessageEvent event = new MessageEvent(targetUserName, 1);
 		message = new Message();
 		message.setEvent(event);

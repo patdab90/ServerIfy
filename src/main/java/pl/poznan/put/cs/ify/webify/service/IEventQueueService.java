@@ -7,4 +7,10 @@ public interface IEventQueueService extends IBaseService<EventQueueEntity> {
 	EventQueueEntity pull(UserEntity target);
 
 	void push(EventQueueEntity element);
+
+	EventQueueEntity createQueueElement(Object dataObject,
+			UserEntity sourceUser, UserEntity targetUser);
+
+	void pushQueueElement(Object dataObject, UserEntity sourceUser,
+			UserEntity userEntity);
 }

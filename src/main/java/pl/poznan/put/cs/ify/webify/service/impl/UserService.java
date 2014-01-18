@@ -103,4 +103,9 @@ public class UserService implements IUserService {
 		}
 		return false;
 	}
+
+	@Override
+	public boolean isBroadcast(UserEntity user) {
+		return "BROADCAST".equals(user.getUsername());
+	}
 }
