@@ -60,6 +60,9 @@ public class MessageParser implements IMessageParser {
 		device = mu.getDevice();
 		recipe = mu.getRecipe();
 		user = userDAO.findByUserName(mu.getUsername());
+		if (user == null) {
+			user = null;
+		}
 		if (user.getPassword().equals(mu.getPassword())) {
 			user = null;
 		}
