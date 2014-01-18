@@ -9,8 +9,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import org.aspectj.org.eclipse.jdt.internal.compiler.ast.FalseLiteral;
-
 import pl.poznan.put.cs.ify.webify.data.entity.BaseEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 
@@ -34,11 +32,13 @@ public class GroupPermissionEntity extends BaseEntity {
 	private boolean a = false;
 
 	@Column(nullable = false)
-	private boolean r = true;
+	private boolean r = false;
 
 	@Column(nullable = false)
-	private boolean x = true;
-	
+	private boolean x = false;
+
+	@Column(nullable = false)
+	private boolean c = true;
 
 	@ManyToOne(fetch = FetchType.EAGER, targetEntity = GroupEntity.class)
 	@JoinColumns(value = {
@@ -100,4 +100,11 @@ public class GroupPermissionEntity extends BaseEntity {
 		this.user = user;
 	}
 
+	public boolean isC() {
+		return c;
+	}
+
+	public void setC(boolean c) {
+		this.c = c;
+	}
 }

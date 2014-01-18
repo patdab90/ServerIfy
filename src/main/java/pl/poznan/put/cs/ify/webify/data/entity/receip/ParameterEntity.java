@@ -8,7 +8,6 @@ import javax.persistence.JoinColumns;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
 import pl.poznan.put.cs.ify.webify.data.entity.BaseEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;

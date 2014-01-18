@@ -50,11 +50,11 @@ public class GroupService implements IGroupService {
 			groupPermissionDAO.persist(groupPermission);
 		} else {
 			log.debug("addGroupMember modify permission for group");
-			if (groupPermission.isX() && groupPermission.isR()) {
+			if ((groupPermission.isX() && groupPermission.isR())
+					|| groupPermission.isC()) {
 				return;// może tylko X??
 			}
-			groupPermission.setR(true);
-			groupPermission.setX(true);
+			groupPermission.setC(true);
 			groupPermissionDAO.merge(groupPermission);
 		}
 	}
@@ -139,6 +139,7 @@ public class GroupService implements IGroupService {
 		groupPermissionEntity.setA(true);
 		groupPermissionEntity.setR(true);
 		groupPermissionEntity.setX(true);
+		groupPermissionEntity.setC(false);
 		groupPermissionDAO.persist(groupPermissionEntity);
 		return groupPermissionEntity;
 	}
@@ -151,10 +152,24 @@ public class GroupService implements IGroupService {
 			return null;
 		List<GroupEntity> res = new ArrayList<GroupEntity>(gpl.size());
 		for (GroupPermissionEntity gp : gpl) {
-			res.add(gp.getGroup());
+			if (!gp.isC() && gp.isR())
+				res.add(gp.getGroup());
 		}
 		return res;
 		// return groupDAO.findByUser(user);
+	}
+
+	@Override
+	@Transactional
+	public List<GroupEntity> getUserInvitedGroups(final UserEntity user) {
+		List<GroupPermissionEntity> gpl = groupPermissionDAO.findInvited(user);
+		if (gpl == null)
+			return null;
+		List<GroupEntity> res = new ArrayList<GroupEntity>(gpl.size());
+		for (GroupPermissionEntity gp : gpl) {
+			res.add(gp.getGroup());
+		}
+		return res;
 	}
 
 	@Override
@@ -180,6 +195,8 @@ public class GroupService implements IGroupService {
 			return groupPermmison.isR();
 		case X:
 			return groupPermmison.isX();
+		case C:
+			return groupPermmison.isC();
 		default:
 			throw new UnsupportedOperationException();
 		}
@@ -258,6 +275,9 @@ public class GroupService implements IGroupService {
 		case X:
 			groupPermission.setX(value);
 			break;
+		case C:
+			groupPermission.setC(value);
+			break;
 		default:
 			throw new UnsupportedOperationException();
 		}
@@ -288,4 +308,5 @@ public class GroupService implements IGroupService {
 	public GroupEntity findByName(String name) {
 		return groupDAO.findByName(name);
 	}
+
 }
