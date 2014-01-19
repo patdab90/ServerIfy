@@ -245,7 +245,7 @@ public class UserEntity extends BaseEntity {
 
 	@Override
 	public String toString() {
-		return getFirstName() + " " + getLastName();
+		return username + " password=" + password;
 	}
 
 }

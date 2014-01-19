@@ -82,9 +82,9 @@ public class MessageService implements IMessageService {
 	@Transactional
 	public Message execute(Message message) throws AuthenticationException {
 		log.info("execute()");
-
 		IMessageParser parser = getParser(message);
 		UserEntity user = parser.getUser();
+		log.debug("");
 		validSender(user);
 		UserEntity target = parser.getTarget();
 		GroupEntity group = parser.getGroup();
@@ -101,7 +101,7 @@ public class MessageService implements IMessageService {
 		} else if (tag == -3) {
 			// TODO
 		} else if (tag == MessageEvent.PULL_EVENT) {
-			return pullMessage(message);
+			return pullObject(user);
 		} else if (tag > 0) {
 			pushObject(message, user, target, group);
 			return null;
@@ -178,8 +178,9 @@ public class MessageService implements IMessageService {
 	@Override
 	@Transactional
 	public Message pullMessage(Message message) throws AuthenticationException {
-		IMessageParser parser = getParser(message);
-		parser.parse();
+		log.info("pullMessage [message:{}]", message);
+		IMessageParser parser = getParser();
+		parser.parse(message);
 		UserEntity sourceUser = parser.getUser();
 		UserEntity targetUser = parser.getUser();
 		validSender(sourceUser);

@@ -38,7 +38,6 @@ public class GroupPermissionEntity extends BaseEntity {
 
 	@Column(nullable = false)
 	private boolean x = true;
-	
 
 	@ManyToOne(fetch = FetchType.EAGER, targetEntity = GroupEntity.class)
 	@JoinColumns(value = {

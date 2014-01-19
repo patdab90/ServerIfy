@@ -31,6 +31,7 @@ public class MessageUser implements Serializable {
 		this.group = group;
 		this.device = device;
 		this.recipe = recipe;
+		this.password = password;
 	}
 
 	public String getUsername() {

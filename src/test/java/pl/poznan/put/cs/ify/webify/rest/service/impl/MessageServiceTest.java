@@ -1,9 +1,5 @@
 package pl.poznan.put.cs.ify.webify.rest.service.impl;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.*;
 
 import java.util.Date;
@@ -36,6 +32,7 @@ import pl.poznan.put.cs.ify.webify.rest.model.MessageEvent;
 import pl.poznan.put.cs.ify.webify.rest.model.MessageParam;
 import pl.poznan.put.cs.ify.webify.rest.model.MessageUser;
 import pl.poznan.put.cs.ify.webify.rest.service.IMessageService;
+import pl.poznan.put.cs.ify.webify.utils.StringUtils;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:pl/poznan/put/cs/ify/webify/spring-context.xml" })
@@ -69,7 +66,9 @@ public class MessageServiceTest {
 		assertNotNull(message);
 
 		message.getEvent().setTag(MessageEvent.GET_DATA_EVENT);
+		log.debug("getDataExecutionTest1 test <<");
 		Message result = service.execute(message);
+		log.debug("getDataExecutionTest1 test >>");
 		log.info("getDateExecutionTest1(): result=" + result);
 		assertNotNull(result);
 		assertNull(result.getValues());
@@ -79,6 +78,7 @@ public class MessageServiceTest {
 	@Transactional
 	public void getDataExecutionTest2() throws AuthenticationException {
 		init();
+		log.trace(">> ");
 		final String paramname = "param_name1" + System.currentTimeMillis();
 		final String paramtype = "param_type1" + System.currentTimeMillis();
 		final String paramvalue = "param_value1" + System.currentTimeMillis();
@@ -100,7 +100,9 @@ public class MessageServiceTest {
 
 		message.getEvent().setTag(MessageEvent.GET_DATA_EVENT);
 		// message.getEvent().setTarget(userEntity.getUsername());
+		log.debug("getDataExecutionTest2 test <<");
 		Message result = service.execute(message);
+		log.debug("getDataExecutionTest2 test >>");
 		assertNotNull(result);
 		assertNotNull(result.getValues());
 		assertFalse(result.getValues().isEmpty());
@@ -118,7 +120,8 @@ public class MessageServiceTest {
 		assertNotNull("User DAO is null", userDAO);
 		assertNotNull("Group DAO is null", groupDAO);
 		message = new Message();
-		MessageEvent event = new MessageEvent(null, MessageEvent.GET_DATA_EVENT);
+		MessageEvent event = new MessageEvent("BROADCAST",
+				MessageEvent.GET_DATA_EVENT);
 		Date now = new Date();
 		String time = "" + now.getTime();
 		log.info("init(): time=" + time);
@@ -126,15 +129,15 @@ public class MessageServiceTest {
 		String group = "group" + time;
 		String device = "device" + time;
 		String recipe = "recipe" + time;
-		MessageUser user = new MessageUser(username, username, group, device,
-				recipe);
+		MessageUser user = new MessageUser(username, StringUtils.sh1(username,
+				username), group, device, recipe);
 		message.setEvent(event);
 		message.setUser(user);
 		userEntity = new UserEntity();
 		userEntity.setFirstName("test1");
 		userEntity.setLastName("test1");
-		userEntity.setPassword("test1");
 		userEntity.setUsername(username);
+		userEntity.setPassword(username);
 		log.info("broadcastTest(): username=" + userEntity.getUsername());
 		userEntity.addRole(UserRole.USER);
 		userDAO.persist(userEntity);
@@ -146,7 +149,7 @@ public class MessageServiceTest {
 		UserEntity targetUser = new UserEntity();
 		targetUser.setFirstName("test1");
 		targetUser.setLastName("test1");
-		targetUser.setPassword("test1");
+		targetUser.setPassword(username + "2");
 		targetUser.setUsername(username + "2");
 		log.info("broadcastTest(): username=" + targetUser.getUsername());
 		targetUser.addRole(UserRole.USER);
@@ -192,7 +195,9 @@ public class MessageServiceTest {
 
 		message.getEvent().setTag(1);
 		message.getEvent().setTarget(broadcast.getUsername());
+		log.info("BROADCAST test <<");
 		Message result = service.execute(message);
+		log.info("BROADCAST test >>");
 		assertNull(result);
 		EventQueueEntity event1 = eventQueueDAO.findCurrent(userEntity);
 		assertNotNull(event1);
@@ -217,16 +222,17 @@ public class MessageServiceTest {
 		String group = "group" + time;
 		String device = "device" + time;
 		String recipe = "recipe" + time;
-		MessageUser user = new MessageUser(username, username, group, device,
-				recipe);
+		MessageUser user = new MessageUser(username, StringUtils.sh1(username,
+				username), group, device, recipe);
 		message.setEvent(event);
 		message.setUser(user);
 
 		userEntity = new UserEntity();
 		userEntity.setFirstName("test1");
 		userEntity.setLastName("test1");
-		userEntity.setPassword("test1");
 		userEntity.setUsername(username);
+		userEntity.setPassword(username);
+
 		log.info("init(): username=" + userEntity.getUsername());
 		userEntity.addRole(UserRole.USER);
 		userDAO.persist(userEntity);
