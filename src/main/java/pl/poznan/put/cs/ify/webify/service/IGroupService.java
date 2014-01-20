@@ -52,4 +52,6 @@ public interface IGroupService extends IBaseService<GroupEntity> {
 
 	GroupEntity findByName(String name);
 
+	List<GroupEntity> getUserInvitedGroups(UserEntity user);
+
 }

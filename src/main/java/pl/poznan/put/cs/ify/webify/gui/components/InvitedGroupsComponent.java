@@ -60,6 +60,7 @@ public class InvitedGroupsComponent extends Panel {
 	 */
 	public void init(UserSession session) {
 		this.removeAllComponents();
+<<<<<<< HEAD
 		/*
 		 * user = userService.getByUsername(session.getUserName());
 		 * List<GroupEntity> groups = groupService.getUserInvitedGroups(user);
@@ -99,4 +100,58 @@ public class InvitedGroupsComponent extends Panel {
 		 */
 	}
 
+=======
+
+		user = userService.getByUsername(session.getUserName());
+		List<GroupEntity> groups = groupService.getUserInvitedGroups(user);
+
+		groupsList = new ListSelect();
+		groupsList.setRows(groups.size());
+		for (GroupEntity groupEntity : groups) {
+			groupsList.addItem(groupEntity.getName());
+		}
+		groupsList.setDescription("Grupy do których zostałeś zaproszony.");
+		addComponent(groupsList);
+		confirmButton = new Button("Potwierdź zaproszeni", new ClickListener() {
+
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			@Transactional
+			public void buttonClick(ClickEvent event) {
+				String groupname = (String) groupsList.getValue();
+				if (groupname == null)
+					return;
+				GroupEntity group = groupDAO.findByName(groupname);
+				if (group == null)
+					return;
+				groupService.addPermission(user, group, GroupPermission.X,
+						GroupPermission.R);
+				groupService.removePermission(user, group, GroupPermission.C);
+				((MainWindow) InvitedGroupsComponent.this.getWindow())
+						.refresh();
+			}
+		});
+
+		deleteButton = new Button("Odrzuć zaproszenie", new ClickListener() {
+
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			@Transactional
+			public void buttonClick(ClickEvent event) {
+				String groupname = (String) groupsList.getValue();
+				if (groupname == null)
+					return;
+				GroupEntity group = groupDAO.findByName(groupname);
+				if (group == null)
+					return;
+				GroupPermissionEntity gp = groupPermissionDAO.find(user, group);
+				groupPermissionDAO.remove(gp);
+			}
+		});
+		addComponent(confirmButton);
+		addComponent(deleteButton);
+	}
+>>>>>>> origin/master
 }

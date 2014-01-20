@@ -26,7 +26,6 @@ public class GroupDAO extends BaseDAO<GroupEntity> implements IGroupDAO {
 	}
 
 	@Override
-	@Deprecated
 	public List<GroupEntity> findByUser(UserEntity user) {
 		TypedQuery<GroupEntity> q = getManager()
 				.createQuery(

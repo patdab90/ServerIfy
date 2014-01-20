@@ -49,6 +49,9 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 	@Autowired
 	private EditGoupPanel editGroupPanel;
 
+	@Autowired
+	private InvitedGroupsComponent invitedGroupsComponent;
+
 	private Window mainWindow;
 
 	private NewGroupWindow groupWindow;
@@ -80,6 +83,8 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 		// addComponent();
 		addComponent(addNewGroupButton);
 		createSelect();
+		invitedGroupsComponent.init(session);
+		addComponent(invitedGroupsComponent);
 	}
 
 	protected void click(final UserSession user, final GroupListPanel self) {

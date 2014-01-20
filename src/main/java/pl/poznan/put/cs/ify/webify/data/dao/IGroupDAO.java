@@ -9,5 +9,6 @@ public interface IGroupDAO extends IBaseDAO<GroupEntity> {
 
 	GroupEntity findByName(String groupname);
 
+	@Deprecated
 	List<GroupEntity> findByUser(UserEntity user);
 }

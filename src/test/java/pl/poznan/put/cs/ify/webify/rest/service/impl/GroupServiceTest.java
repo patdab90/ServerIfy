@@ -80,6 +80,9 @@ public class GroupServiceTest {
 		assertNotNull(gp);
 		assertNotNull(gp.getUser());
 		assertEquals(gp.getUser(), user);
+		assertFalse(gp.isC());
+		assertTrue(gp.isR());
+		assertTrue(gp.isX());
 
 		GroupEntity g2 = groupService.createGroupe(user, "TestCreateGroup3"
 				+ new Date().getTime());
@@ -95,6 +98,9 @@ public class GroupServiceTest {
 		assertNotNull(gp2);
 		assertNotNull(gp2.getUser());
 		assertEquals(gp2.getUser(), user);
+		assertFalse(gp2.isC());
+		assertTrue(gp2.isR());
+		assertTrue(gp2.isX());
 
 		List<GroupEntity> groups = groupService.getGroups(user);
 		assertNotNull(groups);

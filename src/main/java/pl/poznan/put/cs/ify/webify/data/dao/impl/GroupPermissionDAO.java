@@ -79,4 +79,37 @@ public class GroupPermissionDAO extends BaseDAO<GroupPermissionEntity>
 		return getSingleResult(q);
 	}
 
+	@Override
+	public GroupPermissionEntity findInvited(UserEntity user, GroupEntity group) {
+		return findInvited(user.getId(), user.getId());
+	}
+
+	@Override
+	public GroupPermissionEntity findInvited(long userId, long groupId) {
+		TypedQuery<GroupPermissionEntity> q = getManager().createQuery(
+				"SELECT gp FROM GroupPermissionEntity gp "
+						+ "WHERE gp.user.id = :user "
+						+ "AND gp.group.id = :group AND gp.c = false", cls);
+		q.setParameter("user", userId);
+		q.setParameter("group", groupId);
+		q.setMaxResults(1);
+		return getSingleResult(q);
+	}
+
+	@Override
+	public List<GroupPermissionEntity> findInvited(UserEntity user) {
+		return findInvited(user.getId());
+	}
+
+	@Override
+	public List<GroupPermissionEntity> findInvited(long userId) {
+		TypedQuery<GroupPermissionEntity> q = getManager()
+				.createQuery(
+						"SELECT gp FROM GroupPermissionEntity gp "
+								+ "WHERE gp.user.id = :user "
+								+ "AND gp.c = false", cls);
+		q.setParameter("user", userId);
+		return q.getResultList();
+	}
+
 }

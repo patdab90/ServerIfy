@@ -37,8 +37,8 @@ public class EditGoupPanel extends Panel {
 	@Autowired
 	private EditUserComponent editUserComponent;
 
-	private CustomComponent leftComponent;
-	private CustomComponent rightComponent;
+	private Panel leftComponent;
+	private Panel rightComponent;
 
 	private ListSelect userList;
 	private Button deleteGroupButton;
@@ -97,7 +97,7 @@ public class EditGoupPanel extends Panel {
 		}
 		createMembersListField(session);
 		createDeleteButton();
-		leftComponent = new CustomComponent();
+		leftComponent = new Panel();
 		leftComponent.addComponent(userList);
 		leftComponent.addComponent(deleteGroupButton);
 	}
