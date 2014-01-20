@@ -81,34 +81,33 @@ public class MessageService implements IMessageService {
 	@Override
 	@Transactional
 	public Message execute(Message message) throws AuthenticationException {
-		log.info("execute()");
+		log.trace("execute() [message:{}]", message);
 		IMessageParser parser = getParser(message);
 		UserEntity user = parser.getUser();
-		log.debug("");
-		validSender(user);
 		UserEntity target = parser.getTarget();
 		GroupEntity group = parser.getGroup();
 		String recipe = parser.getRecipe();
 		String device = parser.getDevice();
 		int tag = parser.getTag();
+		validSender(user);
 		if (tag == MessageEvent.PUT_DATA_EVENT) {// SEND_DATA
 			return putData(parser, group, recipe, device);
 		} else if (tag == MessageEvent.GET_DATA_EVENT) {// GET_DATA
-			log.info("execute() GET_DATA_EVENT");
+			log.trace("execute() GET_DATA_EVENT");
 			return getDataExecution(message, target, group, recipe, device);
-		} else if (tag == -2) {
-			// TODO
-		} else if (tag == -3) {
-			// TODO
 		} else if (tag == MessageEvent.PULL_EVENT) {
-			return pullObject(user);
+			log.trace("execute() PULL_EVENT");
+			return pullObject(user, recipe, group);
 		} else if (tag > 0) {
-			pushObject(message, user, target, group);
+			log.trace("execute() PUSH_EVENT");
+			message.getUser().setPassword("");
+			pushObject(message, user, target, recipe, group);
 			return null;
 		}
 		throw new NotSupportedException();
 	}
 
+	@Transactional
 	public Message putData(IMessageParser parser, GroupEntity group,
 			String recipe, String device) {
 		log.info("execute() PUT_DATA_EVENT");
@@ -148,11 +147,12 @@ public class MessageService implements IMessageService {
 		parser.parse();
 		UserEntity sourceUser = parser.getUser();
 		UserEntity targetUser = parser.getTarget();
+		String recipe = parser.getRecipe();
 		GroupEntity group = parser.getGroup();
 
 		validSender(sourceUser);
-
-		pushObject(dataObject, sourceUser, targetUser, group);
+		message.getUser().setPassword("");
+		pushObject(dataObject, sourceUser, targetUser, recipe, group);
 	}
 
 	protected void validSender(UserEntity sourceUser)
@@ -163,15 +163,16 @@ public class MessageService implements IMessageService {
 	}
 
 	protected void pushObject(Object dataObject, UserEntity sourceUser,
-			UserEntity targetUser, GroupEntity group) {
+			UserEntity targetUser, String recipe, GroupEntity group) {
 		if (userService.isBroadcast(targetUser)) {
 			List<UserEntity> members = groupService.getMembers(group);
 			for (UserEntity userEntity : members) {
 				queueService.pushQueueElement(dataObject, sourceUser,
-						userEntity);
+						userEntity, recipe, group);
 			}
 		} else {
-			queueService.pushQueueElement(dataObject, sourceUser, targetUser);
+			queueService.pushQueueElement(dataObject, sourceUser, targetUser,
+					recipe, group);
 		}
 	}
 
@@ -182,14 +183,16 @@ public class MessageService implements IMessageService {
 		IMessageParser parser = getParser();
 		parser.parse(message);
 		UserEntity sourceUser = parser.getUser();
-		UserEntity targetUser = parser.getUser();
+		String recipe = parser.getRecipe();
+		GroupEntity group = parser.getGroup();
 		validSender(sourceUser);
 
-		return pullObject(targetUser);
+		return pullObject(sourceUser, recipe, group);
 	}
 
-	protected Message pullObject(UserEntity targetUser) {
-		EventQueueEntity element = queueService.pull(targetUser);
+	protected Message pullObject(UserEntity targetUser, String recipe,
+			GroupEntity group) {
+		EventQueueEntity element = queueService.pull(targetUser, recipe, group);
 		if (element == null) {
 			return null;
 		}

@@ -9,8 +9,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import org.aspectj.org.eclipse.jdt.internal.compiler.ast.FalseLiteral;
-
 import pl.poznan.put.cs.ify.webify.data.entity.BaseEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 

@@ -199,10 +199,12 @@ public class MessageServiceTest {
 		Message result = service.execute(message);
 		log.info("BROADCAST test >>");
 		assertNull(result);
-		EventQueueEntity event1 = eventQueueDAO.findCurrent(userEntity);
+		EventQueueEntity event1 = eventQueueDAO.findCurrent(userEntity, recipe,
+				groupEntity);
 		assertNotNull(event1);
 		assertEquals(message, event1.getDataObject());
-		EventQueueEntity event2 = eventQueueDAO.findCurrent(targetUser);
+		EventQueueEntity event2 = eventQueueDAO.findCurrent(targetUser, recipe,
+				groupEntity);
 		assertNotNull(event2);
 		assertEquals(message, event1.getDataObject());
 

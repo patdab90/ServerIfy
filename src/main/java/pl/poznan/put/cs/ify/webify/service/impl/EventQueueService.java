@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO;
+import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.receip.EventQueueEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.service.IEventQueueService;
@@ -17,8 +18,12 @@ public class EventQueueService implements IEventQueueService {
 
 	@Override
 	@Transactional
-	public EventQueueEntity pull(UserEntity target) {
-		EventQueueEntity element = queueDAO.findCurrent(target);
+	public EventQueueEntity pull(UserEntity target, String recipe,
+			GroupEntity group) {
+		if (target == null || group == null) {
+			return null;
+		}
+		EventQueueEntity element = queueDAO.findCurrent(target, recipe, group);
 		if (element != null)
 			queueDAO.remove(element);
 		return element;
@@ -32,19 +37,23 @@ public class EventQueueService implements IEventQueueService {
 
 	@Override
 	public EventQueueEntity createQueueElement(Object dataObject,
-			UserEntity sourceUser, UserEntity targetUser) {
+			UserEntity sourceUser, UserEntity targetUser, String recipe,
+			GroupEntity group) {
 		EventQueueEntity element = new EventQueueEntity();
 		element.setSourceUser(sourceUser);
 		element.setTargetUser(targetUser);
 		element.setDataObject(dataObject);
+		element.setRecipe(recipe);
+		element.setGroup(group);
 		return element;
 	}
 
 	@Override
+	@Transactional
 	public void pushQueueElement(Object dataObject, UserEntity sourceUser,
-			UserEntity userEntity) {
+			UserEntity userEntity, String recipe, GroupEntity group) {
 		EventQueueEntity element = createQueueElement(dataObject, sourceUser,
-				userEntity);
+				userEntity, recipe, group);
 		push(element);
 	}
 }
