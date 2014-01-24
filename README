@@ -1,1 +1,7 @@
-Uruchamianie: mvn clean install tomcat:run
+Linked projects:
+ify (main project) - https://github.com/alxio/ify/
+marketify - https://github.com/Scony/marketify
+
+Dev start:
+mvn clean install tomcat:run
+
