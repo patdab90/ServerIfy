@@ -80,7 +80,8 @@ public class MessageService implements IMessageService {
 
 	@Override
 	@Transactional
-	public Message execute(Message message) throws AuthenticationException {
+	public Message execute(Message message) throws AuthenticationException,
+			IllegalAccessException {
 		log.trace("execute() [message:{}]", message);
 		IMessageParser parser = getParser(message);
 		UserEntity user = parser.getUser();
@@ -90,6 +91,11 @@ public class MessageService implements IMessageService {
 		String device = parser.getDevice();
 		int tag = parser.getTag();
 		validSender(user);
+		if (!groupService.canExecute(group, user)) {
+			throw new IllegalAccessException(
+					"You have no permmision to execiute in this group! groupName="
+							+ group.getName());
+		}
 		if (tag == MessageEvent.PUT_DATA_EVENT) {// SEND_DATA
 			return putData(parser, group, recipe, device);
 		} else if (tag == MessageEvent.GET_DATA_EVENT) {// GET_DATA
@@ -140,7 +146,7 @@ public class MessageService implements IMessageService {
 
 	@Override
 	@Transactional
-	public void pushMessage(Message message) throws AuthenticationException {
+	public void pushMessage(Message message) throws AuthenticationException, IllegalAccessException {
 		Object dataObject = message;
 
 		IMessageParser parser = getParser(message);
@@ -151,6 +157,11 @@ public class MessageService implements IMessageService {
 		GroupEntity group = parser.getGroup();
 
 		validSender(sourceUser);
+		if (!groupService.canExecute(group, sourceUser)) {
+			throw new IllegalAccessException(
+					"You have no permmision to execiute in this group! groupName="
+							+ group.getName());
+		}
 		message.getUser().setPassword("");
 		pushObject(dataObject, sourceUser, targetUser, recipe, group);
 	}
@@ -178,7 +189,8 @@ public class MessageService implements IMessageService {
 
 	@Override
 	@Transactional
-	public Message pullMessage(Message message) throws AuthenticationException {
+	public Message pullMessage(Message message) throws AuthenticationException,
+			IllegalAccessException {
 		log.info("pullMessage [message:{}]", message);
 		IMessageParser parser = getParser();
 		parser.parse(message);
@@ -186,7 +198,11 @@ public class MessageService implements IMessageService {
 		String recipe = parser.getRecipe();
 		GroupEntity group = parser.getGroup();
 		validSender(sourceUser);
-
+		if (!groupService.canExecute(group, sourceUser)) {
+			throw new IllegalAccessException(
+					"You have no permmision to execiute in this group! groupName="
+							+ group.getName());
+		}
 		return pullObject(sourceUser, recipe, group);
 	}
 

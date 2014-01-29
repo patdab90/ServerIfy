@@ -12,6 +12,7 @@ import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
+import pl.poznan.put.cs.ify.webify.gui.windows.MainWindow;
 import pl.poznan.put.cs.ify.webify.gui.windows.NewGroupWindow;
 import pl.poznan.put.cs.ify.webify.service.IGroupService;
 
@@ -49,10 +50,7 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 	@Autowired
 	private EditGoupPanel editGroupPanel;
 
-	@Autowired
-	private InvitedGroupsComponent invitedGroupsComponent;
-
-	private Window mainWindow;
+	private MainWindow mainWindow;
 
 	private NewGroupWindow groupWindow;
 
@@ -60,6 +58,7 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 
 	public GroupListPanel() {
 		super();
+		this.setWidth("250px");
 	}
 
 	// @Transactional
@@ -83,8 +82,8 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 		// addComponent();
 		addComponent(addNewGroupButton);
 		createSelect();
-		invitedGroupsComponent.init(session);
-		addComponent(invitedGroupsComponent);
+		//this.addComponent(editGroupPanel);
+		editGroupPanel.setVisible(false);
 	}
 
 	protected void click(final UserSession user, final GroupListPanel self) {
@@ -92,7 +91,7 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 	}
 
 	public void setMainWindow(Window m) {
-		mainWindow = m;
+		mainWindow = (MainWindow) m;
 	}
 
 	public void setGroupWindow(NewGroupWindow g) {
@@ -110,8 +109,8 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 	protected void createSelect() {
 		select = new ListSelect();
 		UserEntity userEntity = userDAO.findByUserName(session.getUserName());
-		List<GroupEntity> groups = groupService.getGroups(userEntity);
-		select.setRows(groups.size());
+		List<GroupEntity> groups = groupService.getGroupsByMember(userEntity);
+		select.setRows(20);
 		if (groups != null)
 			for (GroupEntity group : groups) {
 				if (!group.equals("")) {
@@ -131,11 +130,11 @@ public class GroupListPanel extends Panel implements Window.CloseListener {
 				if (event.getProperty().getValue() == null
 						|| event.getProperty().getValue().toString().equals("")) {
 					editGroupPanel.setVisible(false);
+				} else {
+					editGroupPanel.init(session, event.getProperty().getValue()
+							.toString(), mainWindow);
+					editGroupPanel.setVisible(true);
 				}
-
-				editGroupPanel.init(session, event.getProperty().getValue()
-						.toString());
-				editGroupPanel.setVisible(true);
 			}
 		});
 		this.addComponent(select);

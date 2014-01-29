@@ -30,6 +30,8 @@ public class GroupRecipeControler {
 			messageService.pushMessage(message);
 		} catch (AuthenticationException e) {
 			return Response.status(Status.UNAUTHORIZED).entity(e).build();
+		} catch (IllegalAccessException e) {
+			return Response.status(Status.METHOD_NOT_ALLOWED).entity(e).build();
 		}
 		return Response.ok().build();
 	}
@@ -43,6 +45,8 @@ public class GroupRecipeControler {
 			return Response.ok(messageService.pullMessage(message)).build();
 		} catch (AuthenticationException e) {
 			return Response.status(Status.UNAUTHORIZED).entity(e).build();
+		} catch (IllegalAccessException e) {
+			return Response.status(Status.METHOD_NOT_ALLOWED).entity(e).build();
 		}
 	}
 
@@ -54,6 +58,8 @@ public class GroupRecipeControler {
 			return Response.ok(messageService.execute(message)).build();
 		} catch (AuthenticationException e) {
 			return Response.status(Status.UNAUTHORIZED).entity(e).build();
+		} catch (IllegalAccessException e) {
+			return Response.status(Status.METHOD_NOT_ALLOWED).entity(e).build();
 		}
 	}
 }

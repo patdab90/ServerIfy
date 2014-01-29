@@ -1,13 +1,13 @@
 package pl.poznan.put.cs.ify.webify.rest.service.impl;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.Date;
 import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -42,6 +42,9 @@ public class GroupServiceTest {
 
 	@Autowired
 	private IUserDAO userDAO;
+
+	@Autowired
+	private IGroupPermissionDAO groupPermissionDAO;
 
 	@Test
 	public void createTest() {
@@ -80,9 +83,6 @@ public class GroupServiceTest {
 		assertNotNull(gp);
 		assertNotNull(gp.getUser());
 		assertEquals(gp.getUser(), user);
-		assertFalse(gp.isC());
-		assertTrue(gp.isR());
-		assertTrue(gp.isX());
 
 		GroupEntity g2 = groupService.createGroupe(user, "TestCreateGroup3"
 				+ new Date().getTime());
@@ -98,11 +98,8 @@ public class GroupServiceTest {
 		assertNotNull(gp2);
 		assertNotNull(gp2.getUser());
 		assertEquals(gp2.getUser(), user);
-		assertFalse(gp2.isC());
-		assertTrue(gp2.isR());
-		assertTrue(gp2.isX());
 
-		List<GroupEntity> groups = groupService.getGroups(user);
+		List<GroupEntity> groups = groupService.getAllGroups(user);
 		assertNotNull(groups);
 		assertEquals(2, groups.size());
 	}
@@ -144,7 +141,26 @@ public class GroupServiceTest {
 		UserEntity u2 = userDAO.findByUserName(username);
 		assertEquals(user2, u2);
 
-		groupService.addGroupMember(user, g, user2);
+		// groupService.addGroupMember(user, g, user2);
+
+		GroupPermissionEntity groupPermission = groupPermissionDAO.find(user2,
+				g);
+		if (groupPermission == null) {
+			log.debug("addGroupMember new permission for group");
+			groupPermission = new GroupPermissionEntity();
+			groupPermission.setI(false);
+			groupPermission.setR(true);
+			groupPermission.setX(true);
+			groupPermission.setUser(user2);
+			groupPermission.setGroup(g);
+			groupPermissionDAO.persist(groupPermission);
+		} else {
+			log.debug("addGroupMember modify permission for group");
+			groupPermission.setI(false);
+			groupPermission.setR(true);
+			groupPermission.setX(true);
+			groupPermissionDAO.merge(groupPermission);
+		}
 
 		GroupPermissionEntity perm = permissionDAO.find(user2, g);
 		assertNotNull(perm);

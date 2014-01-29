@@ -31,15 +31,14 @@ public class GroupService implements IGroupService {
 	@Autowired
 	private IUserDAO userDAO;
 
-	@Override
 	@Transactional
-	public void addGroupMember(final UserEntity admin, final GroupEntity group,
+	@Override
+	public void inviteUser(final UserEntity admin, final GroupEntity group,
 			final UserEntity user) {
 		if (!canAdd(group, admin)) {
 			log.debug("addGroupMember have no permission to add!!");
 			return;// wyjatek??
 		}
-		log.debug("addGroupMember ");
 		GroupPermissionEntity groupPermission = groupPermissionDAO.find(user,
 				group);
 		if (groupPermission == null) {
@@ -50,11 +49,11 @@ public class GroupService implements IGroupService {
 			groupPermissionDAO.persist(groupPermission);
 		} else {
 			log.debug("addGroupMember modify permission for group");
-			if ((groupPermission.isX() && groupPermission.isR())
-					|| groupPermission.isC()) {
+			if (groupPermission.isI()
+					|| (groupPermission.isX() && groupPermission.isR())) {
 				return;// może tylko X??
 			}
-			groupPermission.setC(true);
+			groupPermission.setI(true);
 			groupPermissionDAO.merge(groupPermission);
 		}
 	}
@@ -94,16 +93,9 @@ public class GroupService implements IGroupService {
 	@Transactional
 	@Override
 	public GroupEntity createGroupe(final UserEntity creator, final String name) {
-		if (creator == null) {
-			throw new NullPointerException();
-		}
-		if (name == null) {
-			throw new NullPointerException();
-		}
 		if (name.isEmpty()) {
 			throw new IllegalStateException();
 		}
-
 		final GroupEntity group = new GroupEntity();
 		group.setName(name);
 		group.setOwner(creator);
@@ -111,22 +103,18 @@ public class GroupService implements IGroupService {
 
 		log.debug("createGroupe, group id=" + group.getId());
 
-		GroupPermissionEntity gp = createPermission(creator, group);
-		if (gp.getGroup() == null) {
-			log.debug("createGroupe, group is null");
-			gp.setGroup(group);
-			gp = groupPermissionDAO.merge(gp);
-			if (gp.getGroup() == null)
-				log.error("createGroupe, group is still null");
-			if (gp.getUser() == null) {
-				log.debug("createGroupe, user is null");
-				gp.setUser(creator);
-				groupPermissionDAO.merge(gp);
-				if (gp.getUser() == null)
-					log.error("createGroupe, user is still null");
+		GroupPermissionEntity groupPermission = createPermission(creator, group);
+		if (groupPermission.getGroup() == null) {
+			groupPermission.setGroup(group);
+			groupPermission = groupPermissionDAO.merge(groupPermission);
+			if (groupPermission.getUser() == null) {
+				groupPermission.setUser(creator);
+				groupPermission.setR(true);
+				groupPermission.setX(true);
+				groupPermission.setI(false);
+				groupPermissionDAO.merge(groupPermission);
 			}
 		}
-		log.error("createGroupe, group=" + gp);
 		return group;
 	}
 
@@ -139,35 +127,37 @@ public class GroupService implements IGroupService {
 		groupPermissionEntity.setA(true);
 		groupPermissionEntity.setR(true);
 		groupPermissionEntity.setX(true);
-		groupPermissionEntity.setC(false);
 		groupPermissionDAO.persist(groupPermissionEntity);
 		return groupPermissionEntity;
 	}
 
+	/**
+	 * Get greoups if user can read them.
+	 */
 	@Override
 	@Transactional
-	public List<GroupEntity> getGroups(final UserEntity user) {
+	public List<GroupEntity> getGroupsByMember(final UserEntity user) {
 		List<GroupPermissionEntity> gpl = groupPermissionDAO.find(user);
 		if (gpl == null)
 			return null;
 		List<GroupEntity> res = new ArrayList<GroupEntity>(gpl.size());
 		for (GroupPermissionEntity gp : gpl) {
-			if (!gp.isC() && gp.isR())
+			if (!gp.isI() && gp.isR())
 				res.add(gp.getGroup());
 		}
 		return res;
-		// return groupDAO.findByUser(user);
 	}
 
-	@Override
 	@Transactional
-	public List<GroupEntity> getUserInvitedGroups(final UserEntity user) {
-		List<GroupPermissionEntity> gpl = groupPermissionDAO.findInvited(user);
+	@Override
+	public List<GroupEntity> getInvitations(final UserEntity user) {
+		List<GroupPermissionEntity> gpl = groupPermissionDAO.find(user);
 		if (gpl == null)
 			return null;
 		List<GroupEntity> res = new ArrayList<GroupEntity>(gpl.size());
 		for (GroupPermissionEntity gp : gpl) {
-			res.add(gp.getGroup());
+			if (gp.isI())
+				res.add(gp.getGroup());
 		}
 		return res;
 	}
@@ -195,8 +185,6 @@ public class GroupService implements IGroupService {
 			return groupPermmison.isR();
 		case X:
 			return groupPermmison.isX();
-		case C:
-			return groupPermmison.isC();
 		default:
 			throw new UnsupportedOperationException();
 		}
@@ -225,13 +213,6 @@ public class GroupService implements IGroupService {
 	@Transactional
 	public boolean isMember(final GroupEntity group, final UserEntity user) {
 		return hasPermition(user, group, GroupPermission.X);
-	}
-
-	@Override
-	@Transactional
-	public void removeGroupMember(final UserEntity admin,
-			final GroupEntity entity, final UserEntity user) {
-
 	}
 
 	@Override
@@ -275,8 +256,8 @@ public class GroupService implements IGroupService {
 		case X:
 			groupPermission.setX(value);
 			break;
-		case C:
-			groupPermission.setC(value);
+		case I:
+			groupPermission.setI(value);
 			break;
 		default:
 			throw new UnsupportedOperationException();
@@ -286,21 +267,16 @@ public class GroupService implements IGroupService {
 	@Override
 	@Transactional
 	public void setPermission(final UserEntity user, final GroupEntity group,
-			final boolean d, final boolean a, final boolean r, final boolean x) {
+			final boolean d, final boolean a, final boolean r, final boolean x,
+			final boolean i) {
 		final GroupPermissionEntity groupPermission = groupPermissionDAO.find(
 				user, group);
 		groupPermission.setA(a);
 		groupPermission.setD(d);
 		groupPermission.setR(r);
 		groupPermission.setX(x);
+		groupPermission.setI(i);
 		groupPermissionDAO.merge(groupPermission);
-	}
-
-	@Override
-	@Deprecated
-	public List<GroupEntity> getGroupsByUsername(String username) {
-
-		return null;
 	}
 
 	@Transactional
@@ -309,4 +285,22 @@ public class GroupService implements IGroupService {
 		return groupDAO.findByName(name);
 	}
 
+	@Override
+	@Transactional
+	public List<GroupEntity> getAllGroups(UserEntity user) {
+		List<GroupPermissionEntity> gpl = groupPermissionDAO.find(user);
+		if (gpl == null)
+			return null;
+		List<GroupEntity> res = new ArrayList<GroupEntity>(gpl.size());
+		for (GroupPermissionEntity gp : gpl) {
+			res.add(gp.getGroup());
+		}
+		return res;
+	}
+
+	@Transactional
+	@Override
+	public boolean canExecute(final GroupEntity group, final UserEntity user) {
+		return hasPermition(user, group, GroupPermission.X);
+	}
 }

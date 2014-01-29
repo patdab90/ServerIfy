@@ -1,6 +1,10 @@
 package pl.poznan.put.cs.ify.webify.rest.service.impl;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
 
@@ -59,7 +63,8 @@ public class MessageServiceTest {
 
 	@Test
 	@Transactional
-	public void getDataExecutionTest1() throws AuthenticationException {
+	public void getDataExecutionTest1() throws AuthenticationException,
+			IllegalAccessException {
 		init();
 		log.info("getDateExecutionTest1()");
 		assertNotNull("Service is null", service);
@@ -76,7 +81,8 @@ public class MessageServiceTest {
 
 	@Test
 	@Transactional
-	public void getDataExecutionTest2() throws AuthenticationException {
+	public void getDataExecutionTest2() throws AuthenticationException,
+			IllegalAccessException {
 		init();
 		log.trace(">> ");
 		final String paramname = "param_name1" + System.currentTimeMillis();
@@ -115,7 +121,8 @@ public class MessageServiceTest {
 
 	@Test
 	@Transactional
-	public void broadcastTest() throws AuthenticationException {
+	public void broadcastTest() throws AuthenticationException,
+			IllegalAccessException {
 		log.info("init()");
 		assertNotNull("User DAO is null", userDAO);
 		assertNotNull("Group DAO is null", groupDAO);

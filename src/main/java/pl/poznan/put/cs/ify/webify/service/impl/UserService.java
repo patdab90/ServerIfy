@@ -1,8 +1,5 @@
 package pl.poznan.put.cs.ify.webify.service.impl;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -106,9 +103,6 @@ public class UserService implements IUserService {
 
 	@Override
 	public boolean isBroadcast(UserEntity user) {
-		if (user == null) {
-			return false;
-		}
 		return "BROADCAST".equals(user.getUsername());
 	}
 }

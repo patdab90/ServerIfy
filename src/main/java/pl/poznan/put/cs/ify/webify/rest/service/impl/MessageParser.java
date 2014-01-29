@@ -60,7 +60,6 @@ public class MessageParser implements IMessageParser {
 		recipe = mu.getRecipe();
 		log.info("parse() password={}", mu.getPassword());
 		user = userDAO.findByUserName(mu.getUsername());
-<<<<<<< HEAD
 		log.info("parse() user={}", user);
 		if (user != null) {
 			log.debug("parse() passwordDB:{}, password:{}", user.getPassword(),
@@ -68,13 +67,6 @@ public class MessageParser implements IMessageParser {
 			if (!user.getPassword().equals(mu.getPassword())) {
 				user = null;
 			}
-=======
-		if (user == null) {
-			user = null;
-		}
-		if (user.getPassword().equals(mu.getPassword())) {
-			user = null;
->>>>>>> origin/master
 		}
 
 		group = groupDAO.findByName(mu.getGroup());

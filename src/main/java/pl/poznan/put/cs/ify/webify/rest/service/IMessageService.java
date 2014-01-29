@@ -9,13 +9,16 @@ public interface IMessageService {
 
 	public IMessageParser getParser();
 
-	Message execute(Message message) throws AuthenticationException;
+	Message execute(Message message) throws AuthenticationException,
+			IllegalAccessException;
 
 	IMessageParser getParser(Message message);
 
 	IMessageBuilder getBuilder(Message message);
 
-	void pushMessage(Message message) throws AuthenticationException;
+	void pushMessage(Message message) throws AuthenticationException,
+			IllegalAccessException;
 
-	Message pullMessage(Message message) throws AuthenticationException;
+	Message pullMessage(Message message) throws AuthenticationException,
+			IllegalAccessException;
 }

@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pl.poznan.put.cs.ify.webify.data.dao.impl.GroupDAOTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
->>>>>>> origin/master
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec

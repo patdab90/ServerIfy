@@ -38,7 +38,7 @@ public abstract class BaseWindow extends Window {
 	@Autowired
 	protected UserSession session;
 
-	public BaseWindow(String title) {
+	public BaseWindow() {
 
 		try {
 			Inject.inject(this);

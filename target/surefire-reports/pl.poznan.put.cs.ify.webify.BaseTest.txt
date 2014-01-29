@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pl.poznan.put.cs.ify.webify.BaseTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.79 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.03 sec
->>>>>>> origin/master
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.109 sec

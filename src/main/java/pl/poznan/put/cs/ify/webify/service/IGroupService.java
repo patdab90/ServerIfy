@@ -9,13 +9,6 @@ import pl.poznan.put.cs.ify.webify.data.enums.GroupPermission;
 
 public interface IGroupService extends IBaseService<GroupEntity> {
 
-	void addGroupMember(UserEntity admin, GroupEntity entity, UserEntity user);
-
-	void removeGroupMember(UserEntity admin, GroupEntity entity, UserEntity user);
-
-	void setPermission(UserEntity user, GroupEntity group, boolean d,
-			boolean a, boolean r, boolean x);
-
 	void addPermission(UserEntity user, GroupEntity group,
 			GroupPermission... permission);
 
@@ -30,10 +23,7 @@ public interface IGroupService extends IBaseService<GroupEntity> {
 
 	List<UserEntity> getMembers(GroupEntity group);
 
-	List<GroupEntity> getGroups(UserEntity user);
-
-	@Deprecated
-	List<GroupEntity> getGroupsByUsername(String username);
+	List<GroupEntity> getGroupsByMember(UserEntity user);
 
 	boolean hasPermition(UserEntity user, GroupEntity group,
 			GroupPermission permission);
@@ -52,6 +42,15 @@ public interface IGroupService extends IBaseService<GroupEntity> {
 
 	GroupEntity findByName(String name);
 
-	List<GroupEntity> getUserInvitedGroups(UserEntity user);
+	void setPermission(UserEntity user, GroupEntity group, boolean d,
+			boolean a, boolean r, boolean x, boolean i);
+
+	void inviteUser(UserEntity admin, GroupEntity group, UserEntity user);
+
+	List<GroupEntity> getInvitations(UserEntity user);
+
+	List<GroupEntity> getAllGroups(UserEntity user);
+
+	boolean canExecute(GroupEntity group, UserEntity user);
 
 }

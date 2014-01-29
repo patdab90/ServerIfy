@@ -20,8 +20,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO;
 import pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO;
+import pl.poznan.put.cs.ify.webify.data.dao.IGroupPermissionDAO;
 import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
+import pl.poznan.put.cs.ify.webify.data.entity.group.GroupPermissionEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.receip.EventQueueEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.data.enums.user.UserRole;
@@ -59,6 +61,9 @@ public class EventQueueServiceTest {
 
 	private UserEntity targetUser;
 	private GroupEntity groupEntity;
+
+	@Autowired
+	private IGroupPermissionDAO groupPermissionDAO;
 
 	@Test()
 	@Transactional
@@ -144,7 +149,25 @@ public class EventQueueServiceTest {
 		groupDAO.persist(groupEntity);
 		assertNotNull(groupEntity.getId());
 
-		groupService.addGroupMember(sourceUser, groupEntity, targetUser);
+		// groupService.addGroupMember(sourceUser, groupEntity, targetUser);
+
+		GroupPermissionEntity groupPermission = groupPermissionDAO.find(
+				targetUser, groupEntity);
+		if (groupPermission == null) {
+			log.debug("addGroupMember new permission for group");
+			groupPermission = new GroupPermissionEntity();
+			groupPermission.setUser(targetUser);
+			groupPermission.setGroup(groupEntity);
+			groupPermissionDAO.persist(groupPermission);
+		} else {
+			log.debug("addGroupMember modify permission for group");
+			if (groupPermission.isI()
+					|| (groupPermission.isX() && groupPermission.isR())) {
+				return;// może tylko X??
+			}
+			groupPermission.setI(true);
+			groupPermissionDAO.merge(groupPermission);
+		}
 
 		element = new EventQueueEntity();
 		element.setSourceUser(sourceUser);

@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import pl.poznan.put.cs.ify.webify.App;
 import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.data.enums.user.UserRole;
@@ -40,9 +39,6 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 	private TextField zipcode;
 	private TextField city;
 
-	// @Autowired
-	// private IUserRegistrationProcess registrationProcess;
-
 	@Autowired
 	private IUserService userBo;
 
@@ -50,7 +46,11 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 	private IUserDAO userDAO;
 
 	public RegisterWindow() {
-		super(App.APPLICATION_TITLE);
+		this.setWidth("300px");
+		this.setHeight("270px");
+		this.setName("Rejestracja");
+		this.setModal(true);
+		this.setResizable(false);
 		final Form fl = new Form();
 		final TextField uName = new TextField("Nazwa użytkownika");
 		uName.setImmediate(true);

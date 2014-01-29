@@ -103,7 +103,7 @@ public abstract class BaseDAO<T extends BaseEntity> implements IBaseDAO<T> {
 			throw new IllegalStateException(entity.getClass().getSimpleName()
 					+ ": merge: Brak entity managera");
 		}
-		if (this.getManager().contains(this)) {
+		if (this.getManager().contains(entity)) {
 			return entity;
 		}
 		return this.manager.merge(entity);

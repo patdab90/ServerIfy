@@ -30,7 +30,6 @@ public class App extends Application {
 
 	private static final long serialVersionUID = 1L;
 
-	public static final String APPLICATION_TITLE = "Vaading-Spring Demo";
 	protected final Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired

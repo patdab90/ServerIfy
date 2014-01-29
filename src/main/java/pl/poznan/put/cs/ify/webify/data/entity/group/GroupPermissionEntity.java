@@ -38,11 +38,15 @@ public class GroupPermissionEntity extends BaseEntity {
 	private boolean x = false;
 
 	@Column(nullable = false)
-<<<<<<< HEAD
-	private boolean x = true;
-=======
-	private boolean c = true;
->>>>>>> origin/master
+	private boolean i = true;
+
+	public boolean isI() {
+		return i;
+	}
+
+	public void setI(boolean i) {
+		this.i = i;
+	}
 
 	@ManyToOne(fetch = FetchType.EAGER, targetEntity = GroupEntity.class)
 	@JoinColumns(value = {
@@ -104,11 +108,4 @@ public class GroupPermissionEntity extends BaseEntity {
 		this.user = user;
 	}
 
-	public boolean isC() {
-		return c;
-	}
-
-	public void setC(boolean c) {
-		this.c = c;
-	}
 }

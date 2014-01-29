@@ -9,12 +9,10 @@ import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
-import com.vaadin.ui.Window.CloseEvent;
 
 @Component(value = "loginComponent")
 @Scope(value = "session")
-public class LoginComponent extends CustomComponent implements
-		Window.CloseListener {
+public class LoginComponent extends CustomComponent {
 
 	/**
 	 * 
@@ -52,7 +50,6 @@ public class LoginComponent extends CustomComponent implements
 				return null;
 			}
 		};
-
 		layoutCss.addComponent(info);
 		layoutCss.addComponent(loginButton);
 		layoutCss.addComponent(registerButton);
@@ -73,24 +70,12 @@ public class LoginComponent extends CustomComponent implements
 	}
 
 	public void loginButtonClick(Button.ClickEvent event) {
-
 		main.addWindow(login);
-		login.addListener(this);
-		login.setSizeFull();
-
-		loginButton.setEnabled(false);
-
-		info.setValue("Logowanie...");
 	}
 
 	public void registerButtonClick(Button.ClickEvent event) {
 
 		main.addWindow(register);
-		register.addListener(this);
-		register.setSizeFull();
-		registerButton.setEnabled(false);
-
-		info.setValue("Rejestracja...");
 	}
 
 	public void closeButtonClick(Button.ClickEvent event) {
@@ -98,13 +83,4 @@ public class LoginComponent extends CustomComponent implements
 		info.setValue("Nie jesteś zalogowany");
 	}
 
-	/** In case the window is closed otherwise. */
-	@Override
-	public void windowClose(CloseEvent e) {
-
-		loginButton.setEnabled(true);
-		registerButton.setEnabled(true);
-
-		info.setValue("Nie jesteś zalogowany");
-	}
 }

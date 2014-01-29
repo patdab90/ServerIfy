@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
+import pl.poznan.put.cs.ify.webify.gui.windows.MainWindow;
 import pl.poznan.put.cs.ify.webify.service.IGroupService;
 import pl.poznan.put.cs.ify.webify.service.IUserService;
 
@@ -18,14 +20,13 @@ import com.vaadin.data.Property.ValueChangeListener;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.CustomComponent;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.ListSelect;
-import com.vaadin.ui.Panel;
-import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
 
 @Component(value = "editGoupPanel")
 @Scope(value = "session")
-public class EditGoupPanel extends Panel {
+public class EditGoupPanel extends HorizontalLayout {
 
 	private static final long serialVersionUID = 5346057885095040354L;
 
@@ -33,20 +34,23 @@ public class EditGoupPanel extends Panel {
 	private IUserService userService;
 
 	@Autowired
+	private IGroupDAO groupDAO;
+	@Autowired
 	private IGroupService groupService;
 	@Autowired
 	private EditUserComponent editUserComponent;
 
-	private Panel leftComponent;
-	private Panel rightComponent;
+	private VerticalLayout leftComponent;
 
 	private ListSelect userList;
 	private Button deleteGroupButton;
-	private TextField newMemberName;
-	private Button addMemberButton;
-	private Button userDeleteButton;
+	// private TextField newMemberName;
+	// private Button addMemberButton;
+	// private Button userDeleteButton;
 
 	private GroupEntity group;
+
+	private MainWindow parentWindow;
 
 	public EditGoupPanel() {
 		super();
@@ -56,6 +60,7 @@ public class EditGoupPanel extends Panel {
 	protected void createMembersListField(UserSession session) {
 		userList = new ListSelect("Członkowie grupy");
 		userList.setNullSelectionAllowed(true);
+		userList.setRows(20);
 		List<UserEntity> groupMembers = groupService.getMembers(group);
 		for (UserEntity userEntity : groupMembers) {
 			userList.addItem(userEntity.getUsername());
@@ -80,16 +85,20 @@ public class EditGoupPanel extends Panel {
 	protected void createDeleteButton() {
 		deleteGroupButton = new Button("Usun grupę", new ClickListener() {
 
+			private static final long serialVersionUID = 1L;
+
 			@Override
 			public void buttonClick(ClickEvent event) {
-				// TODO Auto-generated method stub
-
+				groupDAO.remove(group);
+				parentWindow.refresh();
 			}
 		});
 
 	}
 
-	public void init(UserSession session, String groupName) {
+	public void init(UserSession session, String groupName,
+			MainWindow parentWindow) {
+		this.parentWindow = parentWindow;
 		this.removeAllComponents();
 		group = groupService.findByName(groupName);
 		if (group == null) {
@@ -97,8 +106,9 @@ public class EditGoupPanel extends Panel {
 		}
 		createMembersListField(session);
 		createDeleteButton();
-		leftComponent = new Panel();
+		leftComponent = new VerticalLayout();
 		leftComponent.addComponent(userList);
 		leftComponent.addComponent(deleteGroupButton);
+		this.addComponent(leftComponent);
 	}
 }

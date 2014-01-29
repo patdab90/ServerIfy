@@ -4,8 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import pl.poznan.put.cs.ify.webify.App;
+import pl.poznan.put.cs.ify.webify.gui.components.EditGoupPanel;
 import pl.poznan.put.cs.ify.webify.gui.components.GroupListPanel;
+import pl.poznan.put.cs.ify.webify.gui.components.InvitedGroupsComponent;
 //import pl.poznan.put.cs.ify.webify.bo.impl.UserBo;
 import pl.poznan.put.cs.ify.webify.gui.components.LoginComponent;
 import pl.poznan.put.cs.ify.webify.gui.components.TitlePanel;
@@ -16,6 +17,7 @@ import pl.poznan.put.cs.ify.webify.service.IUserService;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Button.ClickListener;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Window;
 
@@ -31,8 +33,6 @@ public class MainWindow extends BaseWindow {
 	@Autowired
 	private UserSession session;
 
-	// @Autowired
-	// private UserBo userBo;
 	@Autowired
 	private IUserService userService;
 
@@ -49,10 +49,16 @@ public class MainWindow extends BaseWindow {
 	private GroupListPanel groupListPanel;
 
 	@Autowired
+	private EditGoupPanel editGoupPanel;
+
+	@Autowired
 	private NewGroupWindow groupWindow;
 
 	@Autowired
 	private TitlePanel titlePanel;
+
+	@Autowired
+	private InvitedGroupsComponent invitedGroupsComponent;
 
 	private Button logoutButton;
 
@@ -60,7 +66,6 @@ public class MainWindow extends BaseWindow {
 	// private MenuComponent menuComponent;
 
 	public MainWindow() {
-		super(App.APPLICATION_TITLE);
 
 	}
 
@@ -101,9 +106,13 @@ public class MainWindow extends BaseWindow {
 			addComponent(new Label("Jesteś zalogowany jako "
 					+ session.getUserName()));
 			addComponent(logoutButton);
-			addComponent(groupListPanel);
+			HorizontalLayout layout = new HorizontalLayout();
+			layout.addComponent(groupListPanel);
+			layout.addComponent(editGoupPanel);
+			this.addComponent(layout);
+			invitedGroupsComponent.init(session);
+			this.addComponent(invitedGroupsComponent);
 
-			// menuComponent.constructMenu();
 		}
 	}
 

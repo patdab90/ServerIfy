@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import pl.poznan.put.cs.ify.webify.App;
 import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
 import pl.poznan.put.cs.ify.webify.service.IUserService;
 import pl.poznan.put.cs.ify.webify.service.impl.UserService;
@@ -62,7 +61,11 @@ public class LoginWindow extends BaseWindow implements LoginListener {
 	}
 
 	public LoginWindow() {
-		super(App.APPLICATION_TITLE);
+		this.setWidth("290px");
+		this.setHeight("335px");
+		this.setName("Rejestracja");
+		this.setModal(true);
+		this.setResizable(false);
 		LoginForm form = new LoginForm();
 		form.addListener((LoginListener) this);
 		Panel loginPanel = new Panel("Login");

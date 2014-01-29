@@ -51,7 +51,7 @@ public class SimpleREST {
 	@Consumes(value = "application/json")
 	@Produces(value = "application/json")
 	public Message post(Message message) {
-		Message m = new Message();
+		// Message m = new Message();
 		return message;
 	}
 

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import pl.poznan.put.cs.ify.webify.App;
 import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.gui.session.UserSession;
@@ -41,7 +40,6 @@ public class NewGroupWindow extends BaseWindow {
 	private IGroupService groupService;
 
 	public NewGroupWindow() {
-		super(App.APPLICATION_TITLE);
 
 	}
 
@@ -77,7 +75,6 @@ public class NewGroupWindow extends BaseWindow {
 			private static final long serialVersionUID = 1L;
 
 			@Override
-			// @Transactional
 			public void buttonClick(ClickEvent event) {
 				fl.commit();
 				UserEntity user = userService.getByUsername(session
@@ -88,7 +85,7 @@ public class NewGroupWindow extends BaseWindow {
 				for (Object userNameObj : userList.getItemIds()) {
 					String userName = userNameObj.toString();
 					UserEntity member = userService.getByUsername(userName);
-					groupService.addGroupMember(user, group, member);
+					groupService.inviteUser(user, group, member);
 				}
 				getApplication().getMainWindow().showNotification(
 						"Grupa zarejestrowana: " + groupName);

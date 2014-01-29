@@ -5,21 +5,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import pl.poznan.put.cs.ify.webify.SpringContextHelper;
-
 import com.vaadin.Application;
 import com.vaadin.terminal.ClassResource;
 import com.vaadin.ui.Embedded;
-import com.vaadin.ui.Panel;
+import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.Label;
 
 @Component(value = "titlePanel")
 @Scope(value = "session")
-public class TitlePanel extends Panel {
+public class TitlePanel extends HorizontalLayout {
 
-	/**
-	 * Obiekt helpera
-	 */
-	protected SpringContextHelper helper = null;
 	/**
 	 * Obiekt loggera
 	 */
@@ -30,16 +25,18 @@ public class TitlePanel extends Panel {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Embedded logo;
+	private Label titleLabel;
 
 	public TitlePanel() {
-		super("If{Y}");
+		super();
 	}
 
 	public void init(Application app) {
-		if (logo == null) {
-			logo = new Embedded("", new ClassResource("ify-logo.png", app));
-			this.addComponent(logo);
-		}
+		this.removeAllComponents();
+		logo = new Embedded("", new ClassResource("ify-logo.png", app));
+		this.addComponent(logo);
+		titleLabel = new Label("if{Y}");
+		this.addComponent(titleLabel);
 	}
 
 }
