@@ -1,10 +1,14 @@
 package pl.poznan.put.cs.ify.webify.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import pl.poznan.put.cs.ify.webify.data.dao.IParameterDAO;
+import pl.poznan.put.cs.ify.webify.data.entity.group.GroupEntity;
 import pl.poznan.put.cs.ify.webify.data.entity.receip.ParameterEntity;
+import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.service.IParameterService;
 
 @Component
@@ -44,5 +48,17 @@ public class ParameterService implements IParameterService {
 		} else {
 			param.setStringValue(value);
 		}
+	}
+
+	@Override
+	public List<ParameterEntity> getData(UserEntity target, GroupEntity group,
+			String recipe) {
+		List<ParameterEntity> params = null;
+		if (target == null) {
+			params = parameterDAO.find(group, recipe);
+		} else {
+			params = parameterDAO.find(target, group, recipe);
+		}
+		return params;
 	}
 }

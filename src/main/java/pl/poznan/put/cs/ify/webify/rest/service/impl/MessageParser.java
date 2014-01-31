@@ -95,7 +95,6 @@ public class MessageParser implements IMessageParser {
 			String value) {
 		ParameterEntity p = new ParameterEntity();
 		p.setName(name);
-		p.setDevice(device);
 		p.setRecipe(recipe);
 		p.setUser(user);
 		p.setGroup(group);

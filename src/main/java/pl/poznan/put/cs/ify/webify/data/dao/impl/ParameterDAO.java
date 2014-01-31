@@ -21,64 +21,43 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
-	@Transactional
-	public List<ParameterEntity> find(GroupEntity group, String recipe,
-			String device) {
-		TypedQuery<ParameterEntity> q = getManager()
-				.createQuery(
-						"SELECT p FROM ParameterEntity p "
-								+ "WHERE p.group.id = :groupId AND p.recipe = :recipe AND p.device = :device",
-						cls);
-		q.setParameter("groupId", group.getId());
-		q.setParameter("recipe", recipe);
-		q.setParameter("device", device);
-		return q.getResultList();
-	}
-
-	@Override
-	public ParameterEntity find(String name, GroupEntity group, String recipe,
-			String device) {
+	public ParameterEntity find(String name, GroupEntity group, String recipe) {
 		TypedQuery<ParameterEntity> q = getManager().createQuery(
 				"SELECT p FROM ParameterEntity p "
 						+ "WHERE p.name = :name AND p.group.id = :groupId "
-						+ "AND p.recipe = :recipe AND p.device = :device", cls);
+						+ "AND p.recipe = :recipe", cls);
 		q.setParameter("groupId", group.getId());
 		q.setParameter("recipe", recipe);
-		q.setParameter("device", device);
 		q.setParameter("name", name);
 		return getSingleResult(q);
 	}
 
 	@Override
 	public List<ParameterEntity> find(UserEntity user, GroupEntity group,
-			String recipe, String device) {
+			String recipe) {
 		TypedQuery<ParameterEntity> q = getManager()
 				.createQuery(
 						"SELECT p FROM ParameterEntity p "
 								+ "WHERE p.user.id = :userId AND p.group.id = :groupId "
-								+ "AND p.recipe = :recipe AND p.device = :device",
-						cls);
+								+ "AND p.recipe = :recipe", cls);
 		q.setParameter("userId", user.getId());
 		q.setParameter("groupId", group.getId());
 		q.setParameter("recipe", recipe);
-		q.setParameter("device", device);
 		return q.getResultList();
 	}
 
 	@Override
 	public ParameterEntity find(String name, UserEntity user,
-			GroupEntity group, String recipe, String device) {
+			GroupEntity group, String recipe) {
 		TypedQuery<ParameterEntity> q = getManager()
 				.createQuery(
 						"SELECT p FROM ParameterEntity p "
 								+ "WHERE p.name = :name AND p.user.id = :userId AND p.group.id = :groupId "
-								+ "AND p.recipe = :recipe AND p.device = :device",
-						cls);
+								+ "AND p.recipe = :recipe AND", cls);
 		q.setParameter("name", name);
 		q.setParameter("userId", user.getId());
 		q.setParameter("groupId", group.getId());
 		q.setParameter("recipe", recipe);
-		q.setParameter("device", device);
 		return getSingleResult(q);
 	}
 
@@ -92,6 +71,7 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 	}
 
 	@Override
+	@Transactional
 	public List<ParameterEntity> find(GroupEntity group, String recipe) {
 		TypedQuery<ParameterEntity> q = getManager()
 				.createQuery(
@@ -102,5 +82,4 @@ public class ParameterDAO extends BaseDAO<ParameterEntity> implements
 		q.setParameter("recipe", recipe);
 		return q.getResultList();
 	}
-
 }

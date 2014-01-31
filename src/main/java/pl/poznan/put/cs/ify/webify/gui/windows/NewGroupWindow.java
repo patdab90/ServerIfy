@@ -55,6 +55,8 @@ public class NewGroupWindow extends BaseWindow {
 
 	public void init(UserSession session) {
 		this.setWidth("500px");
+		this.setName("Dodawanie grupy: ");
+		this.setModal(true);
 		final Form fl = new Form();
 		createGroupNameField();
 		createNewMemberNameFiled();

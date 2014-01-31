@@ -109,9 +109,9 @@ public class MessageBuilder implements IMessageBuilder {
 
 	@Transactional
 	private Map<String, MessageParam> buildParameters() {
-		if (message.getValues() != null && !message.getValues().isEmpty()) {
-			return message.getValues();
-		}
+		// if (message.getValues() != null && !message.getValues().isEmpty()) {
+		// return message.getValues();
+		// }
 		if (parameters == null || parameters.isEmpty()) {
 			return null;
 		}

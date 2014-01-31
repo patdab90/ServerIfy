@@ -88,7 +88,6 @@ public class MessageService implements IMessageService {
 		UserEntity target = parser.getTarget();
 		GroupEntity group = parser.getGroup();
 		String recipe = parser.getRecipe();
-		String device = parser.getDevice();
 		int tag = parser.getTag();
 		validSender(user);
 		if (!groupService.canExecute(group, user)) {
@@ -97,10 +96,10 @@ public class MessageService implements IMessageService {
 							+ group.getName());
 		}
 		if (tag == MessageEvent.PUT_DATA_EVENT) {// SEND_DATA
-			return putData(parser, group, recipe, device);
+			return putData(parser, group, recipe);
 		} else if (tag == MessageEvent.GET_DATA_EVENT) {// GET_DATA
 			log.trace("execute() GET_DATA_EVENT");
-			return getDataExecution(message, target, group, recipe, device);
+			return getData(message, target, group, recipe);
 		} else if (tag == MessageEvent.PULL_EVENT) {
 			log.trace("execute() PULL_EVENT");
 			return pullObject(user, recipe, group);
@@ -115,13 +114,12 @@ public class MessageService implements IMessageService {
 
 	@Transactional
 	public Message putData(IMessageParser parser, GroupEntity group,
-			String recipe, String device) {
+			String recipe) {
 		log.info("execute() PUT_DATA_EVENT");
 		List<ParameterEntity> params = parser.getParameters();
 		for (ParameterEntity p : params) {
 			log.debug("parameter=" + p);
-			ParameterEntity pe = parameterDAO.find(p.getName(), group, recipe,
-					device);
+			ParameterEntity pe = parameterDAO.find(p.getName(), group, recipe);
 			if (pe == null) {
 				parameterDAO.persist(p);
 			} else {
@@ -132,21 +130,16 @@ public class MessageService implements IMessageService {
 		return null;
 	}
 
-	protected Message getDataExecution(Message message, UserEntity target,
-			GroupEntity group, String recipe, String device) {
-		List<ParameterEntity> params = null;
-		if (target == null) {
-			params = parameterDAO.find(group, recipe);
-		} else {
-			params = parameterDAO.find(target, group, recipe, device);
-		}
-		IMessageBuilder builder = getBuilder(message);
-		return builder.params(params).build();
+	protected Message getData(final Message message, final UserEntity target,
+			final GroupEntity group, final String recipe) {
+		return getBuilder(message).params(
+				parameterBo.getData(target, group, recipe)).build();
 	}
 
 	@Override
 	@Transactional
-	public void pushMessage(Message message) throws AuthenticationException, IllegalAccessException {
+	public void pushMessage(final Message message)
+			throws AuthenticationException, IllegalAccessException {
 		Object dataObject = message;
 
 		IMessageParser parser = getParser(message);

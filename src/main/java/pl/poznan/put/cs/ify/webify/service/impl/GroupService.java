@@ -104,7 +104,7 @@ public class GroupService implements IGroupService {
 		log.debug("createGroupe, group id=" + group.getId());
 
 		GroupPermissionEntity groupPermission = createPermission(creator, group);
-		if (groupPermission.getGroup() == null) {
+		if (groupPermission.getGroup() == null) {// TODO może nie potrzebny!!!
 			groupPermission.setGroup(group);
 			groupPermission = groupPermissionDAO.merge(groupPermission);
 			if (groupPermission.getUser() == null) {
@@ -125,6 +125,7 @@ public class GroupService implements IGroupService {
 		groupPermissionEntity.setGroup(group);
 		groupPermissionEntity.setD(true);
 		groupPermissionEntity.setA(true);
+		groupPermissionEntity.setI(false);
 		groupPermissionEntity.setR(true);
 		groupPermissionEntity.setX(true);
 		groupPermissionDAO.persist(groupPermissionEntity);

@@ -62,15 +62,8 @@ public class ParameterEntity extends BaseEntity {
 	@Column(nullable = false)
 	private String recipe;
 
-	@Column(nullable = false)
-	private String device;
-
 	public Boolean getBooleanValue() {
 		return booleanValue;
-	}
-
-	public String getDevice() {
-		return device;
 	}
 
 	public Double getDoubleValue() {
@@ -111,10 +104,6 @@ public class ParameterEntity extends BaseEntity {
 
 	public void setBooleanValue(final Boolean booleanValue) {
 		this.booleanValue = booleanValue;
-	}
-
-	public void setDevice(final String device) {
-		this.device = device;
 	}
 
 	public void setDoubleValue(final Double doubleValue) {

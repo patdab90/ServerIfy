@@ -95,7 +95,6 @@ public class MessageServiceTest {
 
 		ParameterEntity param = new ParameterEntity();
 		param.setStringValue(paramvalue);
-		param.setDevice(message.getUser().getDevice());
 		param.setGroup(groupEntity);
 		param.setName(paramname);
 		param.setRecipe(message.getUser().getRecipe());
