@@ -9,6 +9,7 @@ import pl.poznan.put.cs.ify.webify.data.dao.IUserDAO;
 import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.data.enums.user.UserRole;
 import pl.poznan.put.cs.ify.webify.service.IUserService;
+import pl.poznan.put.cs.ify.webify.service.impl.UserService;
 
 import com.vaadin.data.Validator;
 import com.vaadin.data.validator.RegexpValidator;
@@ -126,18 +127,13 @@ public class RegisterWindow extends BaseWindow implements TextChangeListener {
 			public void buttonClick(ClickEvent event) {
 				fl.commit();
 
-				UserEntity user = new UserEntity();
 				String username = fl.getField("uName").getValue().toString();
 				String pass = fl.getField("password").getValue().toString();
+				String lastName = fl.getField("lastName").getValue().toString();
+				String firstName = fl.getField("firstName").getValue()
+						.toString();
 				log.debug("password=" + pass);
-				user.setLastName(fl.getField("lastName").getValue().toString());
-				user.setFirstName(fl.getField("firstName").getValue()
-						.toString());
-				user.setUsername(username);
-				user.setPassword(pass);
-				user.addRole(UserRole.USER);
-
-				userDAO.persist(user);
+				userBo.registerUser(username, pass, firstName, lastName);
 				getApplication().getMainWindow().showNotification(
 						"Użytkownik zarejestrowany: "
 								+ fl.getField("uName").getValue().toString());

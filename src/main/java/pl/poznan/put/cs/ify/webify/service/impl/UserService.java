@@ -88,17 +88,26 @@ public class UserService implements IUserService {
 	 * java.lang.String)
 	 */
 	@Override
-	@Transactional
 	public boolean login(final String username, final String password) {
+		return loginHash(username, StringUtils.sh1(username, password));
+	}
+
+	@Override
+	public boolean loginHash(final String username, final String passHash) {
+		return getUser(username, passHash) != null;
+	}
+
+	@Override
+	@Transactional
+	public UserEntity getUser(final String username, final String password) {
 		final UserEntity user = userDAO.findByUserName(username);
 		if (user == null) {
-			log.info("LOGIN: brak uzytkownika: " + username);
-			return false;
+			return null;
 		}
-		if (StringUtils.sh1(username, password).equals(user.getPassword())) {
-			return true;
+		if (password.equals(user.getPassword())) {
+			return user;
 		}
-		return false;
+		return null;
 	}
 
 	@Override
@@ -107,5 +116,20 @@ public class UserService implements IUserService {
 			return false;
 		}
 		return "BROADCAST".equals(user.getUsername());
+	}
+
+	@Override
+	@Transactional
+	public UserEntity registerUser(String username, String pass,
+			String firstName, String lastName) {
+		UserEntity user = new UserEntity();
+		user.setLastName(lastName);
+		user.setFirstName(firstName);
+		user.setUsername(username);
+		user.setPassword(pass);
+		user.addRole(UserRole.USER);
+
+		userDAO.persist(user);
+		return user;
 	}
 }

@@ -16,13 +16,9 @@ public class MessageEvent implements Serializable {
 	private String target;
 	private int tag;
 
-	public final static int PULL_EVENT = -4;
-	public final static int GET_DATA_EVENT = -1;
-	public final static int PUT_DATA_EVENT = 0;
-
-	public MessageEvent() {
-
-	}
+	public static final int PULLEVENT = -4;
+	public static final int GETDATAEVENT = -1;
+	public static final int PUTDATAEVENT = 0;
 
 	public MessageEvent(final String target, final int tag) {
 		this.target = target;

@@ -10,18 +10,19 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import pl.poznan.put.cs.ify.webify.data.entity.user.UserEntity;
 import pl.poznan.put.cs.ify.webify.rest.model.LoginMessage;
 import pl.poznan.put.cs.ify.webify.service.IUserService;
 
 @Controller
-@Path("/login")
+@Path("/")
 public class LoginControler {
 
 	@Autowired
 	private IUserService userService;
 
 	@POST
-	@Path("/l")
+	@Path("/login/l")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public boolean login(LoginMessage message) {
@@ -29,11 +30,34 @@ public class LoginControler {
 	}
 
 	@POST
-	@Path("/{user}/{password}")
+	@Path("/login/{user}/{password}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public boolean login2(@PathParam("user") String user,
-			@PathParam("password") String password) {
-		return userService.login(user, password);
+	public boolean login2(@PathParam("user") final String user,
+			@PathParam("password") final String password) {
+		if (user == null || password == null) {
+			return false;
+		}
+		return userService.loginHash(user, password);
 	}
 
+	@POST
+	@Path("/register/{user}/{password}/{firstName}/{secondName}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public boolean register(@PathParam("user") final String user,
+			@PathParam("password") final String password,
+			@PathParam("firstName") String firstName,
+			@PathParam("secondName") String secondName) {
+		UserEntity userEntity = userService.getByUsername(user);
+		if (userEntity == null) {
+			if (password != null && !password.isEmpty()) {
+				userEntity = userService.registerUser(user, password,
+						firstName, secondName);
+				if (userEntity != null) {
+					return true;
+				}
+			}
+
+		}
+		return false;
+	}
 }

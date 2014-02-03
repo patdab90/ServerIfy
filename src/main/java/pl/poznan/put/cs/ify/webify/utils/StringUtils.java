@@ -6,6 +6,8 @@ import java.security.NoSuchAlgorithmException;
 
 public class StringUtils {
 
+	public static String ALGO = "SHA1";
+
 	/**
 	 * Tworzenie sumy kontrolnej MD5 ze stringa
 	 * 
@@ -13,10 +15,12 @@ public class StringUtils {
 	 * @param input
 	 * @return
 	 */
-	public static String md5(String input) {
+	public static String md5(final String input) {
 		String md5 = null;
-		if (null == input)
+		if (null == input) {
 			return null;
+		}
+
 		try {
 			MessageDigest digest = MessageDigest.getInstance("MD5");
 			digest.update(input.getBytes(), 0, input.length());
@@ -26,8 +30,6 @@ public class StringUtils {
 		}
 		return md5;
 	}
-
-	public static String ALGO = "SHA1";
 
 	private static String hash(String input) throws NoSuchAlgorithmException {
 		MessageDigest mDigest = MessageDigest.getInstance(ALGO);

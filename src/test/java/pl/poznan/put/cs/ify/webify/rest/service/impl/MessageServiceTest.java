@@ -70,7 +70,7 @@ public class MessageServiceTest {
 		assertNotNull("Service is null", service);
 		assertNotNull(message);
 
-		message.getEvent().setTag(MessageEvent.GET_DATA_EVENT);
+		message.getEvent().setTag(MessageEvent.GETDATAEVENT);
 		log.debug("getDataExecutionTest1 test <<");
 		Message result = service.execute(message);
 		log.debug("getDataExecutionTest1 test >>");
@@ -103,7 +103,7 @@ public class MessageServiceTest {
 		parameterDAO.persist(param);
 		assertNotNull(param.getId());
 
-		message.getEvent().setTag(MessageEvent.GET_DATA_EVENT);
+		message.getEvent().setTag(MessageEvent.GETDATAEVENT);
 		// message.getEvent().setTarget(userEntity.getUsername());
 		log.debug("getDataExecutionTest2 test <<");
 		Message result = service.execute(message);
@@ -127,7 +127,7 @@ public class MessageServiceTest {
 		assertNotNull("Group DAO is null", groupDAO);
 		message = new Message();
 		MessageEvent event = new MessageEvent("BROADCAST",
-				MessageEvent.GET_DATA_EVENT);
+				MessageEvent.GETDATAEVENT);
 		Date now = new Date();
 		String time = "" + now.getTime();
 		log.info("init(): time=" + time);
@@ -222,7 +222,7 @@ public class MessageServiceTest {
 		assertNotNull("User DAO is null", userDAO);
 		assertNotNull("Group DAO is null", groupDAO);
 		message = new Message();
-		MessageEvent event = new MessageEvent(null, MessageEvent.GET_DATA_EVENT);
+		MessageEvent event = new MessageEvent(null, MessageEvent.GETDATAEVENT);
 		Date now = new Date();
 		String time = "" + now.getTime();
 		log.info("init(): time=" + time);

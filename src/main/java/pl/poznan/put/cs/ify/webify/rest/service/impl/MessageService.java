@@ -95,16 +95,16 @@ public class MessageService implements IMessageService {
 					"You have no permmision to execiute in this group! groupName="
 							+ group.getName());
 		}
-		if (tag == MessageEvent.PUT_DATA_EVENT) {// SEND_DATA
+		if (tag == MessageEvent.PUTDATAEVENT) {// SEND_DATA
 			return putData(parser, group, recipe);
-		} else if (tag == MessageEvent.GET_DATA_EVENT) {// GET_DATA
-			log.trace("execute() GET_DATA_EVENT");
+		} else if (tag == MessageEvent.GETDATAEVENT) {// GET_DATA
+			log.trace("execute() GETDATAEVENT");
 			return getData(message, target, group, recipe);
-		} else if (tag == MessageEvent.PULL_EVENT) {
-			log.trace("execute() PULL_EVENT");
+		} else if (tag == MessageEvent.PULLEVENT) {
+			log.trace("execute() PULLEVENT");
 			return pullObject(user, recipe, group);
 		} else if (tag > 0) {
-			log.trace("execute() PUSH_EVENT");
+			log.trace("execute() PUSHEVENT");
 			message.getUser().setPassword("");
 			pushObject(message, user, target, recipe, group);
 			return null;
@@ -115,7 +115,7 @@ public class MessageService implements IMessageService {
 	@Transactional
 	public Message putData(IMessageParser parser, GroupEntity group,
 			String recipe) {
-		log.info("execute() PUT_DATA_EVENT");
+		log.info("execute() PUTDATAEVENT");
 		List<ParameterEntity> params = parser.getParameters();
 		for (ParameterEntity p : params) {
 			log.debug("parameter=" + p);

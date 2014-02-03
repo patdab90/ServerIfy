@@ -75,4 +75,13 @@ public interface IUserService extends IBaseService<UserEntity> {
 	 */
 	boolean isBroadcast(UserEntity user);
 
+	// *
+
+	boolean loginHash(String username, String passHash);
+
+	UserEntity getUser(String username, String password);
+
+	UserEntity registerUser(String username, String pass, String firstName,
+			String lastName);
+
 }
