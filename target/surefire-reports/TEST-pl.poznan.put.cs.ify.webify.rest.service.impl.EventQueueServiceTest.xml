@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.766" errors="0" skipped="0" tests="2" name="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest">
+<testsuite failures="0" time="8.201" errors="4" skipped="0" tests="4" name="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_38\jre\bin"/>
@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\Workspace\IfY\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8027687448818749415.tmp"/>
+    <property name="classworlds.conf" value="D:\Workspace\IfY\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1316181569166073192.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_38\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files\Dell\DW WLAN Card;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;$JAVA_HOME\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\OpenVPN\bin;C:\Program Files (x86)\OpenVPN\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -42,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_38\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install tomcat:run"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="pl"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,6 +60,824 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.5" classname="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest" name="p1ushTest"/>
-  <testcase time="0.262" classname="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest" name="pullTest"/>
+  <testcase time="4.11" classname="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest" name="p1ushTest">
+    <error message="Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:349)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1315)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1397)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:63)
+	at org.springframework.orm.jpa.DefaultJpaDialect.beginTransaction(DefaultJpaDialect.java:71)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:378)
+	... 32 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:99)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:160)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:81)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1473)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:60)
+	... 34 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:71)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.&lt;init&gt;(Socket.java:375)
+	at java.net.Socket.&lt;init&gt;(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:305)
+	... 59 more
+</error>
+    <system-out>06.02.2014 23:55:17 TRACE (TestContextManager.java:428) - afterTestClass(): class [class pl.poznan.put.cs.ify.webify.data.dao.impl.GroupDAOTest]
+06.02.2014 23:55:17 DEBUG (DirtiesContextTestExecutionListener.java:112) - After test class: context [[TestContext@617e53c9 testClass = GroupDAOTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@321e45e3 testClass = GroupDAOTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]], dirtiesContext [false].
+06.02.2014 23:55:17 TRACE (TestContext.java:97) - Retrieved @ContextConfiguration [@org.springframework.test.context.ContextConfiguration(initializers=[], classes=[], locations=[classpath:pl/poznan/put/cs/ify/webify/spring-context.xml], loader=interface org.springframework.test.context.ContextLoader, value=[], inheritLocations=true, inheritInitializers=true)] for class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:215) - Retrieved @ContextConfiguration [@org.springframework.test.context.ContextConfiguration(initializers=[], classes=[], locations=[classpath:pl/poznan/put/cs/ify/webify/spring-context.xml], loader=interface org.springframework.test.context.ContextLoader, value=[], inheritLocations=true, inheritInitializers=true)] for declaring class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest].
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:222) - Resolved context configuration attributes: [ContextConfigurationAttributes@5e7b4ed7 declaringClass = &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;]
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:153) - Processing ContextLoader for context configuration attributes [ContextConfigurationAttributes@5e7b4ed7 declaringClass = &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;]
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:170) - Using default ContextLoader class [org.springframework.test.context.support.DelegatingSmartContextLoader] for test class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:369) - Processing locations and classes for context configuration attributes [ContextConfigurationAttributes@5e7b4ed7 declaringClass = &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;]
+06.02.2014 23:55:17 DEBUG (AbstractDelegatingSmartContextLoader.java:89) - Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@5e7b4ed7 declaringClass = &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;].
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:261) - Processing context initializers for context configuration attributes [ContextConfigurationAttributes@5e7b4ed7 declaringClass = &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;]
+06.02.2014 23:55:17 TRACE (ContextLoaderUtils.java:309) - Retrieved @ActiveProfiles [@org.springframework.test.context.ActiveProfiles(inheritProfiles=true, value=[test], profiles=[])] for declaring class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest].
+06.02.2014 23:55:17 DEBUG (TestContextManager.java:185) - @TestExecutionListeners is not present for class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]: using defaults.
+06.02.2014 23:55:17 TRACE (TestContextManager.java:137) - Registering TestExecutionListener: org.springframework.test.context.web.ServletTestExecutionListener@717535b6
+06.02.2014 23:55:17 TRACE (TestContextManager.java:137) - Registering TestExecutionListener: org.springframework.test.context.support.DependencyInjectionTestExecutionListener@461979eb
+06.02.2014 23:55:17 TRACE (TestContextManager.java:137) - Registering TestExecutionListener: org.springframework.test.context.support.DirtiesContextTestExecutionListener@32935741
+06.02.2014 23:55:17 TRACE (TestContextManager.java:137) - Registering TestExecutionListener: org.springframework.test.context.transaction.TransactionalTestExecutionListener@67458657
+06.02.2014 23:55:17 DEBUG (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 TRACE (TestContextManager.java:275) - beforeTestClass(): class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 TRACE (TestContextManager.java:307) - prepareTestInstance(): instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9]
+06.02.2014 23:55:17 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:17 DEBUG (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]].
+06.02.2014 23:55:17 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:17 TRACE (CachedIntrospectionResults.java:231) - Getting BeanInfo for class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 TRACE (CachedIntrospectionResults.java:259) - Caching PropertyDescriptors for class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 TRACE (CachedIntrospectionResults.java:271) - Found bean property &apos;class&apos; of type [java.lang.Class]
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IEventQueueService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueService
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueService&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;eventQueueService&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IGroupService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupService
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupService&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;groupService&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;groupDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;eventQueueDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IUserDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.userDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;userDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;userDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupPermissionDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupPermissionDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupPermissionDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;groupPermissionDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IEventQueueService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueService
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueService&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;eventQueueService&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IGroupService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupService
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupService&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;groupService&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;groupDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;eventQueueDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IUserDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.userDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;userDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;userDAO&apos;
+06.02.2014 23:55:17 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupPermissionDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupPermissionDAO
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupPermissionDAO&apos;
+06.02.2014 23:55:17 DEBUG (AutowiredAnnotationBeanPostProcessor.java:433) - Autowiring by type from bean name &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; to bean named &apos;groupPermissionDAO&apos;
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos;
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos;
+06.02.2014 23:55:17 DEBUG (AbstractFallbackTransactionAttributeSource.java:106) - Adding transactional method &apos;init&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:17 DEBUG (AbstractAutoProxyCreator.java:538) - Creating implicit proxy for bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; with 0 common interceptors and 1 specific interceptors
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:155) - Creating CGLIB proxy: target source is SingletonTargetSource for target object [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9]
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:808) - Unable to apply any optimisations to advised method: public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.init()
+06.02.2014 23:55:17 DEBUG (AbstractFallbackTransactionAttributeSource.java:106) - Adding transactional method &apos;p1ushTest&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:808) - Unable to apply any optimisations to advised method: public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.p1ushTest()
+06.02.2014 23:55:17 DEBUG (AbstractFallbackTransactionAttributeSource.java:106) - Adding transactional method &apos;pullTest&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:808) - Unable to apply any optimisations to advised method: public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.pullTest()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:808) - Unable to apply any optimisations to advised method: public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.crean()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:759) - Found finalize() method - using NO_OVERRIDE
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:771) - Found &apos;equals&apos; method: public boolean java.lang.Object.equals(java.lang.Object)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:808) - Unable to apply any optimisations to advised method: public java.lang.String java.lang.Object.toString()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:776) - Found &apos;hashCode&apos; method: public native int java.lang.Object.hashCode()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:808) - Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+06.02.2014 23:55:17 DEBUG (CglibAopProxy.java:765) - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+06.02.2014 23:55:17 TRACE (TestContextManager.java:343) - beforeTestMethod(): instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9], method [public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.p1ushTest()]
+06.02.2014 23:55:17 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:17 DEBUG (AbstractFallbackTransactionAttributeSource.java:106) - Adding transactional method &apos;p1ushTest&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:17 DEBUG (TransactionalTestExecutionListener.java:162) - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9, testMethod = p1ushTest@EventQueueServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]
+06.02.2014 23:55:17 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:17 DEBUG (TransactionalTestExecutionListener.java:538) - Retrieved @TransactionConfiguration [null] for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (TransactionalTestExecutionListener.java:555) - Retrieved TransactionConfigurationAttributes [TransactionConfigurationAttributes@73204425 transactionManagerName = &apos;transactionManager&apos;, defaultRollback = true] for class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:17 DEBUG (GenericTypeResolver.java:151) - Resolving return type for [public static org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect.aspectOf()] with concrete method arguments [{}].
+06.02.2014 23:55:17 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;transactionManager&apos;
+06.02.2014 23:55:17 DEBUG (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [p1ushTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:17 DEBUG (JpaTransactionManager.java:369) - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@2383e965] for JPA transaction
+06.02.2014 23:55:17 DEBUG (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/ify]
+06.02.2014 23:55:19 WARN  (JDBCExceptionReporter.java:233) - SQL Error: 0, SQLState: 08S01
+06.02.2014 23:55:19 ERROR (JDBCExceptionReporter.java:234) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+06.02.2014 23:55:19 DEBUG (EntityManagerFactoryUtils.java:338) - Closing JPA EntityManager
+06.02.2014 23:55:19 WARN  (TestContextManager.java:351) - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@67458657] to process &apos;before&apos; execution of test method [public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.p1ushTest()] for test instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9]
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:349)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1315)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1397)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:63)
+	at org.springframework.orm.jpa.DefaultJpaDialect.beginTransaction(DefaultJpaDialect.java:71)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:378)
+	... 32 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:99)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:160)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:81)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1473)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:60)
+	... 34 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:71)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.&lt;init&gt;(Socket.java:375)
+	at java.net.Socket.&lt;init&gt;(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:305)
+	... 59 more
+06.02.2014 23:55:19 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;transactionManager&apos;
+06.02.2014 23:55:19 DEBUG (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [pl.poznan.put.cs.ify.webify.data.dao.impl.UserDAO.remove]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:19 DEBUG (JpaTransactionManager.java:369) - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@da99836] for JPA transaction
+06.02.2014 23:55:19 DEBUG (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/ify]
+06.02.2014 23:55:21 WARN  (JDBCExceptionReporter.java:233) - SQL Error: 0, SQLState: 08S01
+06.02.2014 23:55:21 ERROR (JDBCExceptionReporter.java:234) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+06.02.2014 23:55:21 DEBUG (EntityManagerFactoryUtils.java:338) - Closing JPA EntityManager
+06.02.2014 23:55:21 TRACE (TestContextManager.java:386) - afterTestMethod(): instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9], method [public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.p1ushTest()], exception [org.junit.internal.runners.model.MultipleFailureException: There were 2 errors:
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)]
+06.02.2014 23:55:21 DEBUG (DirtiesContextTestExecutionListener.java:85) - After test method: context [[TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9, testMethod = p1ushTest@EventQueueServiceTest, testException = org.junit.internal.runners.model.MultipleFailureException: There were 2 errors:
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection), mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]], class dirties context [false], class mode [null], method dirties context [false].
+06.02.2014 23:55:21 DEBUG (ServletTestExecutionListener.java:96) - Resetting RequestContextHolder for test context [TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@576eeb9, testMethod = p1ushTest@EventQueueServiceTest, testException = org.junit.internal.runners.model.MultipleFailureException: There were 2 errors:
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection), mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+</system-out>
+  </testcase>
+  <testcase time="4.152" classname="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest" name="p1ushTest">
+    <error message="Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:329)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at $Proxy44.remove(Unknown Source)
+	at pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.crean(EventQueueServiceTest.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1315)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1397)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:63)
+	at org.springframework.orm.jpa.DefaultJpaDialect.beginTransaction(DefaultJpaDialect.java:71)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:378)
+	... 40 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:99)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:160)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:81)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1473)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:60)
+	... 42 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:71)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 47 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.&lt;init&gt;(Socket.java:375)
+	at java.net.Socket.&lt;init&gt;(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:305)
+	... 67 more
+</error>
+  </testcase>
+  <testcase time="4.03" classname="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest" name="pullTest">
+    <error message="Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:349)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1315)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1397)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:63)
+	at org.springframework.orm.jpa.DefaultJpaDialect.beginTransaction(DefaultJpaDialect.java:71)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:378)
+	... 32 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:99)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:160)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:81)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1473)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:60)
+	... 34 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:71)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.&lt;init&gt;(Socket.java:375)
+	at java.net.Socket.&lt;init&gt;(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:305)
+	... 59 more
+</error>
+    <system-out>06.02.2014 23:55:21 DEBUG (ProfileValueUtils.java:68) - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:21 DEBUG (ProfileValueUtils.java:80) - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest]
+06.02.2014 23:55:21 TRACE (TestContextManager.java:307) - prepareTestInstance(): instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9]
+06.02.2014 23:55:21 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:21 DEBUG (DependencyInjectionTestExecutionListener.java:73) - Performing dependency injection for test context [[TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]].
+06.02.2014 23:55:21 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IEventQueueService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueService
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueService&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IGroupService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupService
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupService&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IUserDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.userDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;userDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupPermissionDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupPermissionDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupPermissionDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IEventQueueService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueService
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueService&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.service.IGroupService pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupService
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupService&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IEventQueueDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.queueDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;eventQueueDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IUserDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.userDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;userDAO&apos;
+06.02.2014 23:55:21 DEBUG (InjectionMetadata.java:85) - Processing injected method of bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos;: AutowiredFieldElement for private pl.poznan.put.cs.ify.webify.data.dao.IGroupPermissionDAO pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.groupPermissionDAO
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;groupPermissionDAO&apos;
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos;
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;org.springframework.transaction.config.internalTransactionAdvisor&apos;
+06.02.2014 23:55:21 DEBUG (AbstractAutoProxyCreator.java:538) - Creating implicit proxy for bean &apos;pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest&apos; with 0 common interceptors and 1 specific interceptors
+06.02.2014 23:55:21 DEBUG (CglibAopProxy.java:155) - Creating CGLIB proxy: target source is SingletonTargetSource for target object [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9]
+06.02.2014 23:55:21 TRACE (TestContextManager.java:343) - beforeTestMethod(): instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9], method [public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.pullTest()]
+06.02.2014 23:55:21 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:21 DEBUG (AbstractFallbackTransactionAttributeSource.java:106) - Adding transactional method &apos;pullTest&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:21 DEBUG (TransactionalTestExecutionListener.java:162) - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9, testMethod = pullTest@EventQueueServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]
+06.02.2014 23:55:21 DEBUG (TestContext.java:162) - Retrieved ApplicationContext for test class [class pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest] from cache with key [[MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+06.02.2014 23:55:21 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;transactionManager&apos;
+06.02.2014 23:55:21 DEBUG (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [pullTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:21 DEBUG (JpaTransactionManager.java:369) - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@1167acf2] for JPA transaction
+06.02.2014 23:55:21 DEBUG (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/ify]
+06.02.2014 23:55:23 WARN  (JDBCExceptionReporter.java:233) - SQL Error: 0, SQLState: 08S01
+06.02.2014 23:55:23 ERROR (JDBCExceptionReporter.java:234) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+06.02.2014 23:55:23 DEBUG (EntityManagerFactoryUtils.java:338) - Closing JPA EntityManager
+06.02.2014 23:55:23 WARN  (TestContextManager.java:351) - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@67458657] to process &apos;before&apos; execution of test method [public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.pullTest()] for test instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9]
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:349)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1315)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1397)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:63)
+	at org.springframework.orm.jpa.DefaultJpaDialect.beginTransaction(DefaultJpaDialect.java:71)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:378)
+	... 32 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:99)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:160)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:81)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1473)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:60)
+	... 34 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:71)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.&lt;init&gt;(Socket.java:375)
+	at java.net.Socket.&lt;init&gt;(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:305)
+	... 59 more
+06.02.2014 23:55:23 DEBUG (AbstractBeanFactory.java:246) - Returning cached instance of singleton bean &apos;transactionManager&apos;
+06.02.2014 23:55:23 DEBUG (AbstractPlatformTransactionManager.java:366) - Creating new transaction with name [pl.poznan.put.cs.ify.webify.data.dao.impl.UserDAO.remove]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+06.02.2014 23:55:23 DEBUG (JpaTransactionManager.java:369) - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@5a335053] for JPA transaction
+06.02.2014 23:55:23 DEBUG (DriverManagerDataSource.java:162) - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/ify]
+06.02.2014 23:55:26 WARN  (JDBCExceptionReporter.java:233) - SQL Error: 0, SQLState: 08S01
+06.02.2014 23:55:26 ERROR (JDBCExceptionReporter.java:234) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+06.02.2014 23:55:26 DEBUG (EntityManagerFactoryUtils.java:338) - Closing JPA EntityManager
+06.02.2014 23:55:26 TRACE (TestContextManager.java:386) - afterTestMethod(): instance [pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9], method [public void pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.pullTest()], exception [org.junit.internal.runners.model.MultipleFailureException: There were 2 errors:
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)]
+06.02.2014 23:55:26 DEBUG (DirtiesContextTestExecutionListener.java:85) - After test method: context [[TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9, testMethod = pullTest@EventQueueServiceTest, testException = org.junit.internal.runners.model.MultipleFailureException: There were 2 errors:
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection), mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]]], class dirties context [false], class mode [null], method dirties context [false].
+06.02.2014 23:55:26 DEBUG (ServletTestExecutionListener.java:96) - Resetting RequestContextHolder for test context [TestContext@366aa95b testClass = EventQueueServiceTest, testInstance = pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest@1ff31ad9, testMethod = pullTest@EventQueueServiceTest, testException = org.junit.internal.runners.model.MultipleFailureException: There were 2 errors:
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection)
+  org.springframework.transaction.CannotCreateTransactionException(Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection), mergedContextConfiguration = [MergedContextConfiguration@4332b67c testClass = EventQueueServiceTest, locations = &apos;{classpath:pl/poznan/put/cs/ify/webify/spring-context.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{test}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;]].
+</system-out>
+  </testcase>
+  <testcase time="4.032" classname="pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest" name="pullTest">
+    <error message="Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:329)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:105)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at $Proxy44.remove(Unknown Source)
+	at pl.poznan.put.cs.ify.webify.rest.service.impl.EventQueueServiceTest.crean(EventQueueServiceTest.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1315)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.throwPersistenceException(AbstractEntityManagerImpl.java:1397)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:63)
+	at org.springframework.orm.jpa.DefaultJpaDialect.beginTransaction(DefaultJpaDialect.java:71)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:378)
+	... 40 more
+Caused by: org.hibernate.exception.JDBCConnectionException: Cannot open connection
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:99)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:52)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:449)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:167)
+	at org.hibernate.jdbc.JDBCContext.connection(JDBCContext.java:160)
+	at org.hibernate.transaction.JDBCTransaction.begin(JDBCTransaction.java:81)
+	at org.hibernate.impl.SessionImpl.beginTransaction(SessionImpl.java:1473)
+	at org.hibernate.ejb.TransactionImpl.begin(TransactionImpl.java:60)
+	... 42 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:355)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2461)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2498)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2283)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:822)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:404)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:317)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:154)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:173)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:164)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:153)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider.getConnection(InjectedDataSourceConnectionProvider.java:71)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:446)
+	... 47 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.&lt;init&gt;(Socket.java:375)
+	at java.net.Socket.&lt;init&gt;(Socket.java:218)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:305)
+	... 67 more
+</error>
+  </testcase>
 </testsuite>

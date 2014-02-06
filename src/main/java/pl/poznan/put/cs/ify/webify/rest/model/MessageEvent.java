@@ -20,6 +20,9 @@ public class MessageEvent implements Serializable {
 	public static final int GETDATAEVENT = -1;
 	public static final int PUTDATAEVENT = 0;
 
+	public MessageEvent() {
+	}
+
 	public MessageEvent(final String target, final int tag) {
 		this.target = target;
 		this.tag = tag;

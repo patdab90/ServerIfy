@@ -18,6 +18,7 @@ public class MessageGroupBuilder implements IMessageGroupBuilder {
 	public MessageGroup build() {
 		MessageGroup g = new MessageGroup();
 		g.setName(group.getName());
+		g.setOwner(group.getOwner().getUsername());
 		return g;
 	}
 
